@@ -1,0 +1,143 @@
+name: Run Kotlin / Android tests
+
+on:
+  push:
+    branches: 
+      - develop
+      - 'current-stable'
+      - 'release/*'
+    paths:
+      - '**/*.java'
+      - '**/*.kt'
+      - '**/*.kts'
+  pull_request:
+    paths:
+      - '**/*.java'
+      - '**/*.kt'
+      - '**/*.kts'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  run-unit-tests:
+    runs-on: ubuntu-24.04
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 10 # so that recent tags can be found
+        submodules: recursive
+
+    - name: Initialize jsword submodule with shallow clone
+      run: |
+        git submodule update --init --depth=1
+    - name: Set up JDK
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'zulu'
+        java-version: '17'
+
+    - name: Set up Node.js environment
+      uses: actions/setup-node@v3
+      with:
+        # Version Spec of the version to use.  Examples: 10.x, 10.15.1, >=10.15.0
+        node-version: '24'
+    - name: Cache gradle dependencies
+      uses: actions/cache@v3
+      with:
+        path: |
+          ~/.gradle/caches
+          ~/.gradle/wrapper
+          ~/.android/build-cache
+        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
+        restore-keys: ${{ runner.os }}-gradle-
+
+    - name: Cache test modules
+      id: cache-test-modules
+      uses: actions/cache@v3
+      with:
+        path: ~/.sword
+        key: ${{ runner.os }}-test-modules # cache auto-removes if not accessed in 7 days. If data needs to refresh, change key name here (till https://github.com/actions/cache/issues/2 is addressed)
+
+    - name: Download test modules if not cached
+      if: steps.cache-test-modules.outputs.cache-hit != 'true'
+      run: |
+        wget ${{ secrets.DOWNLOAD_TEST_MODULES_URL }} -O ./testmods.zip.enc
+        openssl aes-256-cbc -d -a -pbkdf2 -in ./testmods.zip.enc -out ./testmods.zip -pass 'pass:${{ secrets.TEST_MODULE_ENCRYPTION_KEY }}'
+        mkdir -p $HOME/.sword
+        unzip -o -d $HOME/.sword ./testmods.zip
+
+    - name: Build with Gradle and run unit tests
+      run: ./gradlew --console plain testStandardGoogleplayDebugUnitTest
+
+    - name: Upload test results
+      uses: actions/upload-artifact@v4
+      if: ${{ always() }}
+      with:
+        name: unit-test-results
+        path: app/build/reports/**/*.html
+        retention-days: 5
+
+    - name: Before saving cache
+      run: |
+        rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+        rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+  run-instrument-tests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 10 # so that recent tags can be found
+        submodules: recursive
+
+    - name: Initialize jsword submodule with shallow clone
+      run: |
+        git submodule update --init --depth=1
+    - name: Set up JDK
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'zulu'
+        java-version: '17'
+
+    - name: Set up Node.js environment
+      uses: actions/setup-node@v3
+      with:
+        # Version Spec of the version to use.  Examples: 10.x, 10.15.1, >=10.15.0
+        node-version: '24'
+    - name: Cache gradle dependencies
+      uses: actions/cache@v3
+      with:
+        path: |
+          ~/.gradle/caches
+          ~/.gradle/wrapper
+          ~/.android/build-cache
+        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
+        restore-keys: ${{ runner.os }}-gradle-
+    - name: Enable KVM group perms
+      run: |
+        echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+        sudo udevadm control --reload-rules
+        sudo udevadm trigger --name-match=kvm
+    - name: Run instrumentation tests
+      uses: reactivecircus/android-emulator-runner@v2
+      with:
+        api-level: 31
+        arch: x86_64
+        disable-animations: true
+        disk-size: 1500M
+        heap-size: 512M
+        script: ./gradlew --console plain connectedStandardGooglePlayDebugAndroidTest
+
+    - name: Upload test results
+      uses: actions/upload-artifact@v4
+      if: ${{ always() }}
+      with:
+        name: instrument-test-results
+        path: app/build/reports/**/*.html
+        retention-days: 5
+
+    - name: Before saving cache
+      run: |
+        rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+        rm -fr $HOME/.gradle/caches/*/plugin-resolution/

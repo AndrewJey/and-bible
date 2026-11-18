@@ -1,0 +1,126 @@
+# Open in "My Notes" title. (just demonstrating developer note)
+bookmarks: Kirjanmerkit
+bookmarksAndNotes: Kirjanmerkit & Omat Merkinnät
+openMyNotes: Avaa Omissa Merkinnöissä
+openStudyPad: Avaa Opintoalustassa (%s)
+noteText: Alaviitteet (%s)
+noteTextWithoutType: Alaviitteet
+crossReferenceText: Ristiviitteet
+findAllOccurrences: Etsi kaikki esiintymät
+reportError: Raportoi virheestä
+errorTitle: Tapahtui virhe
+warningTitle: Varoitus
+normalTitle: Huomaa
+footnoteTypeStudy: Tutkimus
+footnoteTypeExplanation: Selitys
+footnoteTypeVariant: Muunnos
+footnoteTypeAlternative: Vaihtoehtoinen
+footnoteTypeTranslation: Käännös
+clearLog: Tyhjennä virheloki
+editTextPlaceholder: Napsauta muokataksesi tekstiä
+myDocumentEdit: Muokkaa sivua
+myDocumentEmptyPlaceholder: Aloita muokkaamalla tätä sivua napsauttamalla
+inputPlaceholder: Kirjoita tähän
+inputReference: Anna raamattuviite
+invalidReference: Jaetta ei löytynyt
+bookmarkAccurate: Kirjanmerkki luotiin dokumentissa %s
+bookmarkInaccurate: "Kirjanmerkin kirjatietoa ei ole tallennettu, sisältö näytetään dokumentissa %s."
+defaultBook: oletusraamattudokumentti
+ok: Ok
+yes: "Kyllä"
+ambiguousSelection: "Minkä toiminteen haluat tehdä?"
+cancel: Peruuta
+removeBookmarkConfirmationTitle: "Poista kirjanmerkki?"
+removeBookmarkConfirmation: "Oletko varma että haluat poistaa tämän kirjanmerkin?"
+createdAt: "Luotu: %s"
+lastUpdatedOn: "Viimeksi päivitetty: %s"
+strongsAndMorph: Määritelmä & Morfologia
+externalLink: Avaa ulkoinen linkki
+referenceLink: Avaa viittaus
+openFootnote: Avaa alaviite
+noMyNotesTitle: Ei merkintöjä tälle luvulle.
+noMyNotesDescription: >-
+  Pääset alkuun luomalla kirjanmerkkejä raamattudokumentissa. Kirjanmerkit näkyvät täällä ja voit lisätä omia merkintöjäsi niihin.
+emptyStudyPad: >-
+  Tyhjä opintoalusta. Aloita lisäämällä opintoalustaan tekstimerkintöjä tästä tai tekemällä kirjanmerkkejä tätä opintoalustaa vastaavaan kirjanmerkkiryhmään.
+doYouWantToDeleteEntry: "Poista opintoalustan merkintä?"
+removeStudyPadConfirmationTitle: "Poista opintoalustan merkintä?"
+dragHelp: Raahaa järjestääksesi uudelleen
+openAll: Avaa kaikki viittaukset
+editBookmarkPlaceholder: Napsauta muokataksesi tähän kirjanmerkkiin liittyviä merkintöjä
+onlyLabel: Vain ryhmämerkintä
+wholeBookmark: Koko kirjanmerkki
+assignLabelsMenuEntry1: Valitse tai muokkaa kirjanmerkkiryhmiä...
+favouriteLabels: Suosikkiryhmät
+recentLabels: Viimeaikaiset ryhmät
+bookmarkLabels: Kirjanmerkkiryhmät
+refParserHelp: Asenna moduuli %s tehdäksesi viittauksia muilla kuin englannin kielellä.
+openDownloads: Siirry lisäosien latauksiin
+verseShare: Jaa
+verseSpeak: Puhe
+verseCompare: Vertaa
+verseMemorize: Opettele
+verseNote: Muistiinpano
+verseMyNotes: Omat merkinnät
+verseParagraphBreak: Kappale
+verseShareLong: Jaa tämä jae
+verseCompareLong: Vertaa jaetta
+verseMemorizeLong: Opettele Raamatun jakeita
+addMemorizationTarget: Tavoite +
+addMemorizationTargetLong: Aseta opettelun tavoitteeksi
+removeMemorizationTarget: Tavoite -
+removeMemorizationTargetLong: Poista opettelun tavoite
+markAsMemorized: Merkitse opituksi
+markedAsMemorized: Opittu
+removeFromTargets: Tavoite -
+viewReadingProgress: Luku-/opetteluedistyminen
+viewReadingProgressSettings: Luku-/opetteluasetukset
+readingProgressPercent: "%s%%"
+readingProgressPage: "%s%% · %s/%s"
+readingProgressChapter: "%s%% · l. %s/%s"
+listenInLoop: Kuuntele silmukassa
+viewHelp: Näytä ohje
+verseNoteLong: Kirjoita muistiinpano
+verseParagraphBreakLong: Kappalejako
+addBookmark: Kirjanmerkki
+selectCustomIconTitle: Valitse oma kuvake
+bookmarkSettingsTitle: Kirjanmerkin asetukset
+subtitlePlaceholder: Alaotsikon teksti
+customIconLabel: Oma kuvake
+editActionLabel: Muokkaustoiminto
+editActionModeLabel: Tila
+editActionModeNone: Ei mitään
+editActionModeAppend: Lisää loppuun
+editActionModePrepend: Lisää alkuun
+editActionContentLabel: Sisältö
+editActionContentPlaceholder: Kirjoita dokumenttiin lisättävä teksti...
+experimentalFeatureTitle: Kokeellinen
+experimentalFeatureHelpTitle: Tietoa kokeellisista ominaisuuksista
+experimentalFeatureHelpContent: "Kokeelliset ominaisuudet ovat uusia toimintoja, joita kehitetään ja testataan edelleen. Ne eivät välttämättä toimi täydellisesti ja voivat muuttua merkittävästi tai poistua tulevissa sovellusversioissa."
+insertParagraphBreak: Lisää kappalejako
+insertSubtitle: Lisää alaotsikko
+xmlParseError: XML-jäsennysvirhe
+invalidTag: Virheellinen elementti
+invalidClosingTag: Virheellinen sulkeva elementti
+unmatchedClosingTag: Pariton sulkeva elementti
+unclosedTag: Sulkematon elementti
+unknownError: Tuntematon virhe
+wordBlur: Sanan sumennus
+wordScramble: Sanojen sekoitus
+wordType: Kirjoittaminen
+wordOrder: Järjestys
+typeEverything: Kirjoita kokonaiset sanat
+tapToStartTyping: Napsauta aloittaaksesi kirjoittamisen
+wordVisibility: Sanan näkyvyys
+wordVisibilityLight: Vaalea
+wordVisibilityDim: Himmeä
+wordVisibilityHidden: Piilotettu
+errorHeatmap: Virheiden lämpökartta
+hideUsedButtons: Piilota käytetyt sanapainikkeet
+more: Lisää
+llmAction: Tekoäly
+llmActionLong: Tekoälytoiminto
+aiDocumentRegenerate: Generoi uudelleen
+aiDocumentDelete: Poista
+aiGeneratedBy: "Luonut %s"
+aiGeneratedByWithModel: "Luonut %s (%s)"

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2022-2026 Martin Denham, Sykerö Software / Tuomas Airaksinen and the AndBible contributors.
+  ~
+  ~ This file is part of AndBible: Bible Study (http://github.com/AndBible/and-bible).
+  ~
+  ~ AndBible is free software: you can redistribute it and/or modify it under the
+  ~ terms of the GNU General Public License as published by the Free Software Foundation,
+  ~ either version 3 of the License, or (at your option) any later version.
+  ~
+  ~ AndBible is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+  ~ without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  ~ See the GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along with AndBible.
+  ~ If not, see http://www.gnu.org/licenses/.
+  -->
+
+<!-- Preference configuration
+
+ @author Martin Denham [mjdenham at gmail dot com]
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+	android:key="sync_settings">
+	<PreferenceCategory
+		android:key="sync_general"
+		android:title="@string/sync_general_settings"
+		>
+		<ListPreference
+			android:key="sync_adapter"
+			android:title="@string/sync_adapter"
+			android:icon="@drawable/ic_syncdb_24dp"
+			/>
+		<Preference
+			android:key="cloud_sync_reset"
+			android:title="@string/reset_sync"
+			android:summary="@string/prefs_reset_sync_summary"
+			android:icon="@drawable/baseline_logout_24"
+			/>
+		<Preference
+			android:key="cloud_sync_info"
+			android:title="@string/cloud_info"
+			android:icon="@drawable/ic_info_grey_24dp"
+			/>
+        <EditTextPreference
+            android:key="cloud_sync_server_url"
+            android:title="@string/auth_server_uri"
+            android:icon="@drawable/outline_shield_24"
+            />
+        <EditTextPreference
+            android:key="cloud_sync_username"
+            android:title="@string/auth_username"
+            android:icon="@drawable/outline_shield_24"
+            />
+        <EditTextPreference
+            android:key="cloud_sync_password"
+            android:title="@string/auth_password"
+            android:icon="@drawable/outline_shield_24"
+            />
+        <EditTextPreference
+            android:key="cloud_sync_folder_path"
+            android:title="@string/auth_folder_path"
+            android:summary="@string/auth_folder_path_summary"
+            android:icon="@drawable/outline_shield_24"
+            />
+	</PreferenceCategory>
+
+	<PreferenceCategory
+		android:key="sync_category"
+		android:title="@string/synchronization_categories"
+		>
+		<SwitchPreferenceCompat android:key="sync_enable_bookmarks"
+			android:title="@string/bookmarks"
+			android:summary="@string/bookmarks_contents"
+			android:defaultValue="false"
+			android:icon="@drawable/ic_bookmark_24dp"
+			/>
+		<SwitchPreferenceCompat android:key="sync_enable_workspaces"
+			android:title="@string/help_workspaces_title"
+			android:summary="@string/workspaces_contents"
+			android:defaultValue="false"
+			android:icon="@drawable/ic_baseline_workspace_24"
+			/>
+		<SwitchPreferenceCompat android:key="sync_enable_readingplans"
+			android:title="@string/reading_plans_plural"
+			android:summary="@string/reading_plans_content"
+			android:defaultValue="false"
+			android:icon="@drawable/ic_reading_plan_24dp"
+			/>
+		<SwitchPreferenceCompat android:key="sync_enable_mydocuments"
+			android:title="@string/my_documents_title"
+			android:summary="@string/my_documents_contents"
+			android:defaultValue="false"
+			android:icon="@drawable/ic_baseline_description_gray_24"
+			/>
+		<SwitchPreferenceCompat android:key="sync_enable_ai_settings"
+			android:title="@string/ai_settings_sync_title"
+			android:summary="@string/ai_settings_sync_contents"
+			android:defaultValue="false"
+			android:icon="@drawable/icon_robot"
+			/>
+		<SwitchPreferenceCompat android:key="sync_enable_progress"
+			android:title="@string/progress_sync_title"
+			android:summary="@string/progress_sync_contents"
+			android:defaultValue="false"
+			android:icon="@drawable/ic_baseline_check_circle_24"
+			/>
+		<SwitchPreferenceCompat android:key="sync_enable_documents"
+			android:title="@string/document_sync_title"
+			android:summary="@string/document_sync_contents"
+			android:defaultValue="false"
+			android:icon="@drawable/ic_baseline_description_gray_24" />
+	</PreferenceCategory>
+
+	<PreferenceCategory
+		android:key="document_sync_category"
+		android:title="@string/document_sync_category_title"
+		>
+		<SwitchPreferenceCompat
+			android:key="sync_documents_auto_download"
+			android:defaultValue="true"
+			android:title="@string/document_sync_auto_download_title"
+			android:summary="@string/document_sync_auto_download_summary"
+			android:icon="@drawable/ic_cloud_download_24dp" />
+		<SwitchPreferenceCompat
+			android:key="sync_documents_auto_upload"
+			android:defaultValue="true"
+			android:title="@string/document_sync_auto_upload_title"
+			android:summary="@string/document_sync_auto_upload_summary"
+			android:icon="@drawable/ic_cloud_upload_24dp" />
+		<SwitchPreferenceCompat
+			android:key="sync_documents_auto_delete"
+			android:defaultValue="true"
+			android:title="@string/document_sync_auto_delete_title"
+			android:summary="@string/document_sync_auto_delete_summary"
+			android:icon="@drawable/ic_delete_24dp" />
+		<SwitchPreferenceCompat
+			android:key="sync_documents_wifi_only"
+			android:defaultValue="true"
+			android:title="@string/document_sync_wifi_only_title"
+			android:summary="@string/document_sync_wifi_only_summary"
+			android:icon="@drawable/ic_wifi_24dp" />
+		<Preference
+			android:key="document_sync_manage"
+			android:title="@string/document_sync_manage_title"
+			android:summary="@string/document_sync_manage_summary"
+			android:icon="@drawable/ic_baseline_cloud_24" />
+	</PreferenceCategory>
+</PreferenceScreen>

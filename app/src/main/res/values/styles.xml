@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2022-2022 Martin Denham, Tuomas Airaksinen and the AndBible contributors.
+  ~
+  ~ This file is part of AndBible: Bible Study (http://github.com/AndBible/and-bible).
+  ~
+  ~ AndBible is free software: you can redistribute it and/or modify it under the
+  ~ terms of the GNU General Public License as published by the Free Software Foundation,
+  ~ either version 3 of the License, or (at your option) any later version.
+  ~
+  ~ AndBible is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+  ~ without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  ~ See the GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along with AndBible.
+  ~ If not, see http://www.gnu.org/licenses/.
+  -->
+
+<!-- Styles used in application
+ 
+ @author Martin Denham [mjdenham at gmail dot com]
+-->
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="InfoText" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_margin">10dip</item>
+    </style>
+    <style name="SplashTitleFont" parent="@android:style/TextAppearance.Large">
+        <item name="android:textColor">@color/grey_500</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+    <style name="SplashTopFont" parent="@android:style/TextAppearance.Large">
+        <item name="android:textColor">@color/grey_500</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+    <style name="SplashBottomFont" parent="@android:style/TextAppearance.Small">
+        <item name="android:textColor">@color/grey_500</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+    
+    <style name="SmallGreyText" parent="@android:style/TextAppearance.Small">
+        <item name="android:textColor">#C0C0C0</item>
+    </style>
+
+    <style name="TransportButtonTheme">
+        <item name="android:tint">?attr/transportButtonColor</item>
+    </style>
+    <style name="EditBookmarkLabelCategoryTitle" parent="@android:style/TextAppearance.Large">
+        <item name="android:paddingStart">2dip</item>
+        <item name="android:layout_marginTop">20dip</item>
+        <item name="android:paddingBottom">5dip</item>
+    </style>
+    <style name="EditBookmarkLabelItemTitle" parent="@android:style/TextAppearance.Small">
+        <item name="android:paddingStart">2dip</item>
+        <item name="android:paddingEnd">5dip</item>
+        <item name="android:paddingTop">8dip</item>
+        <item name="android:paddingBottom">8dip</item>
+    </style>
+    <style name="CustomIconButton" parent="@style/EditBookmarkLabelItemTitle">
+        <item name="android:layout_marginStart">8dip</item>
+        <item name="android:layout_marginTop">-10dip</item>
+        <item name="android:drawablePadding">10dip</item>
+        <item name="android:textAppearance">@style/EditBookmarkLabelItemTitle</item>
+    </style>
+    <style name="EditBookmarkLabelItemIcon">
+        <item name="android:scaleY">0.8</item>
+        <item name="android:scaleX">0.8</item>
+    </style>
+</resources>

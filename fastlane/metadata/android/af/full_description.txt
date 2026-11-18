@@ -1,0 +1,50 @@
+<b>Kragtige Bybelstudie instrument</b>
+
+"AndBible: Bybel Studie" is 'n kragtige, maklik om te gebruik, vanlyn Bybelstudie-toep vir Android — 'n veelsydige instrumentestel met hoë gehalte kenmerke wat baie studiestyle bedien, van ontspanne lees tot diepgaande navorsing. Meer as net 'n leser, dit is 'n instrument vir ernstige persoonlike studie.
+
+Ontwikkel deur Bybellesers, vir Bybellesers — 'n nie-winsgewende, oopbron gemeenskapsprojek wat heeltemal gratis is en geen advertensies bevat nie.
+
+'n Paar gewilde Bybelweergawes (van die vele beskikbaar) is KJV, NASB, NET, en ook gewilde kommentare soos Matthew Henry en John Gill.
+
+<b>Kragtige Bybelstudie-kenmerke</b>
+
+Die toepassing het baie insiggewende, oorspronklike kenmerke, wat 'n komplekse en diep Bybelstudie-ervaring gladder as ooit maak. Die mees opvallende kenmerke is soos volg:
+
+ * Verdeel teksaansigte wat vergelykende vertalings en konsultasiekommentare moontlik maak
+ * Werkruimtes laat verskeie Bybelstudie-opstellings toe met hul eie instellings
+ * Stong's integrasie laat Griekse en Hebreeuse woord analise toe
+ * Tik op enige skakel om gekoppelde kruisverwysings, voetnotas en kommentare (Gill, Matthew Henry ens. ...) of versamelings van kruisverwysings (Skat van Skrif kennis, TSKe) te volg.
+ * Opsionele KI-studie-agent (slegs op aanvraag — vereis jou eie API-sleutel vir 'n eksterne diens): verken jou geïnstalleerde kommentare en woordeboeke met KI-bystand in jou gekose taal, plus ander kreatiewe studie-werkvloeie. 'n Ingeboude toestemmingstelsel hou jou in volle beheer van wat die agent kan doen.
+ * Buigsame volteks-soektog oor een of meer Bybelvertalings tegelyk
+ * Gevorderde boekmerk & beklemtoon funksies met persoonlike studie notas
+ * Bestudeer blokke vir die toevoeging van notas en Bybel verwysings terwyl jy na preke luister.
+ * Lees- en memoriseringsbestuur: stel leesdoelwitte, hou vordering by, en memoriseer verse met interaktiewe Woordwarboel-, Woordorde-, Woordwasem- en Tik-Dit-modusse
+ * Gevorderde teks-na-spraak-spraak-boekmerke, wat 'n gladde Bybel beluister ervaring moontlik maak
+ * Sinkronisering oor toestelle: hou jou werkspasies, boekmerke, notas en leesvordering op datum oor al jou toestelle
+ * Groot biblioteek van dokumente: Bybelvertalings, teologiese kommentare, woordeboeke, kaarte en christelike boeke, wat meer as 1500 dokumente in meer as 700 tale beloop, wettig versprei deur Crosswire en ander SWAARDbewaarplekke.
+ * Inheemse ondersteuning vir MyBible, MySword en EPUB-lêers stel jou in staat om jou biblioteek selfs meer uit te brei.
+
+<b>Kom ons maak die beste Bybel toep saam!</b>
+
+AndBible is 'n oopbron gemeenskapsprojek. In die praktyk beteken dit dat enigiemand met geskikte vaardighede kan, en aangemoedig word om, by te dra tot die projek deur:
+
+ * ontwikkeling van nuwe kenmerke,
+ * toets nog nie vrygestelde kenmerke nie,
+ * hou gebruiker skoppelvlak vertalings op datum, en
+ * help om die module biblioteek uit te brei deur toestemmings van kopiereg houers te verkry, of deur dokumente na SWORD-formaat om te skakel.
+
+As jy 'n professionele sagteware-ingenieur of toetser is, oorweeg dit asseblief om by te dra tot die projek. Vir meer inligting oor hoe om by te dra, sien asseblief https://git.io/JUnaj.
+
+<b>Ondersteuning deur ontwikkelings tyd te koop!</b>
+
+As jy nie tyd of vaardighede vir projekbydraes het nie, kan jy ook projek ondersteun deur professionele ontwikkelaar se werk tyd te koop.
+
+Sien opsies: https://shop.andbible.org/
+
+<b>Skakels</b>
+
+ * Tuisblad: https://andbible.org
+ * Hou van AndBible op Facebook: https://www.facebook.com/AndBible/
+ * Ons Youtube kanaal: https://www.youtube.com/c/AndBible
+ * Algemene vrae: https://git.io/JJm8E
+ * Projekbladsy op Github: https://github.com/AndBible/and-bible

@@ -1,0 +1,74 @@
+# Long version of app name that will be displayed on Play Store. (max 30 characters)
+title: "AndBible: Kajian Alkitab"
+# Short promotional text, shown in Play Store (max 80 characters)
+short_description: "Alat kajian Alkitab berkuasa: ulasan, penanda buku, nota, alat AI"
+# Main (first) subtitle of the Play Store main (long) description text.
+subtitle_1: Alat Kajian Alkitab yang Berkuasa
+# Please add variables marked with curly braces also in your translation untranslated, in correct places!
+paragraph_1_1: >
+  "{{ title }}" ialah aplikasi kajian Alkitab luar talian yang berkuasa dan mudah digunakan untuk Android — set alat serba boleh dengan ciri-ciri berkualiti tinggi yang menyokong pelbagai gaya kajian, daripada pembacaan santai hingga penyelidikan mendalam. Lebih daripada sekadar pembaca, ia merupakan alat untuk kajian peribadi yang serius.
+paragraph_1_2: >
+  Dibangunkan oleh pembaca Alkitab, untuk pembaca Alkitab — projek komuniti sumber terbuka tanpa keuntungan, sepenuhnya percuma dan tanpa iklan.
+# You can also advertise here the best documents that are available in the app in your language.
+paragraph_1_3: >
+  Beberapa versi Alkitab popular (daripada banyak yang tersedia) ialah KJV, NASB, NET, dan juga ulasan popular seperti Matthew Henry dan John Gill.
+subtitle_2: Ciri Kajian Alkitab yang Berkuasa
+paragraph_2_1: >
+  Aplikasi ini mempunyai banyak ciri asli yang berwawasan, yang menjadikan pengalaman kajian Alkitab yang kompleks dan mendalam lebih lancar dari sebelumnya. Ciri-ciri yang paling ketara adalah seperti berikut:
+feature_01: Paparan teks pisah yang membolehkan perbandingan terjemahan dan rujukan ulasan
+feature_02: >
+  Ruang kerja membolehkan pelbagai persediaan kajian Alkitab dengan tetapan mereka sendiri
+feature_03: Integrasi Strong's membolehkan analisis perkataan Greek dan Ibrani
+# Please add variables marked with curly braces also in your translation untranslated, in correct places!
+feature_04: >
+  Ketik mana-mana pautan untuk mengikuti rujukan silang, nota kaki, dan ulasan ({{commentary_examples}}) atau koleksi rujukan silang ({{cross_reference_examples}}) yang berhiperpautan.
+# Examples of commentaries. You can add here also other commentaries of your language if they
+# are found in the app.
+commentary_examples: Gill, Matthew Henry dll.
+# Examples of cross-reference collections.
+cross_reference_examples: Treasure of Scripture Knowledge, TSKe
+feature_05: >
+  Teks ke pertuturan lanjutan dengan penanda buku baca, membolehkan pengalaman mendengar Alkitab yang lancar
+feature_06: >
+  Carian teks penuh yang fleksibel merentasi satu atau banyak terjemahan Alkitab secara serentak
+feature_07: Ciri penanda buku &amp; penyerlahan lanjutan dengan nota kajian peribadi
+feature_08: >
+  Penyegerakan merentas peranti: pastikan ruang kerja, penanda buku, nota, dan kemajuan bacaan anda diselaraskan pada semua peranti anda
+feature_09: >
+  Penjejakan bacaan dan hafalan: tetapkan matlamat bacaan, jejaki kemajuan, dan hafal ayat dengan mod interaktif Susun Perkataan, Tertib Perkataan, Kabur Perkataan, dan Taipkan
+# Please add variables marked with curly braces also in your translated, untranslated, in correct places!
+feature_10: >
+  Perpustakaan dokumen yang luas: terjemahan Alkitab, ulasan teologi, kamus, peta, dan buku Kristian, berjumlah lebih {{total_documents}} dokumen dalam lebih {{total_languages}} bahasa, diedarkan secara sah oleh Crosswire dan repositori SWORD lain.
+feature_10_1: >
+  Sokongan asli untuk fail MyBible, MySword dan EPUB membolehkan anda meluaskan perpustakaan anda lebih lagi.
+feature_11: >
+  Ejen kajian AI pilihan (perlu didayakan sendiri — memerlukan kunci API anda sendiri untuk perkhidmatan luar): jelajahi ulasan dan kamus yang anda pasang dengan bantuan AI dalam bahasa pilihan anda, serta aliran kerja kajian kreatif yang lain. Sistem kebenaran terbina dalam memastikan anda mengawal sepenuhnya apa yang boleh dilakukan oleh ejen tersebut.
+# In addition or in addition to the mentioned documents also some of the commercial/modern bible
+# versions / documents of your language that are not (yet) available in the app.
+unavailable_documents: ESV, NIV dan NKJV
+feature_12: >
+  Luar talian: satu-satunya masa anda memerlukan internet ialah untuk memuat turun dokumen.
+# UNUSED
+feature_13: Pad Kajian untuk menambah nota dan rujukan Alkitab semasa mendengar khotbah.
+subtitle_3: Mari buat aplikasi Alkitab terbaik bersama-sama!
+paragraph_3_1: >
+  AndBible adalah projek komuniti sumber terbuka. Pada praktiknya, ini bermakna sesiapa sahaja dengan kemahiran yang sesuai boleh, dan digalakkan untuk, menyumbang kepada projek dengan:
+contr_1: membangunkan ciri baharu,
+contr_2: menguji ciri yang belum dikeluarkan,
+contr_3: mengemaskinikan terjemahan antara muka pengguna, dan
+contr_4: >
+  membantu meluaskan perpustakaan modul dengan mendapatkan kebenaran dari pemegang hak cipta, atau dengan menukar dokumen ke format SWORD.
+# Please add variables marked with curly braces also in your translated, untranslated, in correct places!
+paragraph_4_1: >
+  Jika anda jurutera perisian atau penguji profesional, sila pertimbangkan untuk menyumbang kepada projek. Untuk maklumat lanjut tentang cara menyumbang, sila lihat {{how_to_contribute_url}}.
+subtitle_4: Pautan
+# Please add variables marked with curly braces also in your translated, untranslated, in correct places!
+link_1: "Laman utama: {{homepage_url}}"
+link_2: "Suka AndBible di Facebook: {{facebook_url}}"
+link_3: "Saluran Youtube kami: {{youtube_url}}"
+link_4: "Soalan Lazim: {{faq_url}}"
+link_5: "Halaman projek di Github: {{github_url}}"
+buy_title: Sokong dengan membeli masa pembangunan!
+buy_1: >
+  Jika anda tidak mempunyai masa atau kemahiran untuk sumbangan projek, anda juga boleh menyokong projek dengan membeli masa kerja pembangun profesional.
+buy_2: Lihat pilihan

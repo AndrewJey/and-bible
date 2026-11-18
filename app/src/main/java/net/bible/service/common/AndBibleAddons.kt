@@ -1,0 +1,144 @@
+/*
+ * Copyright (c) 2021-2026 Martin Denham, Sykerö Software / Tuomas Airaksinen and the AndBible contributors.
+ *
+ * This file is part of AndBible: Bible Study (http://github.com/AndBible/and-bible).
+ *
+ * AndBible is free software: you can redistribute it and/or modify it under the
+ * terms of the GNU General Public License as published by the Free Software Foundation,
+ * either version 3 of the License, or (at your option) any later version.
+ *
+ * AndBible is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+ * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with AndBible.
+ * If not, see http://www.gnu.org/licenses/.
+ */
+
+package net.bible.service.common
+
+import android.util.Log
+import net.bible.android.control.event.ABEventBus
+import net.bible.service.sword.AndBibleAddonFilter
+import org.crosswire.jsword.book.Book
+import org.crosswire.jsword.book.Books
+import java.io.File
+
+class ReloadAddonsEvent
+
+class ProvidedFont(val book: Book, val name: String, val path: String) {
+    val file: File get() = File(File(book.bookMetaData.location), path)
+}
+
+class ProvidedBackgroundImage(val book: Book, val name: String, val path: String) {
+    val file: File get() = File(File(book.bookMetaData.location), path)
+}
+
+class ProvidedReadingPlan(val book: Book, val fileName: String, val isDateBased: Boolean) {
+    val file: File get() = File(File(book.bookMetaData.location), fileName)
+}
+
+/** An add-on prompt pack, either from a SWORD module or a standalone CSV file. */
+class ProvidedPromptPack(val moduleName: String, val file: File)
+
+object AndBibleAddons {
+    private const val TAG = "AndBibleAddons"
+    private var _addons: List<Book>? = null
+    private val addons: List<Book> get() {
+        return _addons ?:
+            Books.installed().getBooks(AndBibleAddonFilter()).apply {
+                _addons = this
+            }
+    }
+
+    val providedFonts: Map<String, ProvidedFont> get() {
+        val fontsByName = mutableMapOf<String, ProvidedFont>()
+        for (book in addons) {
+            for (it in book.bookMetaData.getValues("AndBibleProvidesFont")?: emptyList()) {
+                val values = it.split(";")
+                val name = values[0]
+                val filename = values[1]
+                val provFont = ProvidedFont(book, name, filename)
+                if(provFont.file.canRead()) {
+                    fontsByName[name] = provFont
+                } else {
+                    Log.e("ProvidedFonts", "Could not read font file ${provFont.file}")
+                }
+            }
+        }
+        return fontsByName
+    }
+
+    val fontsByModule: Map<String, List<ProvidedFont>> get() {
+        val fontsByModule = mutableMapOf<String, MutableList<ProvidedFont>>()
+        for (it in providedFonts.values) {
+            val fonts = fontsByModule[it.book.initials] ?: mutableListOf<ProvidedFont>()
+                .apply {fontsByModule[it.book.initials] = this}
+            fonts.add(it)
+        }
+        return fontsByModule
+    }
+
+    /** Background-image add-on modules, keyed by module initials (one image per module). */
+    val providedBackgroundImages: Map<String, ProvidedBackgroundImage> get() {
+        val byModule = mutableMapOf<String, ProvidedBackgroundImage>()
+        for (book in addons) {
+            val marker = book.bookMetaData.getValues("AndBibleProvidesBackgroundImage")?.firstOrNull() ?: continue
+            val values = marker.split(";")
+            val provided = ProvidedBackgroundImage(book, values[0], values.getOrElse(1) { "" })
+            if (provided.file.canRead()) {
+                byModule[book.initials] = provided
+            } else {
+                Log.e(TAG, "Could not read background image file ${provided.file}")
+            }
+        }
+        return byModule
+    }
+
+    val providedReadingPlans: Map<String, ProvidedReadingPlan> get() {
+        val readingPlansByFileName = mutableMapOf<String, ProvidedReadingPlan>()
+        for (book in addons) {
+            for (fileName in book.bookMetaData.getValues("AndBibleProvidesReadingPlan")?: emptyList()) {
+                val isDateBased = book.bookMetaData.getProperty("AndBibleReadingPlanDateBased")?.equals("True", ignoreCase = true) == true
+                val planCode = File(File(book.bookMetaData.location), fileName).nameWithoutExtension
+                readingPlansByFileName[planCode] = ProvidedReadingPlan(book, fileName, isDateBased)
+            }
+        }
+        return readingPlansByFileName
+    }
+
+    /** Prompt packs from SWORD add-on modules (AndBibleProvidesPrompts property). Standalone CSVs are registered as SWORD modules by CsvPromptBook. */
+    val providedPromptPacks: List<ProvidedPromptPack> get() {
+        val packs = mutableListOf<ProvidedPromptPack>()
+        for (book in addons) {
+            val csvPath = book.bookMetaData.getProperty("AndBibleProvidesPrompts")
+            if (csvPath != null) {
+                val file = File(File(book.bookMetaData.location), csvPath)
+                if (file.canRead()) {
+                    packs.add(ProvidedPromptPack(book.initials, file))
+                } else {
+                    Log.e(TAG, "Could not read prompt pack file $file for module ${book.initials}")
+                }
+            }
+        }
+        return packs
+    }
+
+    fun clearCaches() {
+        _addons =null
+        ABEventBus.post(ReloadAddonsEvent())
+    }
+
+    val fontModuleNames: List<String> get() =
+        addons.filter { it.bookMetaData.getValues("AndBibleProvidesFont") != null }.map { it.initials }
+
+    val backgroundImageModuleNames: List<String> get() =
+        addons.filter { it.bookMetaData.getValues("AndBibleProvidesBackgroundImage") != null }.map { it.initials }
+
+    val featureModuleNames: List<String> get() =
+        addons.filter { it.bookMetaData.getValues("AndBibleProvidesFeature") != null }.map { it.initials }
+
+    val styleModuleNames: List<String> get() =
+        addons.filter { it.bookMetaData.getValues("AndBibleProvidesStyle") != null }.map { it.initials }
+}
+

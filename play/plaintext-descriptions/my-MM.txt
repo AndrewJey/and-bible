@@ -1,0 +1,50 @@
+စွမ်းအားမြင့် ကျမ်းစာလေ့လာရေး ကိရိယာ
+
+"AndBible: သမ္မာကျမ်းစာ" is a powerful, easy-to-use, offline Bible study app for Android — a versatile toolkit of high-quality features serving many study styles, from casual reading to in-depth research. More than a reader, it's a tool for serious personal study.
+
+Developed by Bible readers, for Bible readers — a non-profit, open-source community project that is completely free and contains no ads.
+
+ထင်ရှားသည့် ကျမ်းစာဗားရှင်းအချို့ (အများအပြား ရှိသည့်အနက်)ဖြစ်သည့်  KJV၊ NASBနှင့် NET တို့ရှိပြီး Matthew Henry နှင့် John Gill ကဲ့သို့သော ထင်ရှားသည့် အနက်ဖွင့်ကျမ်းများလည်း ရှိသည်။
+
+စွမ်းအားမြင့် ကျမ်းစာလေ့လာရေး အသွင်အပြင်များ
+
+ရှုပ်ထွေးပြီးနက်နဲသည့် ကျမ်းစာလေ့လာခြင်း အတွေ့အကြုံကို အရင်နှင့်မတူ ချောမွေ့စေရန် စွမ်းဆောင်ပေးသည့် ထိုးထွင်းအမြင်နှင့် မူရင်း အသွင်အပြင်များစွာ ဤအက်ပ်တွင် ရှိပါသည်။ အထင်ရှားဆုံး အသွင်အပြင်များမှာ အောက်ပါအတိုင်းဖြစ်သည်:
+
+ * ဘာသာပြန်များကို နှိုင်းယှဉ်ခြင်းနှင့် အနက်ဖွင့် ကျမ်းများ ဖတ်ရှုခြင်းကို လုပ်ဆောင်နိုင်သည့် စာသားခွဲ မြင်ကွင်းများ
+ * ကျမ်းစာလေ့လာခြင်း setup များကို ၎င်းတို့၏ ကိုယ်ပိုင်ဆက်တင်များနှင့်အတူ ခွင့်ပြုပေးသည့် လုပ်ငန်းခွင်များ
+ * Strong နှင့်ပေါင်းစပ်ခြင်းဖြင့် ဂရိနှင့် ဟီဘရူး စာလုံးများကို ခွဲခြမ်းလေ့လာနိုင်သည်။
+ * Tap any link to follow hyperlinked cross-references, footnotes, and commentaries (Gill, Matthew Henry အစရှိသဖြင့်) or cross-reference collections (Treasure of Scripture Knowledge, TSKe).
+ * မှတ်တမ်းများအားလုံးကိုတရားဝင် ဖြန့်ဖြူးနိုင်ရန် သို့မဟုတ် မူပိုင်ခွင့်ပိုင်ရှင်ထံမှ ခွင့်ပြုချက်များ ရယူပြီးဖြစ်ကြောင်းသေချာစေရန် မှတ်တမ်းများ အားလုံး၏ဇစ်မြစ်ကို သုတေသနလုပ်ထားပြီး ဖြစ်သည်။ ထို့ကြောင့်ပင် ဤအက်ပ်တွင် ESV, NIV နှင့် NKJV ကဲ့သို့သော မှတ်တမ်းများ မပါဝင်ခြင်းဖြစ်သည်း
+ * Flexible full-text search across one or many Bible translations simultaneously
+ * ကိုယ်ပိုင်လေ့လာရေးမှတ်စုများတွင် အဆင့်မြှင့်စာညှပ်ခြင်းများနှင့် ဟိုက်လိုက်အသွင်အပြင်များ
+ * တရားဟောချက်များနားထောင်နေစဉ်အတွင်း မှတ်စုများနှင့် ကျမ်းစာကိုးကားချက်များကို ပေါင်းထည့်ရန် လေ့လာရေးစာရွက်
+ * Reading and memorization tracking: set reading goals, track progress, and memorize verses with interactive Word Scramble, Word Order, Word Blur, and Type It modes
+ * စကားပြောစာညှပ်ဖြင့် အသံထွက်စေသည့် အဆင့်မြင့်စာသား။ ချောမွေ့သည့် ကျမ်းစာ နားထောင်ခြင်း အထိအတွေ့ကို ပေးစွမ်းနိုင်ပါသည်
+ * Cross-device sync: keep your workspaces, bookmarks, notes, and reading progress in sync across all your devices
+ * ကျယ်ဝန်းသည့် မှတ်တမ်းစာကြည့်တိုက်: ကျမ်းစာဘာသာပြန်များ၊ သီဩလော်ဂျီဆိုင်ရာ အနက်ဖွင့်ကျမ်းများ၊ အဘိဓာန်များ၊ မြေပုံများနှင့် ခရစ်ယာန် စာအုပ်များကို 1500 မှတ်တမ်းများတွင် 700 ဘာသာစကားများစွာဖြင့် Crosswire နှင့် အခြား SWORD သုတဘဏ်များမှ တရားဝင် ဖြန့်ဖြူးပါသည်။
+ * Native support for MyBible, MySword and EPUB files enables you to extend your library even more
+
+အကောင်းဆုံးကျမ်းစာအက်ပ်ကို အတူတစ်ကွ လုပ်ဆောင်ကြရအောင်။
+
+And Bible သည် အခမဲ့လူထုအခြေပြုလုပ်ငန်း တစ်ခု ဖြစ်သည်။ ဆိုလိုသည်မှာ လက်တွေ့တွင် တစ်စုံတစ်ယောက်သည် သင့်လျော်သည့် အရည်အချင်းရှိလျှင်ပါဝင်နိုင်ပြီး ပါဝင်ရန်၊ လုပ်ငန်းကို အောက်ပါနည်းလမ်းဖြင့် အထောက်အပံ့​ပေးရန် ဖိတ်ခေါ်လိုပါသည်။
+
+ * အသွင်အပြင်အသစ်များကို ဖွံ့ဖြိုးစေခြင်း
+ * မဖြန့်ချီရသေးသည့် အသွင်အပြင်များကို စမ်းသပ်ခြင်း
+ * နောက်ဆုံးပေါ် ကြားခံဘာသာပြန်များ အသုံးပြုသူကို ထိမ်းသိမ်းထားခြင်း အပြင်
+ * မူပိုင်ခွင့်ပိုင်ရှင်များထံမှ ခွင့်ပြုချက်များရယူခြင်း သို့မဟုတ် SWORD ပုံစံအမျိုးအစားသို့ မှတ်တမ်း များအား ပြောင်းလဲခြင်းအားဖြင့် သင်ခန်းစာ စာကြည့်တိုက်များကို ကူညီချဲ့ထွင်ပေးခြင်း
+
+သင်သည် ကျွမ်းကျင် ဆော့ဝဲလ်အင်ဂျင်နီယာ သို့မဟုတ် စမ်းသပ်သူဖြစ်လျှင် ကျေးဇူးပြုပြီး ဤလုပ်ငန်းကို ကူညီထောက်ပံ့ပေးရန် စဉ်းစားစေလိုပါသည်။ ကူညီထောက်ပံ့ရန် သတင်းအလက်ကို ပိုမိုသိရှိလိုပါလျှင် ကျေးဇူးပြုပြီး https://git.io/JUnaj ကို ကြည့်ပါ။
+
+Support by sponsoring development time!
+
+If you don't have time or skills for code contribution, you can support AndBible by sponsoring development time.
+
+See sponsorship options here:: https://shop.andbible.org/
+
+လင့်ခ်များ
+
+ * ပင်မစာမျက်နှာ: https://andbible.org
+ * And Bible ကို Facebook တွင် နှစ်သက်ပါ။: https://www.facebook.com/AndBible/
+ * သင့် Youtube ချာနယ်လ်: https://www.youtube.com/c/AndBible
+ * အမေးများသည့် မေးခွန်းများ: https://git.io/JJm8E
+ * Github တွင် စာမျက်နှာကို ဖွင့်ပါ: https://github.com/AndBible/and-bible

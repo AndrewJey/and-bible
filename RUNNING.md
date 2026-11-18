@@ -1,25 +1,37 @@
+# Compilar y probar este fork
 
+Este repositorio personal integra la rama `current-stable` de [AndBible/and-bible](https://github.com/AndBible/and-bible). El proyecto mantiene su licencia y atribuciones originales. Las instrucciones de desarrollo del original están en [AGENTS.md](AGENTS.md) y [CLAUDE.md](CLAUDE.md).
 
-<!-- local-development:start -->
-# Desarrollo local
+## Android Studio en Windows
 
-Puedes abrir este repositorio en VS Code, Antigravity o Sublime Text. El compilador y los servicios necesarios dependen del componente indicado abajo.
+1. Abre la raíz como proyecto Gradle y selecciona JDK 17 para Gradle. Instala los componentes Android indicados en `app/build.gradle.kts` mediante SDK Manager.
+2. Inicializa el motor JSword: `git submodule update --init --recursive`. No sustituyas su commit fijado por la última rama de JSword.
+3. Usa Node 24 con npm 11 para `app/bibleview-js`. Agrega su directorio a PATH antes de iniciar Gradle o Android Studio.
+4. Selecciona la variante `standardGithubDebug` para una APK de prueba sin claves de publicación.
 
-## Android / Gradle
+```powershell
+# JAVA_HOME debe apuntar al JDK 17; ANDROID_HOME, a tu SDK
+.\gradlew.bat assembleStandardGithubDebug
+.\gradlew.bat testStandardGoogleplayDebugUnitTest
+```
 
-Importa en Android Studio la carpeta que contiene `settings.gradle`. Hay que revisar juntos el wrapper, Android Gradle Plugin, JDK y SDK antes de sincronizar. Guarda la ruta del SDK en `local.properties`, ignorado por Git, y configura localmente las claves Maps/Firebase. Esta revisión no acredita todavía un APK válido.
+La APK queda en `app/build/outputs/apk/standardGithub/debug/`. Instálala en un emulador o dispositivo de prueba compatible usando Android Studio o `adb install -r <apk>`.
 
-## Componentes y validación
+## Frontend de la aplicación
 
-Inventario y compilaciones locales del 2026-11-15. Una compilación correcta no acredita todavía interacción, compatibilidad de base de datos, instalador ni despliegue.
+```powershell
+cd app/bibleview-js
+npm ci --ignore-scripts
+npm run test:ci
+npm run lint:ci
+npm run type-check:ci
+npm run build-debug
+```
 
-| Componente | Tipo / destino | Validación |
-| --- | --- | --- |
-| [and-bible/app/build.gradle](<and-bible/app/build.gradle>) | gradle | Sin ejecutar |
-| [and-bible/build.gradle](<and-bible/build.gradle>) | gradle | Sin ejecutar |
-| [and-bible/settings.gradle](<and-bible/settings.gradle>) | gradle | Sin ejecutar |
+Las pruebas JVM usan el modo nativo de SQLite para evitar las conexiones simuladas inválidas del modo antiguo en Windows. La suite completa también requiere módulos de prueba como ESV2011: el CI original los descarga mediante secretos y un archivo cifrado, según `.github/workflows/run-tests.yml`. Esos módulos no están incluidos en Git y no se reemplazaron por datos inventados. Sin ellos, algunas pruebas de contenido quedan pendientes aunque la APK compile.
 
-## Archivos ignorados
+La primera compilación descarga Gradle, dependencias y herramientas, y puede tardar bastante. No requiere descifrar el archivo de firma de producción para generar la variante Debug. Las funcionalidades con datos bíblicos necesitan descargar módulos desde la propia aplicación; compilar no comprueba todos los proveedores ni funciones de red.
 
-`.gitignore` excluye credenciales locales, estado del editor y salidas de las herramientas detectadas. No deja de versionar archivos que ya estaban en Git. Los manifiestos, archivos de bloqueo, recursos fuente y scripts de esquema forman parte del código.
-<!-- local-development:end -->
+## Sincronizar de nuevo
+
+El remoto `origin` es el fork personal. `upstream` apunta al original y su URL de push está deshabilitada para evitar publicar allí por accidente. Integra `upstream/current-stable` en una rama de trabajo y conserva el historial, las licencias y las mejoras locales. No uses un reset para actualizar el fork.

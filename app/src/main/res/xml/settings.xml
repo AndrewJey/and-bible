@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2022-2026 Martin Denham, Sykerö Software / Tuomas Airaksinen and the AndBible contributors.
+  ~
+  ~ This file is part of AndBible: Bible Study (http://github.com/AndBible/and-bible).
+  ~
+  ~ AndBible is free software: you can redistribute it and/or modify it under the
+  ~ terms of the GNU General Public License as published by the Free Software Foundation,
+  ~ either version 3 of the License, or (at your option) any later version.
+  ~
+  ~ AndBible is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+  ~ without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  ~ See the GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along with AndBible.
+  ~ If not, see http://www.gnu.org/licenses/.
+  -->
+
+<!-- Preference configuration
+ 
+ @author Martin Denham [mjdenham at gmail dot com]
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+	android:key="bible_display_pref">
+	<PreferenceCategory
+		android:key="dictionaries_category"
+		android:title="@string/prefs_dictionaries_cat">
+		<MultiSelectListPreference android:key="strongs_greek_dictionary"
+			android:title="@string/choose_strongs_greek_dictionary_title"
+			android:summary="@string/choose_strongs_greek_dictionary_summary"
+			android:icon="@drawable/ic_strongs_greek"
+			/>
+		<MultiSelectListPreference android:key="strongs_hebrew_dictionary"
+			android:title="@string/choose_strongs_hebrew_dictionary_title"
+			android:summary="@string/choose_strongs_hebrew_dictionary_summary"
+			android:icon="@drawable/ic_strongs_hebrew"
+			/>
+		<MultiSelectListPreference android:key="robinson_greek_morphology"
+			android:title="@string/choose_strongs_greek_morphology_title"
+			android:summary="@string/choose_strongs_greek_morphology_summary"
+			android:icon="@drawable/ic_morphology_24dp"
+			/>
+		<net.bible.android.view.widget.InverseMultiSelectListPreference android:key="disabled_word_lookup_dictionaries"
+			android:title="@string/choose_word_lookup_dictionary_title"
+			android:summary="@string/choose_word_lookup_dictionary_summary"
+			android:icon="@drawable/ic_dictionary_24dp"
+			/>
+	</PreferenceCategory>
+	<PreferenceCategory
+		android:title="@string/prefs_behavior_customization_cat"
+		>
+		<SwitchPreferenceCompat android:key="navigate_to_verse_pref"
+			android:title="@string/prefs_navigate_to_verse_title"
+			android:summary="@string/prefs_navigate_to_verse_summary"
+			android:defaultValue="false"
+			android:icon="@drawable/ic_chapter_verse_numbers_24dp"
+			/>
+		<SwitchPreferenceCompat android:key="open_links_in_special_window_pref"
+			android:title="@string/prefs_open_links_in_special_window_title"
+			android:summary="@string/prefs_open_links_in_special_window_summary"
+			android:icon="@drawable/ic_link_window_24dp"
+			android:defaultValue="true"/>
+		<SwitchPreferenceCompat android:key="screen_keep_on_pref"
+			android:title="@string/prefs_screen_keep_on_title"
+			android:summary="@string/prefs_screen_keep_on_summary"
+			android:defaultValue="false"
+			android:icon="@drawable/ic_baseline_light_mode_24"
+			/>
+		<SwitchPreferenceCompat android:key="double_tap_to_fullscreen"
+			android:title="@string/prefs_double_tap_to_fullscreen_title"
+			android:summary="@string/prefs_double_tap_to_fullscreen_summary"
+			android:icon="@drawable/ic_full_screen_24"
+			android:defaultValue="true"
+			/>
+		<SwitchPreferenceCompat android:key="auto_fullscreen_pref"
+			android:title="@string/auto_fullscreen"
+			android:summary="@string/auto_fullscreen_summary"
+			android:icon="@drawable/ic_full_screen_by_scrolling_24dp"
+			android:defaultValue="false"
+			/>
+		<ListPreference android:key="toolbar_button_actions"
+			android:title="@string/prefs_toolbar_button_action_title"
+			android:summary="@string/prefs_toolbar_button_action_summary"
+			android:entries="@array/prefs_toolbar_button_action_descriptions"
+			android:icon="@drawable/ic_action_for_button_press_24dp"
+			android:entryValues="@array/prefs_toolbar_button_action_values" />
+
+		<SwitchPreferenceCompat android:key="disable_two_step_bookmarking"
+			android:title="@string/prefs_disable_two_step_bookmarking_title"
+			android:summary="@string/prefs_disable_two_step_bookmarking_summary"
+			android:defaultValue="false"
+			android:icon="@drawable/ic_bookmark_24dp"
+			/>
+        <ListPreference android:key="bible_view_swipe_mode"
+            android:title="@string/prefs_bible_view_swipe_mode_title"
+            android:summary="@string/prefs_bible_view_swipe_mode_summary"
+            android:entries="@array/prefs_bible_view_swipe_mode_descriptions"
+            android:entryValues="@array/prefs_bible_view_swipe_mode_values"
+            android:icon="@drawable/ic_full_screen_by_scrolling_24dp"
+            android:defaultValue="CHAPTER"/>
+		<SwitchPreferenceCompat android:key="volume_keys_scroll"
+			android:title="@string/prefs_volume_keys_scroll_title"
+			android:summary="@string/prefs_volume_keys_scroll_summary"
+			android:defaultValue="true"
+			android:icon="@drawable/ic_baseline_volume_up_24"
+			/>
+		<ListPreference android:key="night_mode_pref3"
+			android:title="@string/prefs_night_mode_title"
+			android:summary="@string/prefs_night_mode_summary"
+			android:entries="@array/prefs_night_mode_descriptions"
+			android:entryValues="@array/prefs_night_mode_values"
+			android:icon="@drawable/ic_night_mode_switching_24dp"
+			android:defaultValue="manual"/>
+	</PreferenceCategory>
+	<PreferenceCategory
+		android:title="@string/prefs_display_customization_cat">
+
+		<Preference android:key="global_text_display_settings"
+			android:title="@string/global_text_display_settings_title"
+			android:summary="@string/global_text_display_settings_summary"
+			android:icon="@drawable/ic_text_format_white_24dp"
+			/>
+
+		<ListPreference android:key="locale_pref"
+			android:title="@string/prefs_interface_locale_title"
+			android:summary="@string/prefs_interface_locale_summary"
+			android:entries="@array/prefs_interface_locale_descriptions"
+			android:entryValues="@array/prefs_interface_locale_values"
+			android:icon="@drawable/ic_application_language_24dp"
+			android:defaultValue=""/>
+        <SwitchPreferenceCompat
+            android:key="disable_click_to_edit"
+            android:title="@string/prefs_disable_click_to_edit_title"
+            android:summary="@string/prefs_disable_click_to_edit_summary"
+            android:defaultValue="false"
+            android:icon="@drawable/ic_click_24dp"
+            />
+        <ListPreference android:key="notes_content_type"
+            android:title="@string/prefs_notes_content_type_title"
+            android:summary="@string/prefs_notes_content_type_summary"
+            android:entries="@array/prefs_notes_content_type_entries"
+            android:entryValues="@array/prefs_notes_content_type_values"
+            android:defaultValue="HTML"
+            android:icon="@drawable/ic_text_format_white_24dp"
+            />
+        <SeekBarPreference android:key="font_size_multiplier"
+            android:title="@string/pref_font_size_multiplier_title"
+            android:summary=""
+            android:defaultValue="100"
+            android:min="10"
+            android:max="500"
+            android:icon="@drawable/ic_font_size_grey_24dp"
+            />
+        <SwitchPreferenceCompat android:key="hide_status_bar"
+            android:title="@string/prefs_hide_status_bar_title"
+            android:summary="@string/prefs_hide_status_bar_summary"
+            android:icon="@drawable/ic_full_screen_24"
+            android:defaultValue="false"
+            />
+		<SwitchPreferenceCompat android:key="full_screen_hide_buttons_pref"
+			android:title="@string/full_screen_hide_buttons_pref_title"
+			android:summary="@string/full_screen_hide_buttons_pref_summary"
+			android:icon="@drawable/ic_hide_window_button_bar_24dp"/>
+			android:defaultValue="true"
+			/>
+		<SwitchPreferenceCompat android:key="hide_window_buttons"
+			android:title="@string/hide_window_buttons_title"
+			android:summary="@string/hide_window_buttons_summary"
+			android:icon="@drawable/ic_hide_window_buttons_24dp"
+			android:defaultValue="false"
+			/>
+		<SwitchPreferenceCompat android:key="hide_bible_reference_overlay"
+			android:title="@string/hide_bible_reference_overlay_title"
+			android:summary="@string/hide_bible_reference_overlay_summary"
+			android:icon="@drawable/ic_hide_bible_reference_overlay_24dp"
+   	  android:defaultValue="false"
+			/>
+		<SwitchPreferenceCompat android:key="show_active_window_indicator"
+			android:title="@string/active_window_indicator_title"
+			android:summary="@string/active_window_indicator_summary"
+            android:icon="@drawable/ic_active_window_24dp"
+            android:defaultValue="true"
+            />
+        <net.bible.android.view.widget.InverseMultiSelectListPreference android:key="disable_bible_bookmark_modal_buttons"
+            android:title="@string/prefs_in_window_bible_bookmark_modal_buttons_title"
+            android:summary="@string/prefs_in_window_bookmark_modal_buttons_description"
+            android:icon="@drawable/ic_one_tap_bible_24"
+            android:entries="@array/prefs_bible_bookmark_modal_action_names"
+            android:entryValues="@array/prefs_bible_bookmark_modal_action_ids"
+            />
+        <net.bible.android.view.widget.InverseMultiSelectListPreference android:key="disable_gen_bookmark_modal_buttons"
+            android:title="@string/prefs_in_window_gen_bookmark_modal_buttons_title"
+            android:summary="@string/prefs_in_window_bookmark_modal_buttons_description"
+            android:icon="@drawable/ic_one_tap_other_24"
+            android:entries="@array/prefs_gen_bookmark_modal_action_names"
+            android:entryValues="@array/prefs_gen_bookmark_modal_action_ids"
+            />
+	</PreferenceCategory>
+
+	<PreferenceCategory android:title="@string/prefs_eink_settings_cat">
+		<ListPreference android:key="display_color_mode"
+			android:title="@string/prefs_display_color_mode_title"
+			android:summary="@string/prefs_display_color_mode_summary"
+			android:entries="@array/prefs_display_color_mode_names"
+			android:entryValues="@array/prefs_display_color_mode_values"
+			android:defaultValue="normal"
+			android:icon="@drawable/ic_eink_24dp"
+			/>
+		<SwitchPreferenceCompat android:key="eink_mode"
+			android:title="@string/prefs_eink_display_title"
+			android:summary="@string/prefs_eink_display_summary"
+			android:defaultValue="false"
+			android:icon="@drawable/ic_eink_24dp"
+			/>
+		<SwitchPreferenceCompat android:key="disable_animations"
+			android:title="@string/prefs_disable_animations_title"
+			android:summary="@string/prefs_disable_animations_summary"
+			android:defaultValue="false"
+			android:icon="@drawable/ic_animate_24dp"
+			/>
+	</PreferenceCategory>
+
+	<PreferenceCategory android:title="@string/prefs_persecution_cat">
+		<Preference
+			android:key="discrete_help"
+			android:title="@string/prefs_persecuted_help"
+			android:summary="@string/prefs_persecuted_summary"
+			android:icon="@drawable/ic_warning_red_24dp"
+			/>
+		<SwitchPreferenceCompat android:key="discrete_mode"
+			android:title="@string/prefs_discrete_mode"
+			android:summary="@string/prefs_discrete_mode_desc"
+			android:defaultValue="false"
+			android:icon="@drawable/ic_calc_24"
+			/>
+		<SwitchPreferenceCompat android:key="show_calculator"
+			android:title="@string/prefs_show_calculator"
+			android:defaultValue="false"
+			android:icon="@drawable/ic_calc_smoke_screen"
+			/>
+		<EditTextPreference android:key="calculator_pin"
+			android:title="@string/prefs_calculator_pin"
+			android:summary="@string/prefs_calculator_pin_desc"
+			android:defaultValue="1234"
+			android:icon="@drawable/ic_calc_pin"
+			/>
+	</PreferenceCategory>
+	<PreferenceCategory android:title="@string/prefs_features_cat">
+		<Preference android:key="sync_settings_shortcut"
+			android:title="@string/cloud_sync_title"
+			android:summary="@string/sync_settings_shortcut_summary"
+			android:icon="@drawable/ic_syncdb_24dp"
+			/>
+		<Preference android:key="ai_settings_shortcut"
+			android:title="@string/ai_settings"
+			android:summary="@string/ai_settings_shortcut_summary"
+			android:icon="@drawable/icon_robot"
+			/>
+		<Preference android:key="reading_progress_settings_shortcut"
+			android:title="@string/reading_progress_settings"
+			android:summary="@string/reading_progress_settings_summary"
+			android:icon="@drawable/ic_baseline_check_circle_24"
+			/>
+	</PreferenceCategory>
+	<PreferenceCategory android:title="@string/prefs_advanced_settings_cat">
+		<MultiSelectListPreference android:key="experimental_features"
+			android:title="@string/prefs_experimental_features_title"
+			android:summary="@string/prefs_experimental_features_summary"
+			android:entries="@array/experimental_features_names"
+			android:entryValues="@array/experimental_features_values"
+			android:defaultValue="@null"
+			android:icon="@drawable/ic_bug_report_white_24dp"
+			/>
+		<SwitchPreferenceCompat android:key="enable_bluetooth_pref"
+			android:title="@string/prefs_enable_bluetooth_title"
+			android:summary="@string/prefs_enable_bluetooth_summary"
+			android:icon="@drawable/ic_baseline_media_bluetooth_on_24"
+			android:defaultValue="true"/>
+		<SwitchPreferenceCompat android:key="request_sdcard_permission_pref"
+			android:title="@string/prefs_request_sdcard_permission_title"
+			android:summary="@string/prefs_request_sdcard_permission_summary"
+			android:defaultValue="false"/>
+		<SwitchPreferenceCompat android:key="show_errorbox"
+			android:title="@string/prefs_show_error_box_title"
+			android:summary="@string/prefs_show_error_box_summary"
+			android:defaultValue="false"
+			android:icon="@drawable/ic_bug_report_white_24dp"
+			/>
+		<Preference android:key="open_links"
+			android:title="@string/open_bible_links_title"
+			android:summary="@string/open_bible_links_summary"
+			android:defaultValue="false"
+			android:icon="@drawable/ic_link_black_24dp"
+			/>
+		<Preference android:key="crash_app"
+			android:title="@string/crash_app"
+			android:summary="@string/crash_app_summary"
+			android:icon="@drawable/ic_bug_report_white_24dp"
+			/>
+	</PreferenceCategory>
+</PreferenceScreen>

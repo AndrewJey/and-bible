@@ -1,0 +1,50 @@
+<b>Ampleksa aplikaĵo por studi Biblion</b>
+
+"AndBible: Studi Biblion" estas potenca, facile uzebla, eksterreta aplikaĵo por studi Biblion sub Android — versatila ilaro de altkvalitaj ebloj, kiuj servas multajn studstilojn, de simpla legado ĝis profunda esploro. Pli ol nura legilo, ĝi estas ilo por serioza persona studado.
+
+Ellaborita de Biblio-legantoj, por Biblio-legantoj — neprofitcela, malfermkoda komunuma projekto, kiu estas tute senpaga kaj ne enhavas reklamojn.
+
+Esperanta Londona Biblio.
+
+<b>Potencaj ebloj de la aplikaĵo</b>
+
+La aplikaĵo distingiĝas per pluraj sagaj, originalaj ebloj, kiuj plifaciligas profundan studadon de Biblio. La plej gravaj trajtoj estas:
+
+ * dividi vidon de teksto por kompari tradukojn kaj legi komentarojn
+ * laborspacoj ebligantaj havi plurajn mediojn por studi Biblion, ĉiu kun propraj agordoj
+ * numeroj de Strong por analizi vortojn en greka kaj hebrea
+ * tuŝu iun ajn ligilon por sekvi hiperligitajn krucreferencojn, piednotojn kaj komentarojn (nedisponeblaj en EO) aŭ kolektojn de krucreferencoj (nedisponeblaj en EO)
+ * laŭvola AI-studagento (nur per propra elekto — postulas vian propran API-ŝlosilon por ekstera servo): esploru viajn instalitajn komentarojn kaj vortarojn kun helpo de AI en la lingvo de via elekto, plus aliaj kreemaj studfluoj. Enkonstruita permes-sistemo lasas vin plene regi tion, kion la agento povas fari.
+ * fleksebla plenteksta serĉado tra unu aŭ pluraj Biblio-tradukoj samtempe
+ * ampleksaj ebloj por krei legosignojn kaj emfazi tekston kun personaj notoj
+ * “notblokoj” por aldoni notojn kaj referencojn dum aŭskulti predikojn
+ * spurado de legado kaj parkerigado: difinu legocelojn, sekvu progreson kaj parkerigu versojn per interagaj reĝimoj Vortmiksaĵo, Vortordo, Vortmalklarigo kaj Tajpu Ĝin
+ * teksto-al-parolo kun legosignoj por senbare aŭskulti Biblion
+ * sinkronigado inter aparatoj: tenu viajn laborspacojn, legosignojn, notojn kaj legoprogreson sinkronaj inter ĉiuj viaj aparatoj
+ * granda biblioteko de dokumentoj: tradukoj, teologiaj komentaroj, vortaroj, mapoj, kristanismaj libroj, pli ol 1500 dokumentoj en 700 lingvoj, laŭleĝe distribuataj de per CrossWire kaj per aliaj SWORD-deponejoj
+ * subteno por moduloj MyBible, MySword kaj dosieroj EPUB por eĉ pli plivastigi vian bibliotekon
+
+<b>Ni kune faru la plej bonan apon por legi Biblion!</b>
+
+AndBible estas malfermkoda plurhoma projekto. Tio ĉi signifas, ke ĉiu (kun necesaj scipovoj) povas kaj estas instigata por kontribui al la projekto per:
+
+ * programi novajn eblojn;
+ * testi beta-eblojn;
+ * traduki la programon;
+ * helpi plivastigi la bibliotekon de moduloj per ricevi permesojn de kopirajt‑posedantoj aŭ konverti dokumentojn al la formo SWORD.
+
+Se vi estas profesia programisto aŭ testanto, bonvolu konsideri kontribui al la projekto. Pliaj informoj pri kiel kontribui troviĝas ĉe https://git.io/JUnaj
+
+<b>Subtenu per aĉeti labortempon de programisto!</b>
+
+Se mankas al vi tempo aŭ scipovoj por kontribui al la projekto, vi povas subteni ĝin per aĉeti labortempon de profesia programisto.
+
+Pliaj informoj: https://shop.andbible.org/
+
+<b>Ligiloj</b>
+
+ * hejmpaĝo: https://andbible.org
+ * ŝatu la apon AndBible ĉe https://www.facebook.com/AndBible/
+ * nia YouTube-kanalo: https://www.youtube.com/c/AndBible
+ * oftaj demandoj (en la angla) https://git.io/JJm8E
+ * projekt-paĝo ĉe GitHub: https://github.com/AndBible/and-bible

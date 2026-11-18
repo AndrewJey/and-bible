@@ -1,46 +1,63 @@
+*.iml
+.gradle
+/local.properties
+/keystore.properties
+.DS_Store
+/build
+/captures
+/.idea
+/app/huawei
+/app/samsung
+/app/amazon
+/app/standardAccrescent
+/app/release
+/app/bibleview-js/node_modules/
+/app/bibleview-js/.idea/
+/app/src/main/assets/web/.idea/
+/app/src/main/assets/web/.sourcemaps/
+/app/src/main/assets/web/loader.js
+/app/bibleview-js/dist/
+/db/build/
+*.env.*
+/projectFilesBackup/
+/app/src/main/assets/web/bibleview-js/
+/tmp/
+/ai-local/
+/wiki/
+/readthedocs/
+/.playwright-mcp/
+/.worktrees/
+
+# Sandbox mode dotfiles & git internals
+.bash_profile
+.bashrc
+.profile
+.zprofile
+.zshrc
+.claude/*
+!.claude/skills/
+.playwright-mcp/
+.gitconfig
+.mcp.json
+.ripgreprc
+HEAD
+config
+hooks
+objects
+refs
+/.kotlin/
 
 
-# local-development:start
-# Local editor state and temporary files
+# Personal workspace files (keep sanitized examples tracked)
 .vs/
 *.suo
 *.user
-*.userosscache
-*.sln.docstates
 *.sublime-workspace
-.idea/
-*~
-*.swp
-*.swo
 .DS_Store
 Thumbs.db
-Desktop.ini
-# Local credentials; keep sanitized example configuration in Git
 .env
 .env.*
 !.env.example
 !.env.sample
 !.env.template
 !.env.*.example
-*.p12
-*.pfx
-*.jks
-*.keystore
-*.publishsettings
-*.pubxml.user
-local.settings.json
-id_rsa
-id_ed25519
-# Java / NetBeans / Gradle output
-nbproject/private/
-build/
-dist/
-target/
-*.class
-.gradle/
-.cxx/
-.externalNativeBuild/
-local.properties
-*.iml
-.local-build/
-# local-development:end

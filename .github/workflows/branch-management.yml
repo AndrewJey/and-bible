@@ -1,0 +1,47 @@
+name: Branch Management
+
+# Disabled for now: current-stable is the branch where development happens, and we
+# don't use the other long-lived branches much (only feature branches). The automatic
+# merge into release/main branches is therefore not needed at the moment.
+# Only manual triggering is left enabled so the workflow can be re-activated easily.
+on:
+  workflow_dispatch:
+  # push:
+  #   branches: [ current-stable ] # do not trigger on branches that are pushed below, unless additional checking is done, or else it will cause endless loop
+
+permissions: {}
+
+jobs:
+  build:
+    environment: And Bible branch management
+    runs-on: ubuntu-24.04
+    steps:
+    - name: Checkout current-stable branch
+      uses: actions/checkout@v3
+      with:
+        token: ${{ secrets.TOKEN_CI }}
+        fetch-depth: 50
+        submodules: recursive
+
+    - name: Initialize jsword submodule with shallow clone
+      run: |
+        git submodule update --init --depth=1
+
+    - name: Get variables
+      id: variables
+      run: |
+        echo ::set-output name=RELEASE_BRANCH::$((grep -w current-stable | cut -d= -f2) < ./.github/workflows/config.properties)
+        echo ::set-output name=MAIN_BRANCH::$((grep -w main-branch | cut -d= -f2) < ./.github/workflows/config.properties)
+
+    - name: Merge to release and develop
+      run: |
+        git fetch --no-tags
+        git config pull.rebase true
+        git config user.email "ci@andbible.github.io"
+        git config user.name "Auto CI"
+        git checkout ${{ steps.variables.outputs.RELEASE_BRANCH }}
+        git merge --ff-only -v --commit origin/current-stable
+        git push -v origin ${{ steps.variables.outputs.RELEASE_BRANCH }}
+        git checkout ${{ steps.variables.outputs.MAIN_BRANCH }}
+        git merge -v --commit origin/current-stable -m "Automatic merge branch 'current-stable' into '${{ steps.variables.outputs.MAIN_BRANCH }}'"
+        git push -v origin ${{ steps.variables.outputs.MAIN_BRANCH }}

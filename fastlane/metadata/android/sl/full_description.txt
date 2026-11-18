@@ -1,0 +1,50 @@
+<b>Močno orodje za proučevanje Biblije</b>
+
+"AndBible: Proučevanje Biblije" je zmogljiva, preprosta aplikacija za proučevanje Biblije na Androidu, ki deluje brez povezave — vsestransko orodje s kakovostnimi funkcijami za različne načine proučevanja, od sproščenega branja do poglobljenega raziskovanja. Več kot le bralnik — pravi pripomoček za resno osebno proučevanje.
+
+Razvili so jo bralci Biblije za bralce Biblije — neprofiten odprtokoden projekt skupnosti, popolnoma brezplačen in brez oglasov.
+
+Nekaj priljubljenih Biblij (od številnih, ki so na voljo) so KJV, NASB, NET in priljubljeni komentarji, kot sta Matthew Henry in John Gill. Na voljo so tudi slovenski prevodi Biblij: SloKJV, SloChraska in SloStritar ter Henohova knjiga.
+
+<b>Zmogljive funkcije za proučevanje Biblije</b>
+
+Aplikacija ima številne vpogledne, izvirne funkcije, zaradi česar je kompleksna in poglobljena izkušnja preučevanja Biblije bolj gladka kot kdaj koli prej. Najbolj opazne lastnosti so naslednje:
+
+ * Razdeljeni pogledi besedila omogočajo primerjavo prevodov in svetovanje komentarjev
+ * Delovni prostori s svojimi nastavitvami omogočajo več nastavitev proučevanja Biblije
+ * Strong-ova števila omogočajo grško in hebrejsko besedno analizo
+ * Tapnite katero koli povezavo, da sledite navzkrižnim referencam, opombam in komentarjem (Gill, Matthew Henry itd.) ali zbirkam navzkrižnih referenc (Zakladnica znanja Božje besede - Treasure of Scripture Knowledge, TSK).
+ * Neobvezen UI pomočnik za proučevanje (samo po izrecni privolitvi — potreben je vaš lastni ključ API za zunanjo storitev): raziskujte nameščene komentarje in slovarje s pomočjo umetne inteligence v izbranem jeziku, ob drugih ustvarjalnih načinih proučevanja. Vgrajen sistem dovoljenj vam zagotavlja popoln nadzor nad tem, kaj sme pomočnik početi.
+ * Prilagodljivo iskanje po celotnem besedilu v enem ali več prevodih Biblije hkrati
+ * Napredne funkcije zaznamkov in poudarjanja z osebnimi študijskimi opombami
+ * Študijske beležnice za dodajanje opomb in biblijskih referenc med poslušanjem pridig.
+ * Sledenje branju in pomnjenju: postavite si cilje branja, spremljajte napredek in si zapomnite vrstice z interaktivnimi načini Premešane besede, Vrstni red besed, Zameglitev besed in Vtipkaj.
+ * Napredna pretvorba besedila v govor z zaznamki za govor, kar omogoča nemoteno izkušnjo poslušanja Biblije - ni še za slovenščino.
+ * Sinhronizacija med napravami: ohranjajte delovne prostore, zaznamke, opombe in napredek branja usklajene na vseh svojih napravah
+ * Ogromna knjižnica dokumentov: prevodi Biblije, komentarji, slovarji, zemljevidi in krščanske knjige, skupaj več kot 1500 dokumentov v več 700 jezikih, ki jih zakonito distribuira Crosswire in druge SWORD shrambe.
+ * Vgrajena podpora datotekam MyBible, MySword in ePUB vam omogoča, da še bolj razširite svojo knjižnico.
+
+<b>Skupaj naredimo najboljšo biblijsko aplikacijo!</b>
+
+And Bible je projekt odprtokodne skupnosti. V praksi to pomeni, da lahko vsak, ki ima ustrezna znanja, k projektu prispeva in ga spodbuja z:
+
+ * razvojem novih funkcij,
+ * testiranjem še neobjavljenih funkcij,
+ * posodabljanjem prevodov uporabniškega vmesnika in
+ * pomoč pri razširitvi knjižnice modulov s pridobivanjem dovoljenj imetnikov avtorskih pravic ali s pretvorbo dokumentov v SWORD obliko.
+
+Če ste poklicni inženir ali preizkuševalec programske opreme, razmislite o sodelovanju pri projektu. Za več informacij o prispevanju glejte https://git.io/JUnaj.
+
+<b>Podprite jo z nakupom časa za razvoj!</b>
+
+Če nimate časa ali znanja za sodelovanje pri projektu, lahko projekt podprete tudi z nakupom delovnega časa profesionalnega razvijalca.
+
+Oglejte si možnosti: https://shop.andbible.org/
+
+<b>Povezave</b>
+
+ * Domača stran: https://andbible.org
+ * Like AndBible on Facebook: https://www.facebook.com/AndBible/
+ * Naš Youtube kanal: https://www.youtube.com/c/AndBible
+ * Pogosto zastavljena vprašanja: https://git.io/JJm8E
+ * Projektna stran na Githubu: https://github.com/AndBible/and-bible

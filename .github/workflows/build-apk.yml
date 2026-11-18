@@ -1,0 +1,126 @@
+name: Build APK when adding tag
+
+on:
+  push:
+    tags:
+      - 'test-*'
+      - 'alpha-*'
+      - 'beta-*'
+      - 'production-*'
+
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    environment: And Bible Builds
+    runs-on: ubuntu-24.04
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 10 # so that recent tags can be found
+        submodules: recursive
+
+    - name: Initialize jsword submodule with shallow clone
+      run: |
+        git submodule update --init --depth=1
+    - name: Set up JDK
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'zulu'
+        java-version: '17'
+
+    - name: Set up Node.js environment
+      uses: actions/setup-node@v3
+      with:
+        # Version Spec of the version to use.  Examples: 10.x, 10.15.1, >=10.15.0
+        node-version: '24'
+
+    - name: Cache gradle dependencies
+      uses: actions/cache@v3
+      with:
+        path: |
+          ~/.gradle/caches
+          ~/.gradle/wrapper
+          ~/.android/build-cache
+        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
+        restore-keys: ${{ runner.os }}-gradle-
+
+    - name: Check/set alpha version suffix
+      if: contains(github.ref, 'refs/tags/alpha-')
+      run: |
+        sed -i 's/\(android:versionName="[0-9]*.[0-9]*.[0-9]*\)/\1-alpha/' ./app/src/main/AndroidManifest.xml
+
+#    - name: Check/set beta version suffix
+#      if: contains(github.ref, 'refs/tags/beta-')
+#      run: |
+#        sed -i 's/\(android:versionName="[0-9]*.[0-9]*.[0-9]*\)/\1-beta/' ./app/src/main/AndroidManifest.xml
+
+    - name: Get variables
+      id: tag_name
+      run: |
+        echo TAG=${GITHUB_REF#refs/tags/} >> $GITHUB_OUTPUT
+        grep versionName ./app/src/main/AndroidManifest.xml | cut -d\" -f2 > VNAME
+        echo VERSION_NAME=$(cat VNAME) >> $GITHUB_OUTPUT
+        echo RELEASE_TITLE=$( if [[ $GITHUB_REF =~ test- ]]; then echo "Test release $(cat VNAME)"; else echo "Release $(cat VNAME)"; fi ) >> $GITHUB_OUTPUT
+        # Changelog filenames use the versionCode (fastlane/F-Droid convention),
+        # e.g. 1099.txt, not the versionName 5.1.1099.txt.
+        VCODE=$(grep versionCode ./app/src/main/AndroidManifest.xml | grep -o '[0-9]*')
+        echo "./fastlane/metadata/android/en-US/changelogs/${VCODE}.txt" > CLPATH
+        if [[ -f $(cat CLPATH) ]]; then cp $(cat CLPATH) RELEASENOTES.txt; else cat > ./RELEASENOTES.txt; fi
+
+    - name: Build with Gradle
+      run: ./gradlew --console plain assembleStandardGithubRelease assembleDiscreteGithubRelease
+
+    - name: Sign apks
+      if: contains(github.ref, 'refs/tags/')
+      env: 
+        TAG_NAME: ${{ steps.tag_name.outputs.TAG }}
+      run: |
+        echo ${{ secrets.KEYSTORE_BASE64 }} | base64 --decode > keystore.jks
+        $ANDROID_SDK_ROOT/build-tools/34.0.0/apksigner sign --ks keystore.jks --ks-pass 'pass:${{ secrets.KEYSTORE_PASSPHRASE }}' --key-pass 'pass:${{ secrets.KEY_PASSPHRASE }}' --out $GITHUB_WORKSPACE/andbible-$TAG_NAME.apk app/build/outputs/apk/standardGithub/release/*-unsigned.apk
+        $ANDROID_SDK_ROOT/build-tools/34.0.0/apksigner sign --ks keystore.jks --ks-pass 'pass:${{ secrets.KEYSTORE_PASSPHRASE }}' --key-pass 'pass:${{ secrets.KEY_PASSPHRASE }}' --out $GITHUB_WORKSPACE/calc-$TAG_NAME.apk app/build/outputs/apk/discreteGithub/release/*-unsigned.apk
+        rm -f keystore.jks
+    - name: Create release
+      if: contains(github.ref, 'refs/tags/')
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        TAG_NAME: ${{ steps.tag_name.outputs.TAG }}
+        VERSION_NAME: ${{ steps.tag_name.outputs.VERSION_NAME }}
+        RELEASE_TITLE: ${{ steps.tag_name.outputs.RELEASE_TITLE }}
+      with:
+        tag_name: ${{ env.TAG_NAME }}
+        release_name: ${{ env.RELEASE_TITLE }}
+        body_path: ./RELEASENOTES.txt
+        prerelease: true
+
+    - name: Upload Standard release Apk
+      if: contains(github.ref, 'refs/tags/')
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        TAG_NAME: ${{ steps.tag_name.outputs.TAG }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./andbible-${{ env.TAG_NAME }}.apk
+        asset_name: andbible-${{ env.TAG_NAME }}.apk
+        asset_content_type: application/vnd.android.package-archive
+    - name: Upload Discrete release Apk
+      if: contains(github.ref, 'refs/tags/')
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        TAG_NAME: ${{ steps.tag_name.outputs.TAG }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./calc-${{ env.TAG_NAME }}.apk
+        asset_name: calculator-${{ env.TAG_NAME }}.apk
+        asset_content_type: application/vnd.android.package-archive
+
+    - name: Before saving cache
+      run: |
+        rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+        rm -fr $HOME/.gradle/caches/*/plugin-resolution/

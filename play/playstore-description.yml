@@ -1,0 +1,92 @@
+# Long version of app name that will be displayed on Play Store. (max 30 characters)
+title: "AndBible: Bible Study"
+# Short promotional text, shown in Play Store (max 80 characters)
+short_description: "Powerful Bible study toolkit: commentaries, bookmarks, notes, AI tools"
+# Main (first) subtitle of the Play Store main (long) description text.
+subtitle_1: Powerful Bible Study tool
+# Please add variables marked with curly braces also in your translation untranslated, in correct places!
+paragraph_1_1: >
+  "{{ title }}" is a powerful, easy-to-use, offline Bible study app for Android — a versatile
+  toolkit of high-quality features serving many study styles, from casual reading to in-depth
+  research. More than a reader, it's a tool for serious personal study.
+paragraph_1_2: >
+  Developed by Bible readers, for Bible readers — a non-profit, open-source community project
+  that is completely free and contains no ads.
+# You can also advertise here the best documents that are available in the app in your language.
+paragraph_1_3: >
+  A few popular Bible versions (of the many available) are KJV, NASB, NET, and also popular
+  commentaries like Matthew Henry and John Gill.
+subtitle_2: Powerful Bible Study features
+paragraph_2_1: >
+  The application has many insightful, original features, that makes a complex and deep Bible study
+  experience smoother than ever. The most notable features are as follows:
+feature_01: Split text views that enable comparing translations and consulting commentaries
+feature_02: Workspaces allow multiple Bible study setups with their own settings
+feature_03: Strong's integration allows Greek and Hebrew word analysis
+# Please add variables marked with curly braces also in your translation untranslated, in correct places!
+feature_04: >
+  Tap any link to follow hyperlinked cross-references, footnotes, and commentaries
+  ({{commentary_examples}}) or cross-reference collections ({{cross_reference_examples}}).
+# Examples of commentaries. You can add here also other commentaries of your language if they
+# are found in the app.
+commentary_examples: Gill, Matthew Henry etc. 
+# Examples of cross-reference collections.
+cross_reference_examples: Treasure of Scripture Knowledge, TSKe
+feature_05: Advanced text to speech with speak bookmarks, enabling a smooth Bible listening experience
+feature_06: Flexible full-text search across one or many Bible translations simultaneously
+feature_07: Advanced bookmarking & highlighting features with personal study notes
+feature_08: >
+  Cross-device sync: keep your workspaces, bookmarks, notes, and reading progress in sync
+  across all your devices
+feature_09: >
+  Reading and memorization tracking: set reading goals, track progress, and memorize verses with interactive Word Scramble, Word Order, Word Blur, and Type It modes
+# Please add variables marked with curly braces also in your translated, untranslated, in correct places!
+feature_10: >
+  Vast library of documents: Bible translations, theological commentaries, dictionaries, maps, and
+  christian books, totaling over {{total_documents}} documents in over {{total_languages}} languages,
+  legally distributed by Crosswire and other SWORD repositories. 
+feature_10_1: >
+  Native support for MyBible, MySword and EPUB files enables you to extend your library even more.
+feature_11: >
+  Optional AI study agent (opt-in only — requires your own API key for an external service):
+  explore your installed commentaries and dictionaries with AI assistance in your chosen language,
+  plus other creative study workflows. A built-in permission system keeps you in full control
+  of what the agent can do.
+# In addition or in addition to the mentioned documents also some of the commercial/modern bible
+# versions / documents of your language that are not (yet) available in the app.
+unavailable_documents: ESV, NIV and NKJV
+feature_12: >
+  Offline: the only time you need internet is for downloading documents.
+# UNUSED
+feature_13: >
+  Study Pads for adding notes and Bible references while listening to sermons.
+subtitle_3: Let’s make the best Bible app together!
+paragraph_3_1: >
+  AndBible is an open-source community project. In practice, this means that anyone with
+  suitable skills can, and is encouraged to, contribute to the project by:
+contr_1: developing new features,
+contr_2: testing not-yet-released features,
+contr_3: keeping user interface translations up-to-date, and
+contr_4: helping to extend the module library by obtaining permissions from copyright holders, or by converting documents to SWORD format.
+# Please add variables marked with curly braces also in your translated, untranslated, in correct places!
+paragraph_4_1: If you are a professional software engineer or tester, please consider contributing to
+  the project. For more information on how to contribute, please see {{how_to_contribute_url}}.
+subtitle_4: Links
+# Please add variables marked with curly braces also in your translated, untranslated, in correct places!
+link_1: >
+  Homepage: {{homepage_url}}
+link_2: >
+  Like AndBible on Facebook: {{facebook_url}}
+link_3: >
+  Our Youtube Channel: {{youtube_url}}
+link_4: >
+  Frequently Asked Questions: {{faq_url}}
+link_5: >
+  Project page on Github: {{github_url}}
+buy_title: >
+  Support by buying development time!
+buy_1: >
+  If you don't have time or skills for project contributions, you can also support 
+  project by buying professional developer working time.
+buy_2: >
+  See options

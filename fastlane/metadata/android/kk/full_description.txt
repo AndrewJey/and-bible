@@ -1,0 +1,50 @@
+<b>Киелі кітапты зерттеудің Мықты құралы</b>
+
+"AndBible: Киелі Кітап+" is a powerful, easy-to-use, offline Bible study app for Android — a versatile toolkit of high-quality features serving many study styles, from casual reading to in-depth research. More than a reader, it's a tool for serious personal study.
+
+Developed by Bible readers, for Bible readers — a non-profit, open-source community project that is completely free and contains no ads.
+
+Киелі кітаптың бірнеше танымал нұсқалары (ең қол жетімділері) - KJV, NASB, NET, сонымен қатар Мэттью Генри мен Джон Гилл сияқты танымал түсініктемелері де бар.
+
+<b>Киелі кітапты зерттеудің мықты мүмкіндіктері</b>
+
+Қосымшаның көптеген қызықты және өзіндік ерекшеліктері бар, бұл Киелі кітапты күрделі және терең зерттеуге бұрынғыдан да жеңіл етеді. Ең көрнекті ерекшеліктері төменде көрсетілген:
+
+ * Аудармаларды салыстыруға және түсіндірмелер арқылы кеңес алуға мүмкіндік беретін мәтіндік көріністерге бөлу
+ * Қолданбаның жұмыс кеңістігі Киелі кітапты зерттеуде бірнеше реттеулерді орнатуға және олармен қолдануға мүмкіндіктер береді
+ * Strong интеграциясы грек және еврей сөздерін талдауға мүмкіндік береді
+ * Айқас сілтемелерге, ескертпелерге және түсіндірмелерге (Гилл, Мэттью Генри және т.б.) немесе айқас сілтемелер жинақтарына (Жазбалар туралы білімнің қазынасы, TSKe) өту үшін кез келген сілтемені түртіңіз.
+ * Optional AI study agent (opt-in only — requires your own API key for an external service): explore your installed commentaries and dictionaries with AI assistance in your chosen language, plus other creative study workflows. A built-in permission system keeps you in full control of what the agent can do.
+ * Flexible full-text search across one or many Bible translations simultaneously
+ * Жетілдірілген белгілеулер мен ерекшелеулерді жеке зерттеу жазбаларында қолдану
+ * Уағыздарды тыңдау кезінде жазбалар мен Киелі кітапқа сілтемелер қосуға арналған оқу тақталары.
+ * Reading and memorization tracking: set reading goals, track progress, and memorize verses with interactive Word Scramble, Word Order, Word Blur, and Type It modes
+ * Жетілдірілген түрлендірулер және қосымша белгілеулермен мәтінді дыбысты етіп шығару, бұл Киелі кітапты жайлы тыңдауға мүмкіндік береді
+ * Cross-device sync: keep your workspaces, bookmarks, notes, and reading progress in sync across all your devices
+ * Құжаттардың көлемді кітапханасы: Киелі Кітаптың аудармалары, теологиялық пікірлер, түсіндірмелер, сөздіктер, карталар және мәсіхшілік кітаптар, 700 әр-түрлі тілдерде Crosswire және SWORD репозиторийлерінде заңды түрде таратылатын көптеген 1500 құжаттар.
+ * MyBible, MySword және EPUB файлдары жергілікті қолдау кітапханаңызды одан әрі кеңейтуге мүмкіндік береді.
+
+<b>Ең жақсы Киелі Кітап қолданбасын бірге жасайық!</b>
+
+AndBible – бұл ашық коды бар қауымдық жоба. Іс жүзінде бұл сәйкес дағдылары бар кез келген адам жобаға келесі жолдармен үлес қоса алады және ынталандыра алады:
+
+ * жаңа мүмкіндіктерді дамыту,
+ * әлі шығарылмаған функцияларды тексеру,
+ * пайдаланушы интерфейсінің аудармаларын жаңартып отыру және
+ * авторлық құқық иелерінен рұқсат алу немесе құжаттарды SWORD форматына түрлендіру арқылы кітапхана модулін кеңейтуге көмектесу.
+
+Егер сіз кәсіби бағдарламашы-инженер немесе сынақшы болсаңыз, жобаға өз үлесіңізді қосуды қарастырыңыз. Қатысу туралы қосымша ақпарат алу үшін https://git.io/JUnaj қараңыз.
+
+<b>Әзірлеу уақытын сатып алу арқылы қолдау көрсетіңіз!</b>
+
+Егер сізде жобаға үлес қосуға уақытыңыз немесе дағдыларыңыз болмаса, кәсіби әзірлеушінің жұмыс уақытын сатып алу арқылы жобаны қолдауға болады.
+
+Варианттарды көру: https://shop.andbible.org/
+
+<b>Сілтемелер</b>
+
+ * Негізгі бет: https://andbible.org
+ * Facebook-те AndBible сияқты: https://www.facebook.com/AndBible/
+ * Біздің Youtube каналымыз: https://www.youtube.com/c/AndBible
+ * Жиі қойылатын сұрақтар: https://git.io/JJm8E
+ * Github-дағы жоба парақшасы: https://github.com/AndBible/and-bible

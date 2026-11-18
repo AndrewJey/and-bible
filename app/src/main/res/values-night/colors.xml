@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2020-2022 Martin Denham, Tuomas Airaksinen and the AndBible contributors.
+  ~
+  ~ This file is part of AndBible: Bible Study (http://github.com/AndBible/and-bible).
+  ~
+  ~ AndBible is free software: you can redistribute it and/or modify it under the
+  ~ terms of the GNU General Public License as published by the Free Software Foundation,
+  ~ either version 3 of the License, or (at your option) any later version.
+  ~
+  ~ AndBible is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+  ~ without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  ~ See the GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along with AndBible.
+  ~ If not, see http://www.gnu.org/licenses/.
+  -->
+
+<resources>
+
+    <color name="bible_reference_overlay">#DE5A5A5A</color>
+
+    <color name="bar_window_button_text_colour">#939393</color>
+    <color name="bar_window_button_icon_tint">@color/bar_window_button_text_colour</color>
+    <color name="bar_window_button_category_tint">@color/bar_window_button_text_colour</color>
+    <color name="bar_window_button_background_colour">#2E2E2E</color>
+    <color name="bar_window_button_background_colour_visible">#6A6A6A</color>
+    <color name="bar_window_button_stroke_color">#686868</color>
+
+    <color name="status_bar">@color/black</color>
+
+    <color name="window_button_text_colour">#32FFFFFF</color>
+
+    <color name="navigation_bar">@color/black</color>
+    <color name="high_contrast">@color/white</color>
+    <color name="background_color">@color/black</color>
+    <color name="disabled_background">#454545</color>
+    <color name="background_color_60">#99000000</color>
+    <color name="actionbar_background">@color/actionbar_background_night</color>
+</resources>

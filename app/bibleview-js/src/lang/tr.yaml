@@ -1,0 +1,126 @@
+# Open in "My Notes" title. (just demonstrating developer note)
+bookmarks: Yer İmleri
+bookmarksAndNotes: Yer İmleri ve Notlarım
+openMyNotes: Notlarım’da Aç
+openStudyPad: Çalışma Defterinde Aç (%s)
+noteText: Dipnotlar (%s)
+noteTextWithoutType: Dipnotlar
+crossReferenceText: Göndermeler
+findAllOccurrences: Kelimenin tüm oluşlarını bul
+reportError: Hata bildir
+errorTitle: Hata oluştu
+warningTitle: Uyarı
+normalTitle: Lütfen dikkat
+footnoteTypeStudy: Çalışma
+footnoteTypeExplanation: Açıklama
+footnoteTypeVariant: Varyant
+footnoteTypeAlternative: Alternatif
+footnoteTypeTranslation: Çeviri
+clearLog: Hata günlüğünü temizle
+editTextPlaceholder: Metni düzenlemek için dokunun
+myDocumentEdit: Sayfayı düzenle
+myDocumentEmptyPlaceholder: Düzenlemeye başlamak için dokunun
+inputPlaceholder: Buraya yazın
+inputReference: Kutsal Kitap referansını girin
+invalidReference: Ayet bulunamadı
+bookmarkAccurate: Yer imi %s içinde oluşturuldu
+bookmarkInaccurate: "Yer imi kitap bilgileri içermiyormuş, içerik %s üzerinde gösterilecek."
+defaultBook: varsayılan Kutsal Kitap belgesi
+ok: Tamam
+yes: "Evet"
+ambiguousSelection: "Hangi eylemi gerçekleştirmek istiyorsunuz?"
+cancel: İptal
+removeBookmarkConfirmationTitle: "Yer imini kaldırsın mı?"
+removeBookmarkConfirmation: "Bu yer imini kaldırmak istediğinizden emin misiniz?"
+createdAt: "Oluşturma: %s"
+lastUpdatedOn: "Son güncelleme: %s"
+strongsAndMorph: Tanım ve Morfoloji
+externalLink: Harici bağlantıyı aç
+referenceLink: Referans bağlantısını aç
+openFootnote: Dipnot aç
+noMyNotesTitle: Bu bölüm için Notlarım yok.
+noMyNotesDescription: >-
+  Bir Kutsal Kitap üzerinde yer imleri oluşturarak başlayın. Yer imleri daha sonra burada görünecek ve bunlara kişisel notlarınızı ekleyebilirsiniz.
+emptyStudyPad: >-
+  Boş çalışma defteri. Burada metin girişleri oluşturarak veya bu çalışma defterine karşılık gelen bir yer imi etiketi ile yer imleri oluşturarak bu çalışma defterine ekleme yapmaya başlayın.
+doYouWantToDeleteEntry: "Bu çalışma defteri sililsin mi?"
+removeStudyPadConfirmationTitle: "Çalışma pedi kaldıralsın mı?"
+dragHelp: Yeniden sıralamak için sürükleyin
+openAll: Tüm referansları açın
+editBookmarkPlaceholder: Bu yer iminin Notlarımı düzenlemek için dokunun
+onlyLabel: Sadece etiket
+wholeBookmark: Tüm yer imi
+assignLabelsMenuEntry1: Etiketleri seçin veya düzenleyin…
+favouriteLabels: Favori Etiketler
+recentLabels: Güncel Etiketler
+bookmarkLabels: Yer imi etiketleri
+refParserHelp: İngilizce dışında dillerde referansları kullanmak için lütfen %s modülünü yükleyin.
+openDownloads: Eklenti indirmelerine git
+verseShare: Paylaş
+verseSpeak: Sesli Oku
+verseCompare: Karşılaştır
+verseMemorize: Ezberleyin<br>
+verseNote: Not
+verseMyNotes: Notlarım
+verseParagraphBreak: Paragraf
+verseShareLong: Bu ayeti paylaş
+verseCompareLong: Ayet karşılaştırması
+verseMemorizeLong: Kutsal Kitap ayetlerini ezberleyin<br>
+addMemorizationTarget: Hedef +
+addMemorizationTargetLong: Ezberleme hedefi olarak ayarla
+removeMemorizationTarget: Hedef -
+removeMemorizationTargetLong: Ezberleme hedefini kaldır
+markAsMemorized: Ezberlenmiş olarak işaretle
+markedAsMemorized: Ezberlenmiş
+removeFromTargets: Hedef -
+viewReadingProgress: Okuma/Ezberleme İlerlemesi
+viewReadingProgressSettings: Okuma/Ezberleme Ayarları
+readingProgressPercent: "%s%%"
+readingProgressPage: "%s%% · %s/%s"
+readingProgressChapter: "%s%% · böl. %s/%s"
+listenInLoop: Döngüde dinle
+viewHelp: Yardımı görüntüle
+verseNoteLong: Bir not yazın
+verseParagraphBreakLong: Paragraf sonu
+addBookmark: Yer imi
+selectCustomIconTitle: Özel işaretçi simgesi seç
+bookmarkSettingsTitle: Yer imi ayarlarını yapılandır
+subtitlePlaceholder: Alt başlık metni
+customIconLabel: Özel simge
+editActionLabel: Düzenleme eylemi
+editActionModeLabel: Mod
+editActionModeNone: Hiçbiri
+editActionModeAppend: Metin ekle (sona)
+editActionModePrepend: Metin ekle (başa)
+editActionContentLabel: İçerik
+editActionContentPlaceholder: Belgeye eklenecek metni girin...
+experimentalFeatureTitle: Deneysel
+experimentalFeatureHelpTitle: Deneysel Özellikler Hakkında
+experimentalFeatureHelpContent: "Deneysel özellikler, hâlâ geliştirme ve test aşamasında olan yeni yeteneklerdir. Mükemmel çalışmayabilirler ve gelecekteki uygulama sürümlerinde önemli ölçüde değişebilir veya kaldırılabilirler."
+insertParagraphBreak: Paragraf sonu ekle
+insertSubtitle: Alt başlık ekle
+xmlParseError: XML ayrıştırma hatası
+invalidTag: Geçersiz etiket
+invalidClosingTag: Geçersiz kapanış etiketi
+unmatchedClosingTag: Eşleşmeyen kapanış etiketi
+unclosedTag: Kapatılmamış etiket
+unknownError: Bilinmeyen hata
+wordBlur: Bulanıklaştır
+wordScramble: Karıştır
+wordType: Tür
+wordOrder: Sıra
+typeEverything: Tam kelimeleri yaz
+tapToStartTyping: Yazmaya başlamak için buraya dokunun
+wordVisibility: Kelime görünürlüğü
+wordVisibilityLight: Açık
+wordVisibilityDim: Soluk
+wordVisibilityHidden: Gizli
+errorHeatmap: Hata ısı haritası
+hideUsedButtons: Kullanılan kelime düğmelerini gizle
+more: Daha fazla
+llmAction: Yapay Zeka
+llmActionLong: Yapay Zeka Eylemi
+aiDocumentRegenerate: Yeniden oluştur
+aiDocumentDelete: Sil
+aiGeneratedBy: "%s tarafından oluşturuldu"
+aiGeneratedByWithModel: "%s (%s) tarafından oluşturuldu"

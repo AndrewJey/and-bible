@@ -1,0 +1,1994 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--
+  ~ Copyright (c) 2022-2026 Martin Denham, Sykerö Software / Tuomas Airaksinen and the AndBible contributors.
+  ~
+  ~ This file is part of AndBible: Bible Study (http://github.com/AndBible/and-bible).
+  ~
+  ~ AndBible is free software: you can redistribute it and/or modify it under the
+  ~ terms of the GNU General Public License as published by the Free Software Foundation,
+  ~ either version 3 of the License, or (at your option) any later version.
+  ~
+  ~ AndBible is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+  ~ without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  ~ See the GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along with AndBible.
+  ~ If not, see http://www.gnu.org/licenses/.
+  -->
+
+<!-- Application text
+
+ @author Martin Denham [mjdenham at gmail dot com]
+-->
+<resources>
+    <string name="app_name_andbible">AndBible</string>
+    <string name="app_name_short">Bible Study</string>
+    <string name="app_name_medium">Bible Study (AndBible)</string>
+    <string name="app_name_long">AndBible: Bible Study</string>
+
+    <string name="version_text">Version %s</string>
+    <string name="no_sdcard_error">Please insert an SD card and restart application.</string>
+
+    <!-- Main menu -->
+    <string name="menu">Menu</string>
+    <string name="chooseBook">Document</string>
+    <string name="selectPassage">Passage</string>
+    <string name="search">Find</string>
+    <string name="settings">Application preferences</string>
+    <string name="history">History</string>
+    <string name="speak">Speak</string>
+    <string name="help">Help</string>
+    <!-- Help dialog strings (phase 3 UI Help links) -->
+    <string name="help_read_more_link">Read more in the manual</string>
+    <string name="help_full_documentation_link">Browse the full documentation</string>
+    <string name="help_prompt_edit_text">Custom prompts let you create reusable AI instructions for your study. Set a name, description, template, the contexts where it should appear, and optionally a custom provider/model. Built-in prompts cannot be edited directly — use \"Copy to customize\" to create your own version.</string>
+    <string name="help_tool_info_text">AI tools are specialised functions the AI can call to read your data or make changes on your behalf. Read tools (verses, commentaries, dictionaries, bookmarks) never require permission. Write tools (creating bookmarks, notes, study pad entries) are gated by the permission system.</string>
+    <string name="help_ai_settings_text">AI Settings is where you manage your prompts and categories. From here you can create new prompts, organise them into categories, import/export prompts as CSV, install add-on prompt packs, and reach the AI connection settings.</string>
+    <string name="help_ai_connection_text">Configure your AI providers, models, permissions and other connection options here. Each provider needs its own API key. You can add multiple providers and select a default model.</string>
+    <string name="help_ai_providers_text">Manage AI providers (Google Gemini, OpenAI, Anthropic, etc.). Each provider needs its own API key. You can add multiple providers and assign different ones to specific prompts.</string>
+    <string name="help_ai_models_text">Manage models for this provider. You can refresh the model list from the provider\'s API to pick up new releases, or add a model name manually if it is not in the fetched list.</string>
+    <string name="help_ai_document_filter_text">Limit which Bibles, commentaries and other modules the AI agent can read. By default the AI sees all installed modules; filtering helps reduce noise and cost when you only want it to consider specific sources.</string>
+    <string name="help_global_tool_permissions_text">Configure permissions for individual AI tools. For each read tool, choose whether the AI may use it (Enabled or Disabled). For each write tool, choose Always allow, Always deny, or Ask (which falls back to the global permission mode set in AI Connection settings).</string>
+    <string name="help_reading_progress_text">Your Bible reading and memorization progress at a glance. Mark chapters as read manually with the \"Mark as read\" button, or enable automatic tracking. Memorize exercises also feed into this view.</string>
+    <string name="help_memorize_text">The Memorize view helps you learn passages by heart. Use Word Blur, Word Scramble, Word Type or Word Order to practise. Successful exercises automatically mark verses as memorized (this can be disabled).</string>
+    <string name="information">Information</string>
+    <string name="other">Other</string>
+    <string name="contact">Contact</string>
+    <string name="help_and_tips">Help &amp; tips</string>
+    <string name="administration">Administration</string>
+    <string name="rate_application">Rate &amp; Review</string>
+    <string name="chooce_document">Choose Document</string>
+
+    <!-- Passage navigation -->
+    <string name="choosePassageBookName">Choose Book</string>
+    <string name="choosePassageChapterName">Choose Chapter</string>
+    <string name="choosePassageVerseName">Choose Verse</string>
+    <string name="bible">Bible</string>
+    <string name="deuterocanonical">Deuterocanonical</string>
+
+    <!--  Search -->
+    <string name="search_index">Search Index</string>
+    <string name="index_creation_required">An index is required to search.</string>
+    <string name="create_index_for">An index is required to search. \n\nCreate index for %s?</string>
+    <string name="rebuild_index_for">Rebuild index for %s?</string>
+    <string name="indexing_wait_msg">When indexing has completed you will be taken to the search screen.</string>
+    <string name="index_create">Create</string>
+    <string name="rebuild_index">Rebuild index</string>
+    <string name="search_in">Find in %s</string>
+    <string name="do_in_background">Continue in background</string>
+    <string name="rebuild_index_button">Rebuild</string>
+    <string name="creating_index_for">Creating index for %s…</string>
+    <!-- X results in module Y -->
+    <string name="search_with_results2">%1$s results in %2$s</string>
+
+    <!-- Tasks -->
+    <string name="progress_status">Progress</string>
+    <string name="task_kill_warning">These long running tasks may terminate if you switch to another application before they finish.</string>
+    <string name="no_tasks_running">There are no tasks currently being executed.</string>
+
+    <!-- Search -->
+    <string name="search_words_group_prompt">Find verses</string>
+    <string name="search_all_words">All words</string>
+    <string name="search_any_word">Any word</string>
+    <string name="search_phrase">Phrase</string>
+    <string name="search_fts_query">Raw query syntax</string>
+    <string name="search_result_count">%d matches found</string>
+    <string name="search_showing_first">Too many matches.  Showing first %d</string>
+    <string name="search_bible_section_group_prompt">Search Where</string>
+    <string name="search_all_bible">Whole Bible</string>
+    <string name="search_new_testament">New Testament</string>
+    <string name="search_old_testament">Old Testament</string>
+    <string name="search_current_book">Current book</string>
+    <string name="error_executing_search">Invalid search query</string>
+    <string name="type_text_or_bible_reference">Type text or bible reference</string>
+    <!-- Open (bible reference X) -->
+    <string name="go_to_ref">Open %s</string>
+    <!-- Finx "(keywords x)", keywords based on text selection -->
+    <string name="search_what">Find \"%s\"</string>
+    <!-- Multi-translation search -->
+    <string name="search_translations">Translations</string>
+    <string name="choose_translations">Choose translations…</string>
+    <string name="multi_search_results">%1$d verses in %2$d translations</string>
+    <string name="search_index_not_created">no index</string>
+
+    <!-- Preferences -->
+    <string name="prefs_show_verseno_title">Chapter &amp; verse numbers</string>
+    <string name="prefs_show_verseno_summary">Show chapter &amp; verse numbers</string>
+
+    <string name="prefs_e_ink_mode_title">Black &amp; white mode</string>
+    <string name="prefs_eink_mode_summary">Use application in monochrome mode (no colors), making it more suitable for E-ink devices.</string>
+    <string name="prefs_display_color_mode_title">Color mode</string>
+    <string name="prefs_display_color_mode_summary">Choose how colors are displayed. Color e-ink keeps a black &amp; white base but shows bookmark colors, the active-window indicator and helper lines in color — for color e-ink screens.</string>
+    <string name="prefs_display_color_mode_normal">Normal</string>
+    <string name="prefs_display_color_mode_bw">Black &amp; white</string>
+    <string name="prefs_display_color_mode_color_eink">Color e-ink</string>
+    <string name="prefs_eink_settings_cat">E-ink settings</string>
+    <string name="prefs_eink_display_title">E-ink features</string>
+    <string name="prefs_eink_display_summary">Enable e-ink specific features (page scroll buttons, scroll helper lines)</string>
+
+    <string name="prefs_disable_animations_title">Disable animations</string>
+    <string name="prefs_disable_animations_summary">Disable various animations such as smooth scrolling. </string>
+
+    <string name="prefs_disable_click_to_edit_title">Disable Study Pad click-to-edit</string>
+    <string name="prefs_disable_click_to_edit_summary">Requires using the edit button to edit notes in the Study Pad.</string>
+
+    <string name="prefs_notes_content_type_title">Format for new bookmark notes</string>
+    <string name="prefs_notes_content_type_summary">Text format used when creating new bookmark notes and Study Pad entries</string>
+    <string name="notes_content_type_html">Rich text (HTML)</string>
+    <string name="notes_content_type_markdown">Markdown</string>
+
+
+
+
+    <string name="prefs_verse_per_line_summary">Show each verse on a different line</string>
+    <string name="prefs_show_bookmarks_summary">Untick to hide all bookmarks</string>
+
+    <string name="prefs_show_mynotes_summary">Show icon in verses with My Note</string>
+    <string name="prefs_show_strongs_summary">Links to Greek &amp; Hebrew definitions</string>
+    <string name="prefs_show_morphology_summary">Show Robinson\'s Greek morphology</string>
+    <string name="prefs_section_title_summary">Show non-canonical section titles</string>
+    <string name="prefs_red_letter_summary">Show words of Christ in red</string>
+
+    <string name="prefs_verse_per_line_title">One verse per line</string>
+    <string name="prefs_show_bookmarks_title">Show bookmarks</string>
+    <string name="prefs_show_mynotes_title">Show My Note icons</string>
+    <string name="prefs_show_footnotes_title">Footnotes</string>
+    <string name="prefs_show_xrefs_title">Cross references</string>
+    <string name="prefs_show_footnotes_summary">Show footnotes, if they are available in the document</string>
+    <string name="prefs_show_footnotes_inline_title">Footnotes inline</string>
+    <string name="prefs_show_footnotes_inline_summary">Show footnotes inline with the text instead of as clickable handles</string>
+    <string name="prefs_show_xrefs_summary">Show cross references, if they are available in the document</string>
+
+    <string name="prefs_show_strongs_title">Strong\'s numbers</string>
+    <string name="prefs_show_morphology_title">Morphological codes</string>
+    <string name="prefs_non_strongs_word_italic_title">Italicize added words</string>
+    <string name="prefs_non_strongs_word_italic_summary">Italicize words without Strong\'s numbers</string>
+    <string name="prefs_section_title_title">Section titles</string>
+    <string name="prefs_title_scroll_button_title">Title scroll button</string>
+    <string name="prefs_title_scroll_button_summary">Show scroll-to-top button next to section titles</string>
+    <string name="prefs_red_letter_title">Red Letter</string>
+    <string name="prefs_infinite_scroll_title">Infinite scroll</string>
+    <string name="prefs_infinite_scroll_summary">Automatically load more content when scrolling</string>
+    <string name="prefs_mark_as_read_button_title">Mark as read button</string>
+    <string name="prefs_mark_as_read_button_summary">Show a button at the end of each chapter to mark it as read</string>
+    <string name="prefs_show_memorization_indicators_title">Memorization indicators</string>
+    <string name="prefs_show_memorization_indicators_summary">Show colored margin indicators for memorized and target verses</string>
+    <string name="prefs_auto_track_reading_title">Auto-track reading</string>
+    <string name="prefs_auto_track_reading_summary">Automatically mark chapters as read when you scroll through them</string>
+    <string name="reading_progress_read_count_scale">Read\nCount</string>
+    <string name="reading_progress_percent_read_scale">Percent\nRead</string>
+    <string name="reading_progress_percent_label">%d%%</string>
+    <string name="reading_progress_history_title">Read History</string>
+    <string name="reading_progress_history_for">Reading progress for %1$s</string>
+    <string name="reading_progress_history_no_entries">No read entries for this selection.</string>
+    <string name="reading_progress_history_version_unknown">Unknown version</string>
+    <string name="prefs_tilt_to_scroll_title">Tilt to scroll</string>
+
+    <string name="prefs_toolbar_button_action_title">Action for toolbar button press</string>
+    <string name="prefs_toolbar_button_action_summary">Action to take when pressing/long-pressing Bible or Commentary toolbar buttons</string>
+    <string name="prefs_toolbar_button_action_default">Press to open menu, long press for documents screen (default)</string>
+    <string name="prefs_toolbar_button_action_swap_menu">Press to open next document, long press to open menu</string>
+    <string name="prefs_toolbar_button_action_swap_activity">Press to open next document, long press for documents screen</string>
+
+    <string name="prefs_night_mode_title">Night mode switching</string>
+    <string name="prefs_night_mode_summary">Whether to switch to night mode automatically (if device supports), manually or via system setting (Android 10+). Manual switching can be done from the 3-dot options menu on the main screen. </string>
+    <string name="prefs_night_mode_manual">Manual</string>
+    <string name="prefs_night_mode_automatic">Automatic</string>
+    <string name="prefs_night_mode_system">System</string>
+    <string name="options_menu_night_mode">Night mode</string>
+
+    <string name="prefs_navigate_to_verse_title">Navigate to verse</string>
+    <string name="prefs_navigate_to_verse_summary">Choose verse (and chapter) when selecting a passage</string>
+    <string name="prefs_open_links_in_special_window_title">Links window</string>
+    <string name="prefs_open_links_in_special_window_summary">Open links in special window, for quicker display of cross-references and Strongs</string>
+    <string name="prefs_text_size_sample_text">Sample text</string>
+    <string name="prefs_screen_keep_on_title">Keep screen on</string>
+    <string name="prefs_screen_keep_on_summary">Prevent screen sleeping while using this app</string>
+    <string name="prefs_interface_locale_title">Application language</string>
+    <string name="prefs_interface_locale_summary">Select custom user interface language</string>
+    <string name="reset_fontsize">Reset</string>
+
+    <string name="prefs_request_sdcard_permission_title">Manually installed documents exist</string>
+    <string name="prefs_request_sdcard_permission_summary">Enable use of manually installed documents from the jsword/sword folder on internal storage</string>
+
+    <string name="prefs_expand_footnotes_title">Inline cross references</string>
+    <string name="prefs_expand_footnotes_summary">Show cross reference content in-line within the text, instead of a link that opens a pop-up dialog</string>
+
+    <string name="all_text_options_window_menutitle">All text options</string>
+    <string name="text_options_window_menutitle">Text options</string>
+    <string name="auto_fullscreen">Fullscreen by scrolling</string>
+    <string name="reversed_split_mode">Reversed split mode</string>
+
+    <string name="add_ellipsis">%s…</string>
+
+    <string name="font_size_pt">%d pt</string>
+    <string name="value_mm">%d mm</string>
+    <string name="auto_fullscreen_summary">Switch automatically to fullscreen when scrolling text. Tip: you can always also switch to full screen by doubletapping screen.</string>
+    <string name="prefs_margin_size_title">Change margin size</string>
+    <string name="prefs_margin_size_mm_title">Margin size (%1$d/%2$d/%3$d mm)</string>
+    <string name="prefs_advanced_settings_cat">Advanced settings</string>
+    <string name="prefs_features_cat">Features</string>
+    <string name="prefs_display_customization_cat">Look &amp; feel</string>
+    <string name="prefs_behavior_customization_cat">Application behavior</string>
+
+    <string name="prefs_margin_size_summary">Adjust left and right margin of the text view. You can also
+        adjust maximum width of the text.
+    </string>
+    <string name="prefs_margin_size_summary_2">Tip: You can tap margin area to jump one page up / down.</string>
+
+    <string name="prefs_text_colors_summary">Adjust text and background colors and noise effect</string>
+    <string name="text_display_settings_activity_title">Text display settings</string>
+    <string name="workspace_text_display_settings_title">Text options - %s</string>
+    <string name="window_text_display_settings_title">Text options - Window %d</string>
+    <string name="global_text_display_settings_title">Global text options</string>
+    <string name="global_text_display_settings_summary">Default text display settings for all workspaces</string>
+    <string name="parent_settings_category_title">Parent settings</string>
+    <string name="workspace_text_options_link">Workspace text options — %s</string>
+    <string name="workspace_text_options_link_summary">Edit text display settings for this workspace</string>
+    <string name="global_text_options_link">Global text options</string>
+    <string name="global_text_options_link_summary">Edit default text display settings for all workspaces</string>
+    <string name="prefs_font_and_colors_title">Font &amp; Colors</string>
+    <string name="prefs_text_layout_title">Text Layout</string>
+    <string name="prefs_strongs_and_morphology_title">Strong\'s &amp; Morphology</string>
+    <string name="prefs_footnotes_and_xrefs_title">Footnotes &amp; Cross-references</string>
+    <string name="prefs_verses_and_headings_title">Verses &amp; Headings</string>
+    <string name="prefs_page_scrolling_title">Page Scrolling</string>
+
+    <string name="prefs_justify_title">Justify-align text</string>
+    <string name="prefs_justify_summary">Align text in \'justify\' style, meaning left and right margins of the text are in line</string>
+    <string name="pref_left_margin_label_mm">Left margin (%d mm)</string>
+    <string name="pref_right_margin_label_mm">Right margin (%d mm)</string>
+    <string name="pref_maximum_width_of_text_label_mm">Maximum width of text (%d mm)</string>
+    <string name="prefs_line_spacing_pt">Line spacing %1.1fx</string>
+    <string name="pref_font_family_label">Font family</string>
+    <string name="prefs_top_margin_title">Top margin</string>
+    <string name="prefs_top_margin_summary">Add margin (with visual indication) to top of the window that contains Bible document. Bible is scrolled so that current verse starts below the margin.</string>
+    <string name="prefs_hyphenation_title">Hyphenation</string>
+    <string name="prefs_hyphenation_summary">Automatically hyphenate words, if language is supported</string>
+    <string name="prefs_line_spacing_pt_title">Line spacing (%1.1fx)</string>
+    <string name="line_spacing_title">Line spacing</string>
+    <string name="line_spacing_summary">Set the space between lines</string>
+    <string name="select_none">Select none</string>
+    <string name="reset_are_you_sure">Are you sure that you want to reset all of these values?</string>
+    <string name="window_pinning_menutitle">Window pinning</string>
+    <string name="hide_window_buttons_title">Hide window buttons</string>
+    <string name="hide_window_buttons_summary">Window buttons that are displayed on right side of the Bible views are hidden. Window navigation bar on the bottom is still displayed and you may open window popup menu by long-clicking them.</string>
+    <string name="hide_bible_reference_overlay_title">Hide Bible reference overlay</string>
+    <string name="hide_bible_reference_overlay_summary">Do not show the semi-transparent Bible reference overlay when app is in fullscreen mode</string>
+
+    <string name="full_screen_hide_buttons_pref_title">Hide window button bar in fullscreen</string>
+    <string name="full_screen_hide_buttons_pref_summary">When switching to fullscreen mode, hide automatically window button bar that is on the bottom of the screen</string>
+
+    <string name="prefs_hide_status_bar_title">Hide status bar</string>
+    <string name="prefs_hide_status_bar_summary">Hide the Android status bar (clock, notifications) while keeping AndBible\'s own toolbar visible. Useful for distraction-free reading and e-ink devices. Swipe from the top edge to reveal it temporarily.</string>
+
+    <string name="prefs_dictionaries_cat">Dictionaries</string>
+    <string name="choose_strongs_greek_dictionary_title">Strongs Greek dictionary</string>
+    <string name="choose_strongs_greek_dictionary_summary">Choose Strongs dictionary for Greek word definitions</string>
+    <string name="choose_strongs_hebrew_dictionary_title">Strongs Hebrew dictionary</string>
+    <string name="choose_strongs_hebrew_dictionary_summary">Choose Strongs dictionary for Hebrew word definitions</string>
+    <string name="choose_strongs_greek_morphology_title">Robinson Greek morphology</string>
+    <string name="choose_strongs_greek_morphology_summary">Choose dictionary for Robinson Greek morphology definitions</string>
+    <string name="choose_word_lookup_dictionary_title">Word lookup dictionaries</string>
+    <string name="choose_word_lookup_dictionary_summary">Choose dictionaries for looking up words</string>
+    <string name="lookup_in_dictionary">Look up in dictionaries</string>
+    <string name="word_not_found_in_dictionaries">Word not found in any dictionary</string>
+
+    <string name="prefs_top_margin_title_mm">Top margin (%d mm)</string>
+    <string name="font_size_title">Font size</string>
+    <string name="font_size_title_pt">Font size (%d pt)</string>
+    <string name="prefs_font_text_size_summary">Adjust main text font size</string>
+
+    <string name="pref_font_family_label_name">Font family (%s)</string>
+    <string name="prefs_font_family_summary">Change font family. Tip: more fonts can be installed via Download Documents / Add-ons.</string>
+
+    <string name="prefs_text_bookmarks_title">Bookmark &amp; My Notes settings</string>
+    <string name="prefs_reading_and_memorization_title">Reading &amp; Memorization</string>
+
+    <string name="prefs_enable_bluetooth_title">Enable Bluetooth media buttons</string>
+    <string name="prefs_enable_bluetooth_summary">Handle Bluetooth media buttons to start/stop speaking.</string>
+    <string name="create_bookmark">Create a new Bookmark</string>
+    <string name="create_bookmark_with_a_note">Create a new Bookmark with a note</string>
+
+    <!-- Colors preferences -->
+    <string name="prefs_text_colors_menutitle">Color settings</string>
+    <string name="window_color_settings_title">Window color settings</string>
+    <string name="workspace_color_settings_title">Workspace color setting defaults</string>
+
+    <string name="color_workspace">Workspace color</string>
+    <string name="color_text">Text color</string>
+    <string name="color_background">Background color</string>
+    <string name="colors_day_mode_title">Day mode</string>
+    <string name="colors_night_mode_title">Night mode</string>
+    <string name="prefs_noise_title">Background noise</string>
+    <string name="prefs_noise_summary">Adding some noise to background might make it more comfortable to eyes. </string>
+
+
+    <!-- Window -->
+    <string name="new_window">New window</string>
+    <string name="windowMaximise">Maximise</string>
+    <string name="windowMinimise">Minimise</string>
+    <string name="windowSynchronise">Synchronise</string>
+    <string name="move_window">Move to</string>
+    <string name="move_window_to_position2">Position %1$d (%2$s:%3$s)</string>
+    <string name="copy_settings">Copy settings to</string>
+    <string name="copy_settings_to_workspace">Workspace</string>
+    <string name="copy_settings_to_window">Window %1$d (%2$s: %3$s)</string>
+    <string name="copy_settings_to_global">Global defaults</string>
+    <string name="change_to_normal">Change to normal window</string>
+    <string name="window_pin_mode">Pin</string>
+
+    <!-- Notes screen -->
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+
+    <!--  Strongs -->
+    <string name="no_indexed_bible_with_strongs_ref">You must download a Bible containing Strong\'s numbers and build its index via Search</string>
+
+    <!-- Module download -->
+    <string name="download">Download Documents</string>
+    <string name="redownload">Redownload Documents</string>
+    <string name="download_source_last_updated">Document lists last updated: %s.</string>
+    <string name="download_refreshing_book_list">Refreshing list of available documents from document servers…</string>
+    <string name="download_source_message1">Documents are downloaded from the following sources:</string>
+    <string name="download_document_confirm_prefix">Download</string>
+    <string name="error_downloading">An error occurred while downloading.  Please check your internet connection.</string>
+    <string name="error_downloading_status">The server which hosts %1$s returned an error due to %2$s (%3$d).</string>
+    <string name="storage_space_warning">Insufficient local storage space.</string>
+    <string name="too_many_jobs">Too many tasks are running.  Please wait for some to finish and try again.</string>
+    <string name="document_not_installed">Please download \'%s\'</string>
+    <string name="free_text_search_documents">Search</string>
+    <string name="chooce_language_hint">Language</string>
+    <string name="one_more_back_press">Press back again to close the app</string>
+    <string name="document_filter_results">%d documents</string>
+    <string name="download_question_title">Do you want to proceed to download documents?</string>
+    <string name="download_question_message">If you live in a persecuted country,
+        you might need to be careful about downloading christian material via Internet.
+        Instead, you might want to obtain module zip files more securely and install them
+        via "Load Documents From Zip". Are you sure you want to proceed with downloading?
+        All downloads from module servers are encrypted (HTTPS).
+    </string>
+    <string name="do_not_ask_again">Yes, do not ask any more</string>
+    <string name="recommended_document">Recommended!</string>
+    <string name="about_version_history">Version history: %s</string>
+    <string name="download_errors">Download errors</string>
+    <string name="failed_repositories_message">Could not connect to the following document server: \n\n%s\n\n</string>
+    <string name="failed_downloads_message">The following files could not be downloaded:\n\n%s\n\n</string>
+    <string name="cant_delete_document">This document can not be deleted.</string>
+
+    <!--  Install zip file -->
+    <string name="install_zip">Load Documents From Files</string>
+    <string name="install_zip_module">Install Bible Module</string>
+    <string name="install_zip_module_discrete">Install Calculator Module</string>
+    <string name="install_zip_successfull">Module was installed successfully</string>
+    <string name="extracting_zip_file">Extracting Zip file now…</string>
+    <string name="checking_zip_file">Checking given file…</string>
+    <string name="invalid_module">File does not contain a valid SWORD module</string>
+    <string name="install_zip_title">Please wait. Loading modules from a file.</string>
+    <string name="overwrite_files">Following files already exists: %s Overwrite?</string>
+    <string name="overwrite_files_title">Overwrite files?</string>
+    <string name="could_not_overwrite_files">Could not overwrite files: %s. Apart from that install was successful.</string>
+    <string name="install_do_you_want">Do you want to install module (%s)?</string>
+
+    <!-- Daily Reading Plan -->
+    <string name="rdg_plan_title">Reading Plan</string>
+    <string name="reading_plans_plural">Reading Plans</string>
+    <string name="rdg_plan_selector_title">Choose a Reading Plan</string>
+    <string name="rdg_plan_day">Day %s</string>
+    <string name="rdg_plan_set_start_date">Set Start Date…</string>
+    <string name="set_current_day">Set as current day…</string>
+    <string name="msg_set_current_day_reading_plan">This will set today as the current day in this plan and mark all previous days as read. Continue?</string>
+    <string name="done">Done</string>
+    <string name="reset_plan_question">Are you sure you want to reset this plan?</string>
+    <string name="import_reading_plan">Import reading plan…</string>
+    <string name="plan_duplicate_user_plan">
+        There is a user reading plan in sdcard
+        jsword/readingplan with the same name as an internal plan. It can not be listed here.
+        Please rename the file to something else, leaving it\'s file extension as .properties
+    </string>
+    <string name="plan_name_y1ntpspr">NT, Psalms &amp; Proverbs in a Year</string>
+    <string name="plan_description_y1ntpspr">
+        Courtesy of HEARTLIGHT Internet Magazine,
+        http://www.heartlight.org, permission granted
+    </string>
+    <string name="plan_name_y1ot1nt1_chronological">Chronological 1-Year through Bible</string>
+    <string name="plan_description_y1ot1nt1_chronological">
+        Plan based on chronological events in the Bible.
+        The chronological time-line is approximate.
+    </string>
+    <string name="plan_name_y1ot1nt1_OTandNT">1-Year OT+NT Simultaneously</string>
+    <string name="plan_description_y1ot1nt1_OTandNT">
+        Read through the Bible in 1 year, with chapters
+        in the OT and NT every day.
+    </string>
+    <string name="plan_name_y1ot1nt1_OTthenNT">1-Year through Bible</string>
+    <string name="plan_description_y1ot1nt1_OTthenNT">
+        Read through the Bible in 1 year, starting in Genesis
+        and finishing in Revelation. The OT is first, then the NT.
+    </string>
+    <string name="plan_name_y1ot1nt2_mcheyne">M\'Cheyne 1-Year 4-chapter/day</string>
+    <string name="plan_description_y1ot1nt2_mcheyne">
+        This plan is based on the M’Cheyne reading system,
+        featuring four different readings for use in both family and personal devotions. Each day has
+        two passages from the Old Testament, one from the New Testament, and one from either the Psalms or the Gospels. In one year,
+        you read the Old Testament once and the New Testament and Psalms twice.
+    </string>
+    <string name="plan_name_y1ot6nt4_profHorner">Prof. Horner 10-chapter/day Reading Plan</string>
+    <string name="plan_description_y1ot6nt4_profHorner">Courtesy of Prof. Horner, permission granted</string>
+    <string name="plan_name_y2ot1ntps2">2-Year Through Bible, NT+PS twice</string>
+    <string name="plan_description_y2ot1ntps2">
+        Read through the Bible in 2 years, reading the NT and Psalms twice.
+        Courtesy of Wholesome Words,  http://www.wholesomewords.org/, permission granted
+    </string>
+
+    <!-- Document context menu -->
+    <string name="delete">Delete</string>
+    <string name="delete_index">Delete search index</string>
+    <string name="about">About</string>
+    <string name="delete_doc">Delete %s?</string>
+    <string name="delete_search_index_doc">Delete index of %s?</string>
+
+    <!-- Verse context menu -->
+    <string name="notes">Footnotes and references</string>
+    <string name="share_verse">Share…</string>
+    <string name="share_verse_widget_title">Share selection</string>
+    <string name="compare_translations">Compare translations</string>
+
+    <!-- Link context menu -->
+    <string name="open_link_in_this_window">Open link here</string>
+    <string name="open_link_in_new_window">Open link in new window</string>
+    <string name="open_link_in_special_window">Open link in special window</string>
+
+    <!-- Bookmarks -->
+    <string name="bookmarks_and_mynotes_title">Bookmarks &amp; My Notes</string>
+    <string name="migrated_my_notes">Migrated My Notes</string>
+    <string name="bookmarks">Bookmarks</string>
+    <!-- Bookmark / note labels -->
+    <string name="labels">Labels</string>
+    <string name="manage_labels">Manage Labels</string>
+    <string name="assign_labels">Assign labels</string>
+    <string name="new_item">New</string>
+    <string name="label_name_prompt">Name</string>
+    <string name="label_unlabelled">Unlabelled</string>
+    <string name="add_bookmark1">Bookmark</string>
+    <string name="add_bookmark3">Selection</string>
+    <string name="add_bookmark_whole_verse">Bookmark Verse</string>
+    <string name="add_bookmark_whole_verse1">Verses</string>
+    <string name="add_whole_page_bookmark">Add bookmark for whole page</string>
+    <string name="add_paragraph_break">Paragraph break</string>
+    <string name="ai_label">AI</string>
+    <string name="bookmark_settings_hide_labels_title">Hide specified labels</string>
+    <string name="bookmark_settings_hide_labels_summary">Hide bookmarks that are marked with specified label(s)</string>
+    <string name="auto_assign_labels_title">Label settings</string>
+    <string name="auto_assign_labels">Auto-assign &amp; Favourite labels</string>
+    <string name="auto_assign_labels1">Auto-assign label to new bookmarks</string>
+    <string name="auto_assign_labels_primary">Auto-assign as primary</string>
+  <!-- can be removed -->
+    <string name="marker_style">Show only marker for selection bookmarks</string>
+    <string name="marker_style_whole_verse">Show only marker for whole verse bookmarks</string>
+    <string name="hide_style">Hide for selection bookmarks</string>
+    <string name="hide_style_whole_verse">Hide for whole verse bookmarks</string>
+    <string name="bookmark_warning">There are bookmarks and/or notes for this document.</string>
+    <string name="bookmark_warning2">
+        If document structure has changed, updating this document could make
+        the locations of these bookmarks/notes move inside the document or disappear completely.
+    </string>
+    <string name="bookmark_warning3">Do you still want to update module?</string>
+    <string name="bookmark_warning4">It is recommended that you backup the module before updating.</string>
+    <!--  Sort orders used for Bookmarks and MyNotes -->
+    <string name="sort_by_date">Date order</string>
+    <string name="sort_by_bible_book">Biblical order</string>
+    <string name="sort_by_alphabetical">Alphabetical order</string>
+    <!-- notes = user notes ("My Notes") that are attached to bookmark -->
+    <string name="filter_by_notes">Search notes</string>
+
+    <!-- Dictionary -->
+    <string name="dictionary">Dictionary</string>
+    <string name="search_dictionary_hint">Search dictionary</string>
+
+    <!-- General Book -->
+    <string name="general_book">Book</string>
+
+    <!-- Speak -->
+    <!-- plurals tags referencing the below have been moved to untranslated_strings.xml -->
+    <!-- Speak - Bible -->
+    <string name="one_chapter">%d chapter</string>
+    <string name="some_chapters">%d chapters</string>
+    <!-- Speak - Commentary -->
+    <string name="one_verse">%d verse</string>
+    <string name="some_verses">%d verses</string>
+    <!-- Speak - Dictionary and other -->
+    <string name="one_page">%d page</string>
+    <string name="some_pages">%d pages</string>
+    <!-- Speak - Common -->
+    <string name="stop">Stop</string>
+    <string name="pause">Pause</string>
+    <string name="rewind">Rewind</string>
+    <string name="forward">Forward</string>
+    <string name="tts_lang_not_available">Language is not available.</string>
+
+    <!-- Speak - Bible -->
+    <string name="speak_speed_title">Speak speed</string>
+    <string name="speak_and_play_earcons_title">Speak and play earcon sounds for</string>
+    <string name="playback_settings_title">Playback Settings</string>
+    <string name="speak_settings_title">General Speak Settings</string>
+    <string name="speak_bookmarking_settings_title">Bookmarking Settings</string>
+    <string name="speak_bookmarks_menu_title">Speak from bookmark</string>
+    <string name="speak_advanced_settings">Advanced settings</string>
+    <string name="speak_sleep_timer_title">Sleep timer</string>
+
+    <string name="speak_no_books_available">No books available to speak</string>
+    <string name="speak_general_error">Speak could not be started for this book</string>
+
+    <string name="repeat_passage">Repeat passage</string>
+    <string name="set_repeat_passage_range">Set repeat passage range</string>
+    <string name="speak_beginning_of_passage">Choose beginning of passage</string>
+    <string name="speak_ending_of_passage">Choose ending of passage</string>
+    <string name="speak_verse_range_to_repeat">Choose verse range to repeat</string>
+    <string name="speak_ending_verse_must_be_later">Ending verse must be later than starting verse</string>
+
+    <string name="conf_speak_synchronize">Text follows speech</string>
+    <string name="conf_speak_auto_bookmark">Automatic bookmarking</string>
+    <string name="conf_save_playback_settings_to_bookmarks">Save playback settings to bookmarks</string>
+    <string name="conf_replace_divinename">Replace divine name with Yahweh</string>
+    <string name="conf_change_chapter">Chapter changes</string>
+    <string name="conf_change_title">Titles</string>
+    <string name="conf_speak_footnotes">Footnotes</string>
+    <string name="conf_speak_sleep_timer">Set sleep timer</string>
+
+    <string name="sleep_timer_title">Sleep time in minutes</string>
+    <string name="sleep_timer_set">Set sleep timer. Timer set: %d minutes</string>
+    <string name="sleep_timer_started">Sleep timer started, %d minutes</string>
+    <string name="sleep_timer_active_at">Sleep timer: %s minutes left.</string>
+
+    <string name="speak_next">Next</string>
+    <string name="speak_previous">Previous</string>
+    <string name="widget_toggle_sleep_timer">Toggle sleep timer</string>
+    <string name="widget_bookmark_helptext">Speak bookmarks shortcut buttons will appear here.</string>
+    <string name="speak_status_stopped">stopped</string>
+    <string name="speak_autobookmarking_disabled">Autobookmarking disabled!</string>
+    <string name="system_speak_settings">Open system TTS settings</string>
+
+    <string name="auto_assing_labels_help1">Here you can adjust which labels are assigned automatically to bookmarks that you create. </string>
+
+    <!-- parameter is ether setting_scope_window or setting_scope_workspace -->
+    <string name="setting_scope">This setting applies to %s.</string>
+    <string name="setting_scope_window">this window</string>
+    <string name="setting_scope_workspace">this workspace</string>
+
+    <string name="assing_labels_help1">Each bookmark can be assigned multiple labels. </string>
+    <!-- param is bookmark icon -->
+    <string name="assing_labels_help2">Use %s to specify which label color is shown.</string>
+    <!-- param is auto-assign label icon -->
+    <string name="assing_labels_help3">Tap %s icon to have that label is assigned automatically to new bookmarks.</string>
+    <!-- param is heart icon -->
+    <string name="assing_labels_help4">Tap %s to add label to your favourite list for quick access.</string>
+
+    <!-- param is refresh icon -->
+    <string name="assing_labels_help5">Tap %s to re-order the list based on your selections.</string>
+
+    <string name="global_text_options_help_title">Global text options</string>
+    <string name="global_text_options_help1">These are the global default settings for all workspaces. Each workspace can override these with its own settings.</string>
+
+    <string name="workspace_text_options_help_title">Workspace text options</string>
+    <string name="workspace_text_options_help1">These settings determine the default for all workspace windows. Settings inherited from global defaults are indicated accordingly.</string>
+    <string name="workspace_text_options_help2">You can override these by changing the individual window settings.</string>
+
+    <string name="window_text_options_help_title">Window text options</string>
+    <!-- Parameter is actual icon -->
+    <string name="window_text_options_help1">%s icon indicates that the setting comes from the workspace settings.</string>
+    <!-- Parameter is actual icon -->
+
+    <!-- First parameter is actual icon. Second parameter is either "default values" or "workspace default values" -->
+    <string name="text_options_reset_help">Use %1$s button to reset all these settings back to %2$s.</string>
+    <string name="reset_defaults">default values</string>
+    <string name="reset_workspace_defaults">workspace default values</string>
+
+
+    <string name="speak_help_auto_bookmark">
+        A Speak bookmark will be automatically added when Speak is paused or stopped.
+        Automatically generated bookmarks are labelled with the special Speak label.
+        If you start at a Speak bookmark the bookmark will be moved to the verse you
+        stop or pause at next time. Only Speak labels will be moved, any other labels
+        will be left alone.
+    </string>
+    <string name="speak_help_playback_settings">
+        Special playback settings (under \"Playback Settings\" on the Speak screen)
+        are saved to Speak bookmarks when this setting is selected.
+        When you restart speaking from a Speak bookmark, the saved playback settings
+        are loaded from the bookmark.
+    </string>
+    <string name="speak_help_playback_settings_example">
+        For example if you are listening to Genesis and Romans and
+        wish to listen to Genesis spoken quickly without chapter change notifications,
+        but to Romans more slowly with audible earcon sounds on chapter changes, then
+        you can have different playback settings for these books,
+        when these settings are saved to the corresponding bookmarks.
+    </string>
+
+    <!-- List of (max 5) words that will be searched and replaced by their counterpart in divinename_replace
+         if they are found in <divineName> tag in the document (i.e. LORD etc, in capital letters).
+
+         Please note that this is not translation but you need to think about what words need to be replaced
+         in your language. These will be used if "Replace divinename with Yahweh" feature is enabled
+         in speak settings. -->
+    <string-array name="speak_divinename_original">
+        <item>Lord</item>
+        <item>God</item>
+        <item/>
+        <item/>
+        <item/>
+    </string-array>
+    <!-- List of (max 5) words that we will replace those words listed in divinename_original.
+
+         Please note that this is not translation but you need to think about what words need to be replaced
+         in your language. These will be used if "Replace divinename with Yahweh" feature is enabled
+         in speak settings. -->
+    <string-array name="speak_divinename_replace">
+        <item>Yahweh</item>
+        <item>Yahweh</item>
+        <item/>
+        <item/>
+        <item/>
+    </string-array>
+
+    <string name="speak_book_changed">Book changed.</string>
+    <string name="speak_chapter_changed">Chapter</string>
+    <string name="speak_first">First</string>
+    <string name="speak_second">Second</string>
+    <string name="speak_third">Third</string>
+    <string name="speak_fourth">Fourth</string>
+    <string name="speak_fifth">Fifth</string>
+
+    <string name="verse_range_mode_disabled">
+        Repeat passage mode was disabled automatically because
+        speaking was started outside of defined verse range.
+    </string>
+
+    <!-- User Notes -->
+    <string name="mynotes">My Notes</string>
+
+    <!-- Backup and restore -->
+    <string name="backup_backup_title">Backup to where?</string>
+    <string name="backup_backup_message">Backup to phone or elsewhere via Share function (email, Google Drive etc.)?</string>
+    <string name="backup_phone_storage">Phone storage</string>
+    <string name="backup_and_restore">Backup &amp; Restore</string>
+    <string name="backup_modules2">Backup Documents to…</string>
+    <string name="backup_app2">Backup app (.apk file) to …</string>
+    <string name="backup_application">Application</string>
+    <string name="backup_database">Database</string>
+    <string name="backup_documents">Documents</string>
+    <string name="backup_application_info">Application file (.APK)</string>
+    <string name="backup_database_info">Bookmarks, labels, notes, study pads, reading plans, workspaces etc.</string>
+    <string name="backup_document_info">Bibles, commentaries, dictionaries, maps etc.</string>
+    <string name="backup_to">Backup to…</string>
+    <string name="backup_restore_from">Restore from…</string>
+    <!-- Restore = overwrite existing. Import = merge into existing -->
+    <string name="backup_restore_from2">Restore or Import from…</string>
+    <string name="backup_restore2">Restore or Import</string>
+    <string name="overwrite_something">Overwrite %s?</string>
+
+    <!-- What items (study pads, bookmarks etc) user wants to restore from app db backup file? -->
+
+    <string name="restore_database">Restore Database File</string>
+    <string name="restore_confirmation">Overwrite My Notes, Bookmarks, Study Pads, Reading Plans and Workspaces?</string>
+    <string name="restore_success">My Notes, Bookmarks, Study Pads, Reading Plans and Workspaces restored successfully</string>
+    <string name="downloading_backup">Downloading backup file…</string>
+    <string name="loading_backup">Loading database from backup…</string>
+    <string name="backup_success2">My Notes, Bookmarks, Study Pads, Reading Plans and Workspaces backed up successfully.</string>
+    <string name="backup_modules_success">Selected modules backed up successfully.</string>
+
+    <string name="backup_modules_email_subject_2">%s modules backup</string>
+    <string name="backup_modules_email_message_2">Attached is your %1$s modules backup, which contains the following modules: %2$s</string>
+
+    <string name="backup_email_subject_2">%s database backup</string>
+    <string name="backup_email_message_2">Your %s database containing bookmarks, notes, reading plans and workspaces is attached</string>
+
+    <string name="exported_studypads_subject">Exported StudyPad(s)</string>
+    <string name="exported_studypads_message">Your %s database containing Bookmarks and Notes related to selected StudyPads is attached</string>
+    <string name="restore_unsuccessfull">Restoring database was unsuccessful. Perhaps you gave invalid database file.</string>
+    <string name="send_backup_file">Send a backup file</string>
+    <string name="backup_modules_title">Select which modules to backup</string>
+    <string name="install_zip_canceled">Module install cancelled</string>
+    <string name="ask_restore_or_import">Database for %s can be either restored (i.e. existing database is removed and selected database is loaded) or imported (selected database is imported into existing database). What do you want to do?</string>
+    <string name="restore">Restore</string>
+    <string name="import2">Import</string>
+
+    <!-- First argument is the name of first label, second and third are the counts of labels & bookmarks, respectively -->
+    <string name="bookmarks_db_stats">\"%1$s\" and %2$s other Label(s) / StudyPad/(s) and %3$s Bookmarks</string>
+
+    <!-- About -->
+    <string name="module_about_copyright">Copyright: %s</string>
+    <string name="module_about_installed_version">Installed version: %1$s (%2$s)</string>
+    <string name="module_about_latest_version">Latest version: %1$s (%2$s)</string>
+    <string name="module_about_versification">Versification: %s</string>
+    <string name="module_about_repository">Distribution server: %s</string>
+    <string name="module_about_osisId">OSIS ID: %s</string>
+
+    <!-- Bug reporting -->
+    <string name="send_bug_report_title">Feedback / bug report</string>
+    <string name="report_bug_email_subject_3">[%1$s] Bug report for %2$s %3$s</string>
+
+    <string name="report_bug_big_heading">PLEASE WRITE YOUR FEEDBACK OR BUG REPORT ABOVE THIS LINE</string>
+    <string name="report_bug_heading1">Instructions:</string>
+    <string name="report_bug_line_1">Tell us briefly what did you do / what happened when issue took place.</string>
+    <string name="report_bug_heading2">For example:</string>
+    <string name="report_bug_instructions1">1. Opened app</string>
+    <string name="report_bug_instructions2">2. Clicked window menu</string>
+    <string name="report_bug_instructions3">-> Crash</string>
+    <string name="report_bug_line_2">Sometimes manually taken screenshots also are beneficial in resolving issues.</string>
+    <string name="report_bug_line_3">Please use this function to report as soon as you have noticed issue taking place.</string>
+    <string name="report_bug_line_4">You can also use this function after opening app, after crash has taken place.
+    </string>
+    <string name="report_bug_heading_3">Attachments:</string>
+    <string name="bug_report_logcat">Log file produced by this app. It does not contain information about any other apps.</string>
+    <string name="bug_report_screenshot">Screenshot of app when crash took place, or when bug report was created.</string>
+    <string name="bug_report_attachment_line_1">Having these files attached helps app developers a lot in fixing the reported bug.</string>
+    <string name="report_bug_heading_4">Device info:</string>
+
+    <!-- Document types -->
+    <string name="doc_type_all">All types</string>
+    <string name="doc_type_bible">Bible</string>
+    <string name="doc_type_commentary">Commentary</string>
+    <string name="doc_type_dictionary">Dictionary</string>
+    <string name="doc_type_book">Book</string>
+    <string name="doc_type_map">Map</string>
+    <string name="doc_type_addons">Add-ons</string>
+    
+    <!-- Languages -->
+    <string name="lang_default">Default</string>
+
+    <!-- General -->
+    <string name="okay">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="discard_changes_confirmation">Discard unsaved changes?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="error">Error</string>
+    <string name="please_wait">Please wait…</string>
+    <string name="all">All</string>
+    <string name="reset_generic">Reset</string>
+    <string name="watch_tutorial_video">Watch tutorial video (English)</string>
+    <string name="verse_not_found">Verse not found</string>
+
+    <!-- Errors -->
+    <string name="report_error">Send Report</string>
+    <string name="error_occurred">An error has occurred</string>
+    <string name="error_occurred_crash_last_time">Last time when you used the application, it crashed. To help us with fixing the bug, we would appreciate if you send us a bug report. </string>
+    <string name="error_occurred_with_link">An error has occurred. %s</string>
+    <string name="error_no_content">No content for selected verse</string>
+    <string name="error_page_too_large">Page is too large to be loaded</string>
+    <string name="error_key_not_in_document">Not found in document</string>
+    <string name="error_key_not_in_document2">%1$s was not found in document %2$s.</string>
+    <string name="empty_list">No items to display</string>
+    <string name="error_skip">Skip</string>
+    <string name="bug_report_email_title">Send bug report via email</string>
+    <string name="bug_report_email_text">Next, please select your preferred email application (Gmail for example) to send the report to the developer team.</string>
+
+    <!-- Notifications -->
+    <string name="notification_channel_tts_status">Text to speech</string>
+    <string name="notification_channel_progress_status">Progress status notification for document downloads etc.</string>
+
+    <!-- Workspaces -->
+    <string name="switch_to_workspace">Workspaces</string>
+    <string name="delete_workspace">Remove</string>
+    <string name="new_copied_workspace">Copy as new</string>
+    <string name="workspace_number">Workspace %d</string>
+    <string name="rename">Rename</string>
+    <string name="workspace_selector_title">Select workspace</string>
+    <string name="workspace_settings">Settings…</string>
+    <string name="give_name_workspace">Give name for new workspace</string>
+    <string name="save_and_exit">Save</string>
+    <string name="workspace_save_changes">Apply changes to workspaces?</string>
+    <string name="copy_of_workspace">Copy of %s</string>
+    <string name="copy_workspace_settings">Copy settings…</string>
+    <string name="copy_settings_title">Which settings do you want to copy?</string>
+    <string name="select_all">Select all</string>
+    <string name="copy_settings_workspaces_title">To which workspaces do you want to copy settings?</string>
+    <string name="reset_settings">Reset</string>
+    <string name="search_settings">Search settings</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="workspace_listing_with_current">%s (current)</string>
+
+    <!-- Beta notice -->
+    <string name="beta_notice_title">This is beta version!</string>
+    <string name="beta_notice_content_1">
+        In beta version, there are new features that are not yet properly tested,
+        and thus using beta might introduce unexpected behavior, i.e. bugs.
+        It is recommended that ordinary Bible readers use stable version instead.
+    </string>
+
+    <string name="beta_notice_content_2">
+        Beta users are encouraged to report bugs via Google Play or
+        (preferably) via %s.
+    </string>
+    <string name="beta_notice_content_3">If you are programmer, please consider contributing bug
+        fixes via %s yourself. :-)</string>
+    <string name="beta_notice_github_issues">Github issues</string>
+    <string name="beta_notice_github">Github</string>
+    <string name="beta_notice_dismiss_until_update">Dismiss until next update</string>
+
+    <string name="stable_notice_title">Application has been upgraded!</string>
+    <string name="upgrade_video_message">Please see video featuring new features of this release (%s).</string>
+    <string name="stable_notice_par1">New version %1$s of %2$s has been installed successfully!</string>
+
+    <string name="new_sync_targets_notice_title">New sync settings available</string>
+    <string name="new_sync_targets_notice_message">This version of AndBible introduces additional sync targets: My Documents, AI settings and reading progress. If you want to enable them, you can do so in the Device Synchronization settings.</string>
+    <string name="open_settings">Open settings</string>
+
+    <!-- History -->
+    <string name="history_for">History (%1$s: Window %2$d)</string>
+
+    <!-- Help -->
+    <string name="help_nav_title">Navigation</string>
+    <string name="help_nav_text">Go to the next or previous chapter by swiping the screen with your finger.
+        Double-tap Bible text to toggle full screen mode.
+        Split screens (called also windows) have menu button on their top-right corner,
+        which enables you to use several window-specific functions and customize window outlook and behaviour.
+    </string>
+    <string name="help_contextmenus_title">Context Menus</string>
+    <string name="help_contextmenus_text">
+        Long pressing in opens context menu or action mode in several views.
+        Long press on the Bible view to open the action mode for actions affecting the current verse.
+        Long press on a document item in list view of Choose Document or Download to delete document or view information.
+        Long press a bookmark in bookmarks listing to add labels or delete bookmark.
+        Long press links to choose if you want to open them in current window, new window or special links window.
+    </string>
+    <string name="help_bookmarks_title">Bookmarks &amp; My Notes</string>
+    <string name="help_bookmarks_text">Bookmarks can be created by selecting some text and choosing "Bookmark" from
+        the popup menu. You can add your custom notes to the new bookmark by tapping the now
+        highlighted text in Bible view. There is also a "My Notes" special document in commentaries that allows you
+        to view your notes in a separate window.
+    </string>
+    <string name="help_studypads_text">
+        Study pads are designed to make it easy to write sermon notes, prepare sermons or just
+        write down personal Bible study notes that have multiple Bible references. Each study pad is associated with one bookmark label.
+        All Bookmarks that have been created with that respective label appear automatically in the study pad document.
+        In addition to bookmarks, there can be custom text entries in a study pad.
+    </string>
+
+    <string name="help_search_title">Search</string>
+    <!-- TODO: to be removed -->
+    <string name="help_search_text2">Search text can include special characters like *, AND, OR, NOT</string>
+    <string name="help_search_details">Please see %s for more details.</string>
+    <string name="help_apache_lucene">Apache Lucene - Query Parser Syntax</string>
+    <string name="help_fts5">FTS5 Full-text Query Syntax</string>
+    <string name="help_workspaces_title">Workspaces</string>
+    <string name="help_workspaces_text">
+        Workspaces allow having multiple context-dependent working environments. Workspace functions
+        can be accessed via Workspaces item in options menu (top-right corner). Quick way to access workspaces is
+        by swipe-down gesture from toolbar. You may also use swipe-left and swipe-right gestures over toolbar to
+        switch to previous / next workspace.
+    </string>
+    <string name="help_hidden_features_title">Hidden shortcuts</string>
+    <string name="help_hidden_features_text">
+        Swipe down from toolbar to show workspace selector.
+        Long press window button to quickly minimize.
+        Long press speak toolbar button to quickly go to speak settings.
+        Long press verse location title in toolbar to jump to document selector.
+        Long press the Back button to access the History list.
+    </string>
+    <string name="help_window_pinning_title">Window pinning</string>
+    <string name="help_window_pinning_text">
+        You can enable window pinning from options menu (three dots, right top corner).
+        If window pinning is enabled, you may show many pinned windows on Bible view,
+        but only one non-pinned window. Pinned windows are displayed first, and then
+        unpinned windows. You might want to open Bible documents as pinned windows, and
+        commentaries and maps etc. as non-pinned windows. Then you can easily
+        have Bible documents always opened, and switch quickly between commentaries and
+        other extra material when you study Bible.
+    </string>
+
+    <!-- Welcome text -->
+    <string name="redownload_documents">Quick Redownload</string>
+    <string name="welcome_message">Thank you for downloading %s. There are currently no Bibles or documents installed. To continue, please install
+        at least 1 document by downloading from the internet, or by loading from a zip file document
+        backup.
+    </string>
+    <!-- Supported file formats for documents -->
+    <!-- argument is app_name_andbible (AndBible). -->
+    <string name="choose_file">You have to choose the file that you want to load to %s. </string>
+    <string name="supported_formats">Supported formats for loading documents from a file: %s</string>
+    <!-- argument is app_name_andbible (AndBible). -->
+    <string name="format_zip">Zip file containing Sword module(s), or documents backup file (*.abmd) created by %s</string>
+    <string name="format_mysword">MySword documents (*.mybible)</string>
+    <string name="format_mybible">MyBible documents (*.SQLite3)</string>
+    <string name="format_esword">e-Sword documents (*.bblx, *.bbli)</string>
+    <string name="format_epub">EPUB documents (*.epub)</string>
+    <string name="format_ttf">TTF fonts (*.ttf)</string>
+    <string name="format_csv_prompts">AI prompt add-ons (*.csv)</string>
+    <string name="format_studypads">StudyPads from AndBible databases (*.abdb)</string>
+    <string name="redownload_message">
+        A list of previous books/documents was found. Click below to easily download them again.
+    </string>
+
+    <!-- Uncategorized -->
+    <string name="close">Close</string>
+    <string name="something_with_parenthesis">%1$s (%2$s)</string>
+    <string name="first_time_help_do_not_show_again">I understand</string>
+    <string name="first_time_help_show_next_time">Show again next time</string>
+
+    <string name="strongs_mode_title">Choose strongs mode</string>
+
+    <string name="download_dialog_message">The following books could not be downloaded:</string>
+    <string name="journal_description">User-editable study pads with custom text and bookmarks</string>
+    <string name="my_notes_description">User-editable notes attached to bookmarks</string>
+    <string name="my_notes_abbreviation">My Notes</string>
+    <string name="studypad">Study Pad</string>
+    <string name="studypads">Study Pads</string>
+    <string name="multi_description">Multiple references</string>
+    <string name="multi_abbreviation">Multiple</string>
+    <string name="compare_description">Compare translations</string>
+    <string name="compare_abbreviation">Compare</string>
+    <string name="compare">Compare</string>
+    <string name="http_forbidden">Forbidden</string>
+    <string name="http_not_found">Not found</string>
+    <string name="http_unknown">Other error</string>
+    <string name="give_passphrase_for_module">Document %s is encrypted and needs passphrase to be unlocked</string>
+    <string name="unlock_module">Set module passphrase</string>
+    <string name="unlock_info">Encrypted module unlock info</string>
+    <string name="try_again_passphrase">Passphrase did not work, try again?</string>
+    <string name="show_unlock_info">Module &amp; unlock info</string>
+
+    <string name="prefs_experimental_features_title">Experimental features</string>
+    <string name="prefs_experimental_features_summary">Select which experimental features to enable. These features are still in development and may change or be removed</string>
+    <string name="experimental_feature_bookmark_edit_actions">Bookmark edit actions</string>
+    <string name="experimental_feature_add_paragraph_break">Add paragraph break bookmark</string>
+<string name="raw_llm_log_title">Raw LLM Log</string>
+    <string name="raw_llm_log_empty">No raw log data available</string>
+    <string name="raw_llm_log_copied">Log copied to clipboard</string>
+    <string name="raw_llm_log_total">Total: in %1$s / out %2$s%3$s</string>
+    <string name="raw_llm_log_entry_system">System prompt</string>
+    <string name="raw_llm_log_entry_user">User message</string>
+    <string name="raw_llm_log_entry_assistant">Assistant response</string>
+    <string name="raw_llm_log_entry_tool_call">Tool call: %s</string>
+    <string name="raw_llm_log_entry_tool_result">Tool result [%s]</string>
+    <string name="raw_llm_log_entry_tool_definitions">Tool definitions (%d tools)</string>
+    <string name="raw_llm_log_entry_api_response">API response (iteration %d)</string>
+    <string name="raw_llm_log_entry_tokens">~%s tokens</string>
+    <string name="raw_llm_log_entry_usage">in: %1$s / out: %2$s%3$s</string>
+    <string name="raw_llm_log_entry_empty">(empty)</string>
+    <string name="raw_llm_log_entry_tool_desc">Description: %s</string>
+    <string name="raw_llm_log_entry_tool_params">Parameters: %s</string>
+    <string name="agent_log_view_raw">View raw LLM log</string>
+    <string name="agent_log_model_selector">Change default model (currently: %1$s)</string>
+    <string name="agent_log_model_not_configured">No model configured</string>
+    <string name="agent_log_select_model">Select default model</string>
+    <string name="share">Share</string>
+    <string name="prefs_show_error_box_title">Show Javascript error box</string>
+    <string name="prefs_show_error_box_summary">Useful for developers when debugging BibleView javascript side errors. This will make the app slower.</string>
+    <string name="active_window_indicator_title">Show active window indicator</string>
+    <string name="active_window_indicator_summary">Highlight window corners to help recognising which window is active</string>
+    <string name="app_licence_title">Open Source License</string>
+
+    <string name="how_to_contribute">How to contribute?</string>
+    <string name="confirm_delete_bookmarks">Do you want to remove %d bookmarks and their notes?</string>
+    <string name="confirm_delete_orphaned_bookmarks">The selected label is attached to %d bookmarks that have no other labels. Do you want to delete these bookmarks along with the labels?</string>
+    <string name="delete_label_and_bookmarks">Delete label and bookmarks</string>
+    <string name="delete_label_only">Delete label only</string>
+    <string name="module_size_megabytes">%.1f MB</string>
+    <string name="tell_friend_title">Recommend to a friend</string>
+    <string name="tell_friend_message1">I would like to recommend %s to you.</string>
+    <string name="tell_friend_message2">It is a powerful, yet easy to use, offline Bible study application for Android.</string>
+    <string name="tell_friend_message3">Install it from Play Store: %s</string>
+    <string name="tell_friend_message4">Read more &amp; more install options: %s</string>
+    <string name="share_verse_ok">Share / Copy</string>
+    <string name="web_search">Web search</string>
+    <string name="share_verse_menu_title">Share / copy…</string>
+    <string name="show_versenumbers">Show verse numbers</string>
+    <string name="show_full_verses">Show full verses</string>
+    <string name="show_selection_only">Show selected text only</string>
+    <string name="advertise_app">Advertise app</string>
+    <string name="verse_share_advertise">Shared using %s.</string>
+    <string name="show_reference">Show reference</string>
+    <string name="show_reference_at_front">Show at front of verse</string>
+    <string name="abbreviate_reference">Abbreviate reference</string>
+    <string name="version_name">Version name</string>
+    <!-- meaning, bible version name -->
+    <string name="show_version_name">Include version name</string>
+    <string name="show_ellipsis">Show ellipsis (…)</string>
+    <string name="show_quotes">Show quotes</string>
+    <string name="separate_verses_with_newlines">Separate verses with newlines</string>
+
+    <string name="initializing_app">Initializing application…</string>
+    <string name="show_notes">Show notes</string>
+    <!-- 1. parameter is current Webview version. 2. minimum version 3. app name 4. Google Play link that takes user to WebView entry in Google Play to upgrade it. -->
+    <string name="old_webview">Android WebView package is too old (%1$s). You need to upgrade your Android WebView package to at least version %2$s to use %3$s. For most devices this can be done via %4$s.</string>
+    <string name="play">Google Play</string>
+    <string name="proceed_anyway">Proceed anyway</string>
+    <string name="proceed">Proceed</string>
+    <string name="rate_title">Rating and reviewing app</string>
+    <string name="rate_message5">
+        Positive and detailed reviews help AndBible Open Source Project a lot. Thank you!
+    </string>
+    <string name="rate_message6">
+        Before reviewing negative review, please consider the following:
+    </string>
+
+    <!-- parameters are actions (file a bug, send email) -->
+    <string name="rate_message1">
+        If have a problem with app, please %1$s or %2$s instead.
+    </string>
+    <!-- param is "please report maintainers" -->
+    <string name="rate_message2">
+        If some text / Bible translation has an issue, %s.
+    </string>
+    <!-- param is "please read what you can do" -->
+    <string name="rate_message3">
+        If particular text is not available in the application, %s.
+    </string>
+    <string name="rate_message4">
+        The developers of this app are not responsible for maintaining documents.
+    </string>
+    <string name="bug_report">
+        send a bug report (from Main Menu)
+    </string>
+    <string name="how_to_help">
+        please read what you can do to help
+    </string>
+    <string name="send_email">
+       send email to developers
+    </string>
+    <string name="proceed_google_play">
+        Proceed to Google Play
+    </string>
+    <string name="text_maintainers">
+       please report issues to text maintainers
+    </string>
+    <string name="cant_change_wholeverse">Can\'t turn off whole verse marking for this bookmark</string>
+    <string name="whole_verse_turned_on">Bookmark is now marked for whole verse</string>
+    <string name="this_bookmark">This bookmark</string>
+    <string name="this_workspace">This workspace</string>
+    <string name="override_style">Override style</string>
+    <string name="no_override_suffix">No override</string>
+    <string name="display_mode_highlight">Highlight</string>
+    <string name="display_mode_underline">Underline</string>
+    <string name="display_mode_marker">Marker only</string>
+    <string name="display_mode_hidden">Hidden</string>
+    <string name="workspace_override_indicator">This label has workspace-specific display mode</string>
+    <string name="primary_label">Primary label</string>
+    <string name="favourite_label">Favourite label</string>
+    <string name="edit_label">Edit label</string>
+    <string name="delete_label_confirmation">Do you want to remove bookmark label "%s"? Also all associated Study Pad notes will be removed.</string>
+    <string name="bookmark_underline_style_arbitrary">Underline style for selection bookmarks</string>
+    <string name="bookmark_underline_style_whole_verse">Underline style for whole verse bookmarks</string>
+    <string name="active_labels">Selected labels</string>
+    <string name="recent_labels">Recent labels</string>
+    <string name="other_labels">Other labels</string>
+    <string name="book_menu_sort_row_opt">Order books horizontally</string>
+    <string name="book_menu_group_by_category">Group books by category</string>
+    <string name="book_menu_show_long_book_name">Show long book name</string>
+    <string name="book_menu_show_progress_bars">Show progress bars</string>
+    <string name="reset_workspace_labels">Do you want to reset auto-assign and favorite settings for this workspace?</string>
+    <string name="reset_hide_labels">Do you want to reset setting for hiding specified labels settings?</string>
+    <string name="reorder">Re-order</string>
+    <string name="system_items">System actions</string>
+    <string name="system_items1">More</string>
+    <string name="text_copied_to_clicpboard">Text copied to clipboard</string>
+    <string name="prefs_disable_two_step_bookmarking_title">One-step bookmarking</string>
+    <string name="prefs_disable_two_step_bookmarking_summary">Show \"Selection\" and \"Verses\" items directly in Bible view Selection menu</string>
+    <string name="prefs_double_tap_to_fullscreen_title">Double-tap to Fullscreen</string>
+    <string name="prefs_double_tap_to_fullscreen_summary">Enter fullscreen mode by double-tapping window</string>
+    <string name="toggle_fullscreen">Fullscreen</string>
+    <string name="exit_fullscreen">Double-tap screen to exit fullscreen</string>
+    <string name="reset_app_prefs">Do you want to reset all global application preferences that are displayed on this screen to their default values?</string>
+    <string name="label_red">Red</string>
+    <string name="label_green">Green</string>
+    <string name="label_blue">Blue</string>
+    <string name="label_salvation">Salvation</string>
+    <string name="label_underline">Underline</string>
+    <string name="auto_backups_title">Auto-Backups</string>
+    <string name="backup_file_info">App v%1$d, %2$s</string>
+    <string name="reset_databases_title">Reset Databases</string>
+    <string name="reset_databases_description">Reset individual databases to their initial empty state. This cannot be undone.</string>
+    <string name="last_crash_info_title">Last crash info</string>
+    <string name="reset_database_confirm">This will permanently delete all data in \"%1$s\" and reset it to the initial state. This cannot be undone.\n\nAre you sure?</string>
+    <string name="reset_database_success">Database has been reset successfully</string>
+    <string name="reset_something">Reset: %1$s</string>
+    <string name="export">Export</string>
+    <string name="csv_export_success">Exported %d bookmarks to CSV</string>
+    <string name="csv_import_success">Import completed: %1$d created, %2$d updated</string>
+    <string name="csv_import_errors">Import completed with errors: %1$d created, %2$d updated, %3$d errors</string>
+    <string name="csv_import_failed">CSV import failed: %s</string>
+    <string name="csv_export_failed">CSV export failed: %s</string>
+    <string name="export_prompts_csv">Export prompts to CSV</string>
+    <string name="import_prompts_csv">Import prompts from CSV</string>
+    <string name="prompts_csv_export_success">Exported %d prompts to CSV</string>
+    <string name="no_prompts_to_export">No user prompts to export</string>
+    <string name="csv_column_selection_title">Select CSV Columns</string>
+    <string name="no_bookmarks_to_export">No bookmarks available to export</string>
+    <string name="export_fileformat">Export as %s</string>
+    <string name="export_something">Export %s</string>
+    <string name="import_items">Import %s</string>
+    <string name="import_error">Importing from App Database failed. Database file could be wrong format or made with too old version of %s.</string>
+
+    <string name="export_bookmarks_csv">Export Bookmarks as %s</string>
+
+    <!-- OSIS reference is the Bible reference in OSIS standard format, e.g. "Gen.1.1-Gen.1.3" -->
+    <string name="osis_reference">OSIS Reference</string>
+    <!-- Bible reference is the Bible reference in human readable format, e.g. "Genesis 1:1-3" -->
+    <string name="bible_reference">Bible Reference</string>
+    <string name="document">Document</string>
+    <string name="book">Book</string>
+    <!-- Chapter is the chapter number in the book, starting from 1 -->
+    <string name="chapter_start">Chapter Start</string>
+    <!-- Verse is the verse number in the chapter, starting from 1 -->
+    <string name="verse_start">Verse Start</string>
+    <string name="chapter_end">Chapter End</string>
+    <string name="verse_end">Verse End</string>
+    <string name="id">Identifier</string>
+    <!-- Ordinals are running index of Bible verses in a bible document, starting from 0. -->
+    <string name="ordinal_start">Ordinal Start</string>
+    <string name="ordinal_end">Ordinal End</string>
+    <string name="created_at">Created At</string>
+    <!-- Offsets are used to indicate from which character a bookmark starts. -->
+    <string name="start_offset">Start Offset</string>
+    <string name="end_offset">End Offset</string>
+    <string name="custom_icon">Custom Icon</string>
+    <string name="last_updated_at">Last updated at</string>
+    <string name="bookmark_notes">Bookmark notes</string>
+
+    <!-- First param is language name, second is app name (app_name_long), third is "instruction for translators" which will be marked as a hyperlink in dialog. I hope we will never need this string, but nobody knows if some translators will drop us one day ... -->
+    <string name="incomplete_translation">We are sorry, but we have only partial user interface translation in %1$s language. That is because %2$s is entirely developed by volunteers. If you can help in translating, please see %3$s.</string>
+    <!-- will be added to incomplete_translation as a link -->
+    <string name="instructions_for_translators">instructions for translators</string>
+    <string name="questions_title">Questions?</string>
+    <string name="bookmark_style">Bookmark style</string>
+    <string name="added_to_bookmark">Assigned to this bookmark</string>
+    <string name="strongs_links">Links</string>
+    <string name="strongs_text_and_links">Text and Links</string>
+    <string name="strongs_hidden_links">Hidden Links</string>
+    <string name="verse_tip">To select partial or many verses, you can long-press Bible text</string>
+
+    <string name="permission_required">Permission needed</string>
+    <string name="labels_search_hint">Search</string>
+    <string name="search_mode_name_start">Name (from start)</string>
+    <string name="search_mode_name_contains">Name (contains)</string>
+    <string name="search_mode_content">Content</string>
+    <string name="search_results_matches">%d matches</string>
+    <string name="search_results_match">1 match</string>
+    <string name="progress_status_permission">To show notifications (download status, processing, speak status), we need your permission. </string>
+
+    <!-- Discrete mode settings -->
+    <string name="app_name_calculator">Simple Calculator</string>
+    <string name="prefs_persecution_cat">Settings for the persecuted</string>
+    <string name="prefs_discrete_mode">Hide religious symbols</string>
+    <string name="prefs_discrete_mode_desc">Rename the app to \'Calculator\' and show a different icon in the launcher.</string>
+    <string name="prefs_show_calculator">Calculator</string>
+    <string name="prefs_calculator_pin">Calculator PIN</string>
+    <string name="prefs_calculator_pin_desc">PIN code to enter the app when the calculator is shown. </string>
+    <string name="calc_division_by_zero">Division by zero is not allowed</string>
+    <!-- Context: calculator. Wrong number format etc. -->
+    <string name="calc_wrong_format">Wrong Format</string>
+    <string name="calc_wrong_format_operand">Wrong Format. Operand Without any numbers?</string>
+    <string name="prefs_persecuted_help">Read this first!</string>
+    <!-- Gives sintructions about the settings (for discrete mode) and also information about another app version that is available to be downloaded, that is better suited for persecuted. -->
+    <string name="prefs_persecuted_summary">Instructions for the settings and information about specific discrete build.</string>
+
+    <string name="calculator_par1">
+        Before entering the app, calculator screen is displayed.
+    </string>
+    <string name="calculator_par2">
+        In it, you can do standard calculus, and when you want to enter the app, you
+        just type your PIN code (default is 1234) and then press "=" button.
+    </string>
+    <string name="calculator_par3">
+        You can set up a custom PIN code by "Calculator PIN" setting.
+    </string>
+    <string name="discrete_mode_info_par1">
+        You are using standard application version, which means that it is still possible to see
+        the real name and icon of the application in app info.
+    </string>
+    <string name="discrete_mode_info_par2">
+        For improved security in persecuted environment, we highly recommend using discrete
+        version of the app, which always displays calculator, even if the app data is deleted.
+    </string>
+    <string name="discrete_mode_link">
+        You can download the latest version of discrete version from %s.
+    </string>
+
+    <!-- Window synchronize groups -->
+    <string name="sync_group_n">Group %d</string>
+    <string name="disable_sync">Disable synchronize</string>
+    <string name="open_in_window">Open results in a window</string>
+
+    <!-- Custom repositories -->
+    <!-- Custom document repositories that can store any AndBible-compatible documents. User can easily install documents from such repositories by adding repository url here. -->
+    <string name="custom_repositories">Custom repositories</string>
+    <string name="custom_repositories_empty_list_message">No custom repositories are defined</string>
+    <string name="custom_repositories_create_button_label">Add Custom Repository</string>
+    <string name="custom_repositories_info_button_label">Information</string>
+    <string name="repository_specification">Repository URL</string>
+    <string name="delete_custom_repository">Do you want to remove custom repository %s?</string>
+    <string name="custom_repositories_help1">To add a new custom repository, type or copy &amp; paste custom repository URL here.</string>
+    <string name="custom_repositories_help2">You can read more information about custom repositories in %s.</string>
+    <string name="wiki_page">WIKI page</string>
+    <string name="custom_repositories_help0">You can install documents from external custom repositories by installing custom repositories.</string>
+    <string name="duplicate_custom_repository">Repository with name %s already exists, can\'t add another.</string>
+
+    <string name="packages_dir">Packages directory (Zip files)</string>
+    <string name="warn_bad_document">Warning: This document might be (at least partially) bad technical quality.</string>
+
+    <!-- Open links in AndBible (Deep linking) -->
+    <string name="open_bible_links_title">Open Bible links in AndBible</string>
+    <string name="open_bible_links_summary">When clicking links that refer to AndBible supported Bible URL, open them in AndBible</string>
+    <string name="copyReference">Copy link to clipboard</string>
+    <string name="reference_copied_to_clipboard">Reference copied to clipboard</string>
+
+    <!-- Device cloud synchronization -->
+    <string name="prefs_sync_introduction_summary1">
+        Choose which backend cloud service you want to use to synchronize multiple devices.
+    </string>
+    <string name="prefs_sync_introduction_summary2">
+        When using Google Drive, %s is granted access only to applications files, not any personal files.
+    </string>
+    <string name="restore_backup_sections">Which backup sections do you want to restore?</string>
+    <string name="db_repositories">Repositories and related settings</string>
+    <string name="db_bookmarks">Bookmarks, My Notes, Labels and Study Pads</string>
+    <string name="synchronizing">Synchronizing…</string>
+    <string name="overrideBackup">
+        Existing database that this device is not synchronized to is found in Cloud.
+        Database contains %s. What do you want to do?
+    </string>
+    <string name="reading_plans_content">Reading plans and their statuses</string>
+    <string name="bookmarks_contents">Bookmarks, Labels and Study Pads</string>
+    <string name="workspaces_contents">Workspaces and Windows</string>
+    <string name="my_documents_contents">My Documents and their content</string>
+    <string name="ai_settings_sync_title">AI Settings</string>
+    <string name="ai_settings_sync_contents">AI prompts and provider configurations</string>
+    <string name="progress_sync_title">Reading Progress</string>
+    <string name="progress_sync_contents">Memorized verses and chapter reading records</string>
+
+    <!-- Reading Progress Activity -->
+    <string name="reading_progress_title">Read/Memory Progress</string>
+    <string name="reading_progress_chapters_read">chapters read</string>
+    <string name="reading_progress_active_days">active days</string>
+    <string name="reading_progress_overall">%s%% of Bible read</string>
+    <string name="reading_progress_bible_heatmap">Bible Overview</string>
+    <string name="reading_progress_old_testament">Old Testament</string>
+    <string name="reading_progress_new_testament">New Testament</string>
+    <string name="reading_progress_calendar">Reading Activity</string>
+    <string name="reading_progress_cycle">Cycle %d</string>
+    <string name="reading_progress_new_cycle">New Cycle</string>
+    <string name="reading_progress_new_cycle_confirm">Start a new reading cycle? This will begin tracking your progress from scratch, while preserving your previous cycle\'s data.</string>
+    <string name="reading_progress_previous_cycle">Previous cycle</string>
+    <string name="reading_progress_next_cycle">Next cycle</string>
+
+    <string name="cloud_fetch_and_restore_initial">Copy from Cloud to this device</string>
+    <string name="cloud_create_new">Copy from this device to Cloud</string>
+    <string name="cloud_disable_sync">Cancel &amp; disable synchronization</string>
+    <string name="cloud_sync_title">Device synchronization</string>
+    <string name="reset_sync">Sign Out</string>
+    <string name="prefs_reset_sync_summary">Disable synchronizing and reset related settings.</string>
+    <string name="sync_confirmation">Are you sure that you want to sign out and reset synchronization?</string>
+    <string name="cloud_info">Cloud information</string>
+    <string name="cloud_info_summary">Data in cloud storage: %s Mb</string>
+    <string name="sync_adapter">Synchronization Backend</string>
+    <string name="sync_adapter_summary">Current: %s</string>
+    <string name="adapters_google_drive">Google Drive</string>
+    <string name="adapters_next_cloud">Next Cloud</string>
+    <string name="auth_server_uri">Server URL</string>
+    <string name="auth_username">User name</string>
+    <string name="auth_password">Password</string>
+    <string name="auth_folder_path">Sync folder path</string>
+    <string name="auth_folder_path_summary">Parent folder for sync data (empty = root)</string>
+    <string name="synchronization_categories">Synchronization categories</string>
+    <string name="sync_general_settings">Info &amp; general settings</string>
+    <string name="sync_introduction">Introduction</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="are_you_sure_reset_local">This will reset your local database for %s with the content that is currently stored in cloud service.</string>
+    <string name="are_you_sure_reset_cloud">This will reset your cloud database for %s with the content that you have in this device.</string>
+    <string name="sync_cant_fetch">The version of database or patch file stored in Cloud is higher than the one supported by this app. </string>
+    <string name="sync_disabling">Disabling synchronizing for %s for now.</string>
+    <string name="sync_update_app">Please update the app to continue synchronization.</string>
+    <string name="sign_in_failed">Signing in to synchronization backend service failed.</string>
+    <!--  ... after restoring from backup file -->
+    <string name="disabling_sync">Disabling cloud synchronizing. You must re-enable manually after restore.</string>
+    <string name="report">Report</string>
+    <string name="sync_error">Error occurred in Cloud synchronization</string>
+    <string name="error_notification_channel_name">Error notifications</string>
+    <string name="last_updated">Last updated: %s</string>
+
+    <!-- MyBible/MySword module support -->
+    <string name="sqlite_cant_read">Can not read the file</string>
+    <string name="sqlite_invalid_file">Invalid module file or filename: %s</string>
+    <string name="sqlite_cant_write">Can not (over)write the file</string>
+    <string name="install_failed_reason">Installing module failed for the following reason: %s.</string>
+    <string name="no_file_manager">No app was found for choosing a file. Please install a file manager and try again.</string>
+
+    <!-- Other / uncategorized -->
+    <string name="app_opened_elsewhere">App opened elsewhere</string>
+    <string name="open_here">Open here</string>
+    <string name="external_link">External link</string>
+    <string name="external_link_question">This will open external link %s in an browser application, do you wish to continue?</string>
+    <string name="nameless">Title not defined</string>
+    <string name="prefs_in_window_bible_bookmark_modal_buttons_title">One-tap actions (Bibles)</string>
+    <string name="prefs_in_window_gen_bookmark_modal_buttons_title">One-tap actions (Other)</string>
+    <string name="prefs_in_window_bookmark_modal_buttons_description">When a text is tapped, one-tap action window is shown. Which action buttons should be shown?</string>
+    <string name="processing_epub">Processing EPUB: %s</string>
+    <string name="buy_development">Buy development work</string>
+    <string name="buy_development2">Support project</string>
+    <string name="dont_show">
+        Don\'t show this message again
+    </string>
+    <string name="pref_font_size_multiplier_title">Font size multiplier</string>
+    <string name="pref_font_size_multiplier_summary_1">Multiply text font sizes by this number.</string>
+    <string name="pref_font_size_multiplier_summary_2">Useful if you have a synchronized device that is used with larger font.</string>
+    <string name="current_value">Current value: %s</string>
+    <string name="prefs_bible_view_swipe_mode_title">Action for swipe left / right gesture</string>
+    <string name="prefs_bible_view_swipe_mode_summary">Swipe left / right gesture can be used to go to next page / chapter.</string>
+    <string name="prefs_swipe_mode_chapter">Chapter</string>
+    <string name="prefs_swipe_mode_page">Page</string>
+    <string name="prefs_swipe_mode_none">Disabled</string>
+    <string name="prefs_volume_keys_scroll_title">Volume buttons scroll</string>
+    <string name="prefs_volume_keys_scroll_summary">Use volume up/down to scroll Bible text and lists</string>
+    <string name="page_number_title">Relative page number</string>
+    <string name="page_number_summary">Show page number overlay as current/total. Both are relative to the start of the loaded text.</string>
+    <string name="select_custom_icon">Select custom marker icon</string>
+    <string name="invalid_url_message">The URL you entered is invalid. Please enter a valid URL (e.g., https://nextcloud.example.com)</string>
+    <string name="memorize_description">Memorize Bible verses</string>
+    <string name="memorize_abbreviation">Memorize</string>
+    <string name="memorize_memorized_passages">Memorized passages</string>
+    <string name="memorize_no_memorized_passages">No memorized passages yet</string>
+    <string name="memorize_targets">Memorization goals</string>
+    <string name="memorize_no_targets">No memorization goals set</string>
+    <string name="memorize_auto_mark">Auto-mark as memorized</string>
+    <string name="memorize_auto_mark_summary">Automatically mark verses as memorized when an exercise is completed</string>
+    <string name="memorize_type_full_words">Type full words</string>
+    <string name="memorize_type_full_words_summary">Require typing the complete word instead of just the first letter</string>
+    <string name="memorize_word_visibility">Word visibility</string>
+    <string name="memorize_word_visibility_summary">How visible untyped words are: light hint, dim, or completely hidden</string>
+    <string name="memorize_word_visibility_light">Light</string>
+    <string name="memorize_word_visibility_dim">Dim</string>
+    <string name="memorize_word_visibility_hidden">Hidden</string>
+    <string name="memorize_error_heatmap">Error heatmap</string>
+    <string name="memorize_error_heatmap_summary">Highlight words with more errors in progressively deeper red</string>
+    <string name="memorize_scramble_hide_used">Hide used word buttons</string>
+    <string name="memorize_scramble_hide_used_summary">Hide word buttons completely after they are correctly placed in word scramble mode</string>
+    <string name="memorize_include_reference">Include verse reference</string>
+    <string name="memorize_include_reference_summary">Add the verse reference (e.g. John 3:16) as the last item to memorize</string>
+    <string name="reading_progress_settings">Progress &amp; memorization</string>
+    <string name="reading_progress_settings_summary">Auto-tracking, memorization, and typing practice settings</string>
+    <string name="memorize_confirm_unmark">Remove memorized status for %s?</string>
+    <string name="memorize_confirm_remove_target">Remove memorization goal %s?</string>
+    <string name="memorize_tab_reading">Reading</string>
+    <string name="memorize_tab_memorization">Memorization</string>
+    <string name="memorize_verses_memorized">Memorized</string>
+    <string name="memorize_verses_target">Goal</string>
+    <string name="memorize_show_more">Show %d more</string>
+    <string name="memorize_calendar">Memorization Activity</string>
+    <string name="memorize_view_list">List</string>
+    <string name="memorize_view_overview">Overview</string>
+
+    <!-- LLM Translation Settings -->
+    <string name="sync_settings_shortcut_summary">Synchronize data between devices</string>
+    <string name="llm_provider_custom">Custom (OpenAI compatible)</string>
+    <string name="ai_behavior_category">Behavior</string>
+    <string name="ai_language_title">AI response language</string>
+    <string name="ai_language_summary">Language AI uses for responses</string>
+    <string name="ai_language_app_default">App language (%1$s)</string>
+    <string name="ai_language_custom">Custom\u2026</string>
+    <string name="ai_language_custom_hint">Enter language name or code</string>
+    <string name="ai_language_custom_example">e.g. suomi, Tagalog, en</string>
+    <string name="ai_usage_category">Usage</string>
+    <string name="llm_usage_summary_title">Token usage</string>
+    <string name="llm_usage_summary_default">No usage data</string>
+    <string name="llm_usage_summary_format">Input: %1$d tokens | Output: %2$d tokens\nEstimated cost: %3$s</string>
+    <string name="llm_reset_usage_title">Reset usage data</string>
+    <string name="llm_reset_usage_summary">Clear cumulative token and cost tracking</string>
+    <string name="llm_reset_usage_confirm_title">Reset usage data?</string>
+    <string name="llm_reset_usage_confirm_message">This will clear all cumulative usage data.</string>
+    <string name="llm_custom_input_price_title">Input price ($/Mtoken)</string>
+    <string name="llm_custom_output_price_title">Output price ($/Mtoken)</string>
+    <string name="llm_cost_total">Total: %1$s</string>
+    <string name="llm_custom_model">Custom…</string>
+    <string name="llm_custom_model_dialog_message">Enter the model ID</string>
+    <string name="llm_rate_limited_retrying">Rate limited. Retrying in %1$ss\u2026</string>
+    <string name="llm_default_document_title">AI Response</string>
+    <string name="llm_default_task_completed">Task completed</string>
+    <string name="llm_default_studypad_opened">StudyPad opened</string>
+    <string name="llm_parse_error">Failed to parse LLM response: %1$s</string>
+    <string name="llm_parse_error_no_choices">No choices in OpenAI response</string>
+    <string name="llm_parse_error_openai">Failed to parse OpenAI response: %1$s</string>
+    <string name="llm_parse_error_anthropic">Failed to parse Anthropic response: %1$s</string>
+    <string name="llm_error_unknown">Unknown error</string>
+    <string name="llm_error_max_iterations">Maximum iterations (%1$d) reached without completion</string>
+    <string name="llm_continue_iterations_title">Continue?</string>
+    <string name="llm_continue_iterations_message">The AI agent has reached its limit of %1$d iterations without completing. Continue for %2$d more iterations?</string>
+    <string name="agent_max_iterations_title">Max agent iterations</string>
+    <string name="agent_max_iterations_summary">Maximum iterations before asking to continue (0 = unlimited)</string>
+    <string name="ask_model_before_run_title">Ask model before run</string>
+    <string name="ask_model_before_run_summary">Show a model selection dialog before executing a prompt (skipped when the prompt has an explicit model override)</string>
+    <string name="auto_hide_agent_log_title">Hide AI panel when done</string>
+    <string name="auto_hide_agent_log_summary">Automatically hide the AI panel when a task finishes successfully or is cancelled. On error the panel stays visible.</string>
+    <string name="ai_task_completed">AI task completed</string>
+    <string name="custom_agent_system_prompt_title">Agent system prompt</string>
+    <string name="custom_system_prompt_summary">Editing not recommended unless you know what you are doing</string>
+    <string name="custom_text_transform_system_prompt_title">Text transformation system prompt</string>
+    <string name="ai_advanced_category">Advanced</string>
+    <string name="custom_system_prompt_default">Default</string>
+    <string name="custom_system_prompt_custom">Custom</string>
+    <string name="reset_to_default">Reset to default</string>
+
+    <!-- Raw log history -->
+    <string name="raw_log_history_title">AI Log History</string>
+    <string name="raw_log_history_summary">View and manage saved AI conversation logs</string>
+    <string name="raw_log_history_empty">No saved logs</string>
+    <string name="raw_log_delete_selected">Delete selected</string>
+    <string name="raw_log_delete_old">Delete old logs\u2026</string>
+    <string name="raw_log_delete_confirm">%d selected</string>
+    <string name="raw_log_older_1_week">Older than 1 week</string>
+    <string name="raw_log_older_1_month">Older than 1 month</string>
+    <string name="raw_log_older_3_months">Older than 3 months</string>
+    <string name="raw_log_delete_all">Delete all</string>
+    <string name="raw_log_item_tokens">%1$s in / %2$s out</string>
+    <string name="raw_log_error_indicator">Error</string>
+    <string name="raw_log_retention_title">Auto-delete old logs</string>
+    <string name="raw_log_retention_summary_days">After %d days</string>
+    <string name="raw_log_retention_summary_disabled">Disabled (keep all)</string>
+    <string name="send_ai_bug_report_title">Report AI bug</string>
+    <string name="ai_bug_report_menu">Report AI bug</string>
+
+    <string name="select_model_before_run_title">Select model</string>
+    <string name="set_default_model_for_prompt">Set as default model for this prompt</string>
+    <string name="prompt_max_iterations">Max iterations override</string>
+    <string name="prompt_max_iterations_hint">Leave empty for global default</string>
+    <string name="prompt_max_iterations_description">Override the global max iterations for this prompt. Empty = global default, 0 = unlimited.</string>
+    <string name="prompt_max_iterations_unlimited">Unlimited</string>
+    <string name="prompt_max_iterations_global_default">Global default (%d)</string>
+    <string name="prompt_max_iterations_summary_with_value">Override the global max iterations for this prompt. 0 = unlimited.\nCurrent: %s</string>
+
+    <!-- Prompt Manager -->
+    <string name="manage_prompts">Manage AI Prompts</string>
+    <string name="manage_prompts_summary">Create and edit AI prompts</string>
+    <string name="ai_settings">AI Settings</string>
+    <string name="ai_connection_settings">Connection settings</string>
+    <string name="ai_setup_title">Configure AI</string>
+    <string name="ai_setup_description">AndBible can use AI to translate Bible text, explain verses, create summaries, and more. To get started, configure a connection to an OpenAI-compatible API provider.</string>
+    <string name="ai_configure_button">Configure Connection</string>
+    <string name="ai_settings_shortcut_summary">AI connection and prompt settings</string>
+    <string name="ai_provider_tier_recommended">Recommended</string>
+    <string name="ai_provider_tier_community">Other providers (not tested)</string>
+
+    <!-- Multi-provider settings -->
+    <string name="ai_providers_models_category">Providers &amp; Models</string>
+    <string name="ai_providers_category">Providers</string>
+    <string name="ai_providers_summary_none">No providers configured</string>
+    <string name="ai_models_summary_none">No models configured</string>
+    <string name="ai_add_provider">Add provider</string>
+    <string name="ai_provider_edit">Edit</string>
+    <string name="ai_provider_delete_confirm">Delete provider \"%1$s\"? Prompts using this provider will revert to the default.</string>
+    <string name="ai_provider_api_key_not_set">API key not set</string>
+    <string name="ai_provider_select_type">Select provider type</string>
+    <string name="ai_provider_name">Provider name</string>
+    <string name="ai_provider_name_hint">Display name for this provider</string>
+    <string name="ai_provider_api_key">API key</string>
+    <string name="ai_provider_endpoint">API endpoint</string>
+    <string name="ai_provider_endpoint_description">Base URL only. AndBible appends \"/chat/completions\" (OpenAI format) or \"/messages\" (Anthropic format) automatically. Model lists are fetched from \"/models\".</string>
+    <string name="ai_provider_api_format">API format</string>
+    <string name="ai_provider_saved">Provider saved</string>
+    <string name="ai_provider_deleted">Provider deleted</string>
+
+    <string name="llm_openrouter_category">Category</string>
+    <string name="llm_openrouter_category_all">All</string>
+    <string name="llm_openrouter_model">Model</string>
+    <!-- Configured models management -->
+    <string name="ai_models_category">Models</string>
+    <string name="add_model">Add model</string>
+    <string name="edit_model_title">Edit model</string>
+    <string name="model_saved">Model saved</string>
+    <string name="model_deleted">Model deleted</string>
+    <string name="model_delete_confirm">Delete model \"%1$s\"?</string>
+    <string name="model_set_default">Set as default model</string>
+    <string name="model_select_provider">Provider</string>
+    <string name="model_supported_badge">✓ Supported</string>
+    <string name="show_also_unsupported_models">Show also unsupported models</string>
+    <string name="show_also_unsupported_providers">Show also unsupported providers</string>
+
+    <!-- Easy Setup -->
+    <string name="model_pricing_summary">%1$s in / %2$s out per Mtoken</string>
+    <string name="easy_setup_free_tier">Free tier</string>
+    <string name="unknown_error">Unknown error</string>
+    <string name="easy_setup_title">Quick Setup</string>
+    <string name="easy_setup_pref_summary">Set up AI with a recommended provider in a few steps</string>
+    <string name="easy_setup_enter_api_key">Enter your API key</string>
+    <string name="easy_setup_api_key_instructions">Get your API key from:</string>
+    <string name="easy_setup_test_connection">Test connection</string>
+    <string name="easy_setup_testing">Testing…</string>
+    <string name="easy_setup_success">Connection successful!</string>
+    <string name="easy_setup_failed">Connection failed: %1$s</string>
+    <string name="easy_setup_done_title">AI is ready!</string>
+    <string name="easy_setup_done_message">Select text in the Bible and try the AI features. You can add more models and providers in the settings.</string>
+    <string name="easy_setup_gemini_desc">Free tier available, good quality</string>
+    <string name="easy_setup_anthropic_desc">Affordable, excellent quality</string>
+    <string name="easy_setup_openai_desc">Well-known, reliable</string>
+
+    <!-- AI Disclaimer -->
+    <string name="ai_disclaimer_warning_title">Important: Read before using AI tools</string>
+    <string name="ai_disclaimer_warning_summary">Risks and responsibilities of using AI</string>
+    <string name="ai_disclaimer_dialog_title">AI Tools — Important Information</string>
+    <string name="ai_disclaimer_intro">AI tools can greatly enrich your Bible study experience and open new ways to engage with Scripture.</string>
+    <string name="ai_disclaimer_approach">AndBible primarily uses AI to process text from the documents you have installed — commentaries, dictionaries, and other modules — rather than relying on the model\'s own training data.</string>
+    <string name="ai_disclaimer_responsibility">However, they are still powerful tools — and with great power comes great responsibility. Please bear the following in mind.</string>
+    <string name="ai_disclaimer_point1">AI can make mistakes, including \"hallucinations\" (confidently stating false or fabricated information). Never blindly accept its output.</string>
+    <string name="ai_disclaimer_point2">AI responses can reflect biases from their training data, be intentionally misleading, or may present a particular theological perspective as if it were neutral or complete.</string>
+    <string name="ai_disclaimer_point3">You are responsible for how you use AI-generated content. Always verify the results against Scripture before relying on them.</string>
+    <string name="ai_disclaimer_point4">AndBible strives to make verification easy (e.g. precise source citations in commentaries), but the ultimate responsibility always lies with you.</string>
+    <string name="ai_disclaimer_point5">"\"Test all things; hold fast what is good.\" (1 Thessalonians 5:21)"</string>
+    <string name="ai_disclaimer_point6">These tools have no soul and no Holy Spirit. They are text-processing tools, not spiritual guides. They are not suitable for directly preparing sermons, devotionals, or other spiritual content without careful human oversight, prayer, and discernment.</string>
+    <string name="ai_disclaimer_point7">Used wisely, they can benefit many users and use cases. But if you are unsure about accepting the risks, choosing not to use them is also a perfectly valid choice.</string>
+    <string name="ai_disclaimer_point8">Your data is sent to the servers of your chosen AI provider. By using an API key, you accept that provider\'s terms and privacy policy. Self-hosted models are possible but require more technical expertise, and may not produce results as good as commercial models.</string>
+    <string name="ai_disclaimer_point9">AI providers charge for API usage. Cost estimates shown in AndBible are approximate — always check your provider\'s billing for actual charges.</string>
+    <string name="ai_disclaimer_accept_title">Accept AI Disclaimer</string>
+    <string name="ai_disclaimer_accept_button">I accept and take full responsibility</string>
+
+    <string name="prompt_permission_mode">Permission mode</string>
+    <string name="prompt_permission_mode_description">Controls when user confirmation is required before the AI performs write operations. The per-tool settings below can override this for individual tools.</string>
+    <string name="agent_permission_mode_summary">Controls when user confirmation is required before AI write operations</string>
+    <string name="prompt_permission_use_default">Use default</string>
+    <string name="prompt_tab_prompt">Prompt</string>
+    <string name="prompt_tab_permissions">Permissions</string>
+    <string name="prompt_tab_advanced">Advanced</string>
+    <string name="prompt_name">Name</string>
+    <string name="prompt_description">Description</string>
+    <string name="prompt_template">Prompt template</string>
+    <string name="prompt_show_in">Show in</string>
+    <string name="prompt_context_verse_selection">Verse selection</string>
+    <string name="prompt_context_text_selection">Text selection</string>
+    <string name="prompt_context_window_menu">Window menu</string>
+    <string name="prompt_context_workspace_menu">Workspace menu</string>
+    <string name="prompt_context_note_editor">Note editor</string>
+    <string name="prompt_bible_only">Bible documents only</string>
+    <string name="prompt_category_study">Study</string>
+    <string name="prompt_category_notes">Notes</string>
+    <string name="prompt_category_general">General</string>
+    <string name="prompt_category_test">Test</string>
+    <string name="prompt_category_uncategorized">Uncategorized</string>
+    <string name="prompt_category_favorites">Favorites</string>
+    <string name="addon_prompt_badge">Add-on: %s</string>
+    <string name="addon_prompt_notice">This prompt is from add-on module \"%s\" and cannot be edited. Use \"Copy to customize\" to create an editable copy.</string>
+    <string name="new_category">New category</string>
+    <string name="new_category_name">Category name</string>
+    <string name="move_category_up">Move up</string>
+    <string name="move_category_down">Move down</string>
+    <string name="hide_category">Hide from AI actions</string>
+    <string name="show_category">Show in AI actions</string>
+    <string name="hidden">hidden</string>
+    <string name="delete_category">Delete category</string>
+    <string name="delete_category_and_prompts">Delete category and its prompts</string>
+    <string name="delete_category_keep_prompts">Move prompts to root and delete category</string>
+    <string name="delete_category_confirm_title">Delete category \"%s\"?</string>
+    <string name="move_to_category">Move to category…</string>
+    <string name="category_none">No category</string>
+    <string name="import_prompts_editable">Import as editable prompts</string>
+    <string name="import_prompts_addon">Install as add-on (read-only)</string>
+    <string name="prompt_category">Category</string>
+    <string name="new_prompt">New prompt</string>
+    <string name="permission_always_ask">Always ask</string>
+    <string name="permission_ask_once_per_run">Ask once per run</string>
+    <string name="permission_allow_all">Allow all</string>
+    <string name="permission_deny_all">Deny all</string>
+    <string name="reset_all_ai_settings">Reset all AI settings</string>
+    <string name="reset_all_ai_settings_confirm_title">Reset all AI settings?</string>
+    <string name="reset_all_ai_settings_confirm_message">This will clear the API key, provider, endpoint, model, and reset all prompts to defaults. Continue?</string>
+    <string name="edit_prompt">Edit prompt</string>
+    <string name="built_in_prompt">Built-in</string>
+    <string name="built_in_prompt_notice">This is a built-in prompt and cannot be edited. Use \"Copy to customize\" to create an editable copy.</string>
+    <string name="copy_to_customize">Copy to customize</string>
+    <string name="prompt_copied">Prompt copied</string>
+    <string name="delete_prompt_confirmation">Delete prompt \"%s\"?</string>
+    <string name="prompt_name_required">Prompt name is required</string>
+    <string name="prompt_template_required">Prompt template is required</string>
+    <string name="prompt_edit_before_run">Specify before run</string>
+    <string name="prompt_edit_before_run_description">Show a text field for specifying the task before running the prompt</string>
+    <string name="prompt_no_document_creation">No document creation</string>
+    <string name="prompt_no_document_creation_description">When enabled, the AI will not create a document. Results are only shown in the activity log. Useful for action-only prompts (bookmarks, labels, StudyPad operations).</string>
+    <string name="prompt_auto_include_documents">Auto-include installed documents</string>
+    <string name="prompt_auto_include_documents_description">Automatically include the list of installed documents in the prompt context, saving an AI iteration.</string>
+    <string name="prompt_auto_include_commentaries">Auto-include commentaries</string>
+    <string name="prompt_auto_include_commentaries_description">Automatically fetch and include commentary entries for the selected verses, saving an AI iteration.</string>
+    <string name="prompt_is_text_transformation">Text transformation</string>
+    <string name="prompt_is_text_transformation_description">Uses a simplified system prompt that preserves formatting (links, headings, bold/italic) while transforming text content. No tools are used. Ideal for translation and editing prompts.</string>
+    <string name="llm_no_document_creation_intercepted">Task completed (document creation disabled)</string>
+    <string name="llm_note_updated">Note updated</string>
+    <string name="specify_before_run_title">Specify task</string>
+    <string name="specify_before_run_hint">Describe the specific task…</string>
+    <string name="prompt_strict_context_matching">Context-dependent cache</string>
+    <string name="prompt_strict_context_matching_description">When enabled, cache matches only when all context (Bible version, selected text) is the same. When disabled, cache matches when verses are the same regardless of Bible version.</string>
+    <string name="ai_document_delete_confirmation">Delete this AI document?</string>
+    <string name="ai_document_regenerating">Regenerating AI document…</string>
+    <string name="ai_regenerate_prompt_not_found">Cannot regenerate: the original prompt was not found. It may have been deleted.</string>
+    <string name="ai_document_regenerate">Regenerate</string>
+    <string name="ai_regenerate_title">Regenerate</string>
+    <string name="ai_regenerate_instructions_hint">Additional instructions (optional)</string>
+    <string name="ai_regenerate_keep_previous">Keep previous version</string>
+    <string name="ai_regenerate_fresh_run">Fresh run (ignore previous result)</string>
+    <string name="ai_unknown_prompt">AI</string>
+
+    <!-- Default prompts -->
+    <string name="default_prompt_translate_to_language">Translate to %s</string>
+    <string name="default_prompt_translate_to_ui_language">Translate to UI language</string>
+    <string name="default_prompt_translate_to_ui_language_desc">Translates document text to the app interface language</string>
+    <string name="default_prompt_summary">Summary</string>
+    <string name="default_prompt_summary_desc">Creates a concise summary of the selected text</string>
+    <string name="default_prompt_explain_verses">Explain verses</string>
+    <string name="default_prompt_explain_verses_desc">Explains the meaning and context of selected verses</string>
+    <string name="default_prompt_explain_verses_studypad">Explain verses → Study Pad</string>
+    <string name="default_prompt_explain_verses_studypad_desc">Create a Study Pad with verse-by-verse explanation and bookmarks</string>
+    <string name="default_prompt_word_study">Word study</string>
+    <string name="default_prompt_word_study_desc">Analyzes original Hebrew/Greek words</string>
+    <string name="default_prompt_cross_references">Cross-references</string>
+    <string name="default_prompt_cross_references_desc">Finds and explains related Bible passages</string>
+    <string name="default_prompt_compare_translations">Compare translations</string>
+    <string name="default_prompt_compare_translations_desc">Shows how different installed translations render the text</string>
+    <string name="default_prompt_thematic_study">Thematic study</string>
+    <string name="default_prompt_thematic_study_desc">Builds a StudyPad with passages and notes on the central theme</string>
+    <string name="default_prompt_bookmark_annotate">Bookmark &amp; annotate</string>
+    <string name="default_prompt_bookmark_annotate_desc">Creates a bookmark with an AI-generated study note</string>
+    <string name="default_prompt_study_layout">Open study layout</string>
+    <string name="default_prompt_study_layout_desc">Opens commentary and parallel translation windows for study</string>
+    <string name="default_prompt_workspace_assistant">Workspace assistant</string>
+    <string name="default_prompt_workspace_assistant_desc">Manage windows: create, close, rearrange, change documents</string>
+    <string name="default_prompt_enhance_note">Enhance note</string>
+    <string name="default_prompt_enhance_note_desc">Improves grammar, clarity, and readability of your note</string>
+    <string name="default_prompt_ask_question">Ask a question</string>
+    <string name="default_prompt_ask_question_desc">Ask any question about the selected passage</string>
+    <string name="default_prompt_custom">Custom prompt</string>
+    <string name="default_prompt_custom_desc">Run a custom task on the selected passage</string>
+    <string name="default_prompt_custom_template">Follow the user\'s task specification for the selected Bible passage.</string>
+    <string name="copy">Copy</string>
+    <string name="delete_prompt_confirm_message">Are you sure you want to delete this prompt?</string>
+    <string name="ai_hide_prompt">Hide</string>
+    <string name="ai_restore_hidden_prompts">Restore hidden prompts</string>
+    <string name="ai_prompt_hidden">Prompt hidden</string>
+    <string name="ai_prompts_restored">Hidden prompts restored</string>
+
+    <!-- Agent Tool Display Names -->
+    <string name="tool_create_bookmark">Create bookmark</string>
+    <string name="tool_add_bookmark_note">Add bookmark note</string>
+    <string name="tool_update_bookmark_note">Update bookmark note</string>
+    <string name="tool_create_label">Create label</string>
+    <string name="tool_add_label_to_bookmark">Add label to bookmark</string>
+    <string name="tool_delete_bookmark">Delete bookmark</string>
+    <string name="tool_delete_label">Delete label</string>
+    <string name="tool_remove_label_from_bookmark">Remove label from bookmark</string>
+    <string name="tool_add_study_pad_entry">Add study pad entry</string>
+    <string name="tool_update_studypad_text_entry">Update study pad text entry</string>
+    <string name="tool_create_study_pad">Create study pad</string>
+    <string name="action_update_studypad_text_entry">Update study pad text entry %1$s</string>
+    <string name="action_create_studypad">Create StudyPad \"%1$s\" with %2$d items</string>
+    <string name="tool_set_document_title">Set document title</string>
+    <string name="tool_finish_with_study_pad">Open study pad</string>
+    <string name="tool_finish_with_my_document_page">Open My Document page</string>
+    <string name="tool_finish_without_document">Finish without document</string>
+    <string name="tool_get_verse_content">Read verse content</string>
+    <string name="tool_get_commentaries">Read commentaries</string>
+    <string name="tool_get_dictionary_entry">Look up dictionary entry</string>
+    <string name="tool_search_bible">Search Bible</string>
+    <string name="tool_search_by_strongs">Search by Strong\'s number</string>
+    <string name="tool_get_installed_documents">List installed documents</string>
+    <string name="tool_get_all_labels">List all labels</string>
+    <string name="tool_get_bookmarks_for_verse">Get bookmarks for verse</string>
+    <string name="tool_get_bookmarks_with_label">Get bookmarks with label</string>
+    <string name="tool_get_study_pad_content">Read study pad content</string>
+    <string name="tool_search_study_pads">Search study pads</string>
+    <string name="tool_get_my_documents">List My Documents</string>
+    <string name="tool_get_my_document_pages">List My Document pages</string>
+    <string name="tool_get_genbook_keys">List general book keys</string>
+    <string name="tool_get_genbook_content">Read general book content</string>
+    <string name="tool_create_my_document">Create My Document</string>
+    <string name="tool_add_my_document_page">Add My Document page</string>
+    <string name="tool_edit_my_document_page">Edit My Document page</string>
+    <string name="tool_delete_my_document_page">Delete My Document page</string>
+    <string name="tool_get_windows">List windows</string>
+    <string name="tool_create_window">Create window</string>
+    <string name="tool_manage_window">Manage window</string>
+    <string name="tool_set_window_document">Set window document</string>
+
+    <!-- Agent Permission Dialog -->
+    <string name="agent_permission_title">Agent Permission</string>
+    <string name="agent_permission_message">The AI assistant wants to use \"%1$s\":\n\n%2$s</string>
+    <string name="agent_permission_message_with_action">The AI assistant wants to:\n\n%1$s</string>
+
+    <!-- Tool action descriptions for permission dialog -->
+    <string name="action_create_bookmark_at">Create bookmark at %1$s</string>
+    <string name="action_create_bookmark_at_with_extras">Create bookmark at %1$s (%2$s)</string>
+    <string name="action_with_note">with note</string>
+    <string name="action_labels">labels: %1$s</string>
+    <string name="action_add_note_to_bookmark_at">Add note to bookmark at %1$s</string>
+    <string name="action_update_note_on_bookmark_at">Update note on bookmark at %1$s</string>
+    <string name="action_create_label">Create label \"%1$s\"</string>
+    <string name="action_add_label_to_bookmark">Add label \"%1$s\" to bookmark at %2$s</string>
+    <string name="action_delete_bookmark">Delete bookmark at %1$s</string>
+    <string name="action_delete_label">Delete label \"%1$s\"</string>
+    <string name="action_remove_label_from_bookmark">Remove label \"%1$s\" from bookmark at %2$s</string>
+    <string name="action_add_entry_to_studypad">Add entry to StudyPad \"%1$s\"</string>
+    <string name="action_create_my_document">Create My Document: \"%1$s\"</string>
+    <string name="action_add_my_document_page">Add page \"%1$s\" to My Document %2$s</string>
+    <string name="action_edit_my_document_page">Edit My Document page: \"%1$s\"</string>
+    <string name="action_delete_my_document_page">Delete My Document page: \"%1$s\"</string>
+    <string name="action_set_document_title">Set document title: \"%1$s\"</string>
+    <string name="action_open_studypad">Open StudyPad \"%1$s\"</string>
+    <string name="action_open_my_document_page">Open My Document page \"%1$s\"</string>
+    <string name="action_create_window">Create new window</string>
+    <string name="action_create_window_with_doc">Create window with %1$s</string>
+    <string name="action_create_window_with_doc_and_key">Create window with %1$s at %2$s</string>
+    <string name="action_close_window">Close window (%1$s)</string>
+    <string name="action_minimize_window">Minimize window (%1$s)</string>
+    <string name="action_restore_window">Restore window (%1$s)</string>
+    <string name="action_set_window_document">Set %1$s to %2$s</string>
+    <string name="action_set_window_document_with_key">Set %1$s to %2$s at %3$s</string>
+    <string name="action_active_window">active window</string>
+    <string name="action_finish">Finish: \"%1$s\"</string>
+    <string name="permission_allow_once">Allow once</string>
+    <string name="permission_allow_for_session">Allow for this session</string>
+    <string name="permission_allow_all_session">Allow all tools this session</string>
+    <string name="permission_allow_always">Always allow \"%1$s\"</string>
+    <string name="permission_deny">Deny</string>
+    <string name="permission_always_allow_confirm_title">Always allow?</string>
+    <string name="permission_always_allow_confirm">Are you sure you want to permanently allow \"%1$s\"?</string>
+    <string name="permission_always_allow_confirm_reset_hint">You can reset this in AI Settings.</string>
+
+    <!-- Agent Tool Permission Settings -->
+    <string name="manage_tool_permissions_title">Tool permissions</string>
+    <string name="manage_tool_permissions_summary">Manage per-tool permission overrides</string>
+    <string name="commentary_max_response_title">Commentary response size limit</string>
+    <string name="commentary_max_response_summary">Show selection dialog when response exceeds limit</string>
+    <string name="commentary_max_response_no_limit">No limit</string>
+    <string name="commentary_max_response_value">~%s tokens</string>
+    <string name="commentary_max_response_dialog_title">Set maximum response size (tokens)</string>
+    <string name="commentary_max_response_dialog_message">When the AI fetches commentaries and the total response exceeds this token limit, a selection dialog lets you choose which commentaries to send to the AI.\n\n0 = no limit (all commentaries are sent automatically).</string>
+    <string name="commentary_filter_dialog_title">Commentary response too large</string>
+    <string name="commentary_filter_dialog_message">Token limit (~%s) exceeded. Deselect commentaries you don\'t want to send to the AI.\n\nYou can adjust this limit in AI Connection settings.</string>
+    <string name="commentary_filter_total_tokens">Selected: ~%1$s / %2$s tokens</string>
+    <string name="tool_log_commentary_count">%d commentaries</string>
+    <string name="tool_log_label_count">%d labels</string>
+    <string name="tool_log_document_count">%d documents</string>
+    <string name="tool_log_study_pad_count">%d study pads</string>
+    <string name="tool_log_search_results">%1$d/%2$d results</string>
+    <string name="tool_log_bookmark_count">%d bookmarks</string>
+    <string name="tool_log_my_document_count">%d documents</string>
+    <string name="tool_log_my_document_page_count">%d pages</string>
+    <string name="tool_log_genbook_key_count">%1$d/%2$d keys</string>
+    <string name="tool_log_window_count">%d windows</string>
+    <string name="tool_log_window_copy">copy</string>
+    <string name="tool_log_window_minimized">minimized</string>
+    <string name="tool_log_window_removed">removed</string>
+    <string name="commentary_filter_item">%1$s%2$s (~%3$s tokens)</string>
+    <string name="ai_document_filter_title">Document access</string>
+    <string name="ai_document_filter_summary">Choose which documents the AI can read</string>
+    <string name="ai_document_filter_summary_count">%d documents excluded</string>
+    <string name="ai_document_filter_activity_title">AI document access</string>
+    <string name="permission_status_default">Ask (default)</string>
+    <string name="permission_option_always_allow">Always allow</string>
+    <string name="permission_option_always_deny">Always deny</string>
+    <string name="reset_all_permissions">Reset all</string>
+
+    <!-- Tool Info -->
+    <string name="ai_available_tools">Available tools</string>
+    <string name="ai_read_tools">Read Tools</string>
+    <string name="ai_write_tools">Write Tools</string>
+
+    <!-- Global Tool Permissions Activity -->
+    <string name="global_tool_permissions_title">Default tool settings</string>
+
+    <!-- Per-Prompt Tool Permissions -->
+    <string name="prompt_tool_permissions">Tool permissions</string>
+
+    <!-- Tool categories -->
+    <string name="tool_category_bible_search">Bible &amp; Search</string>
+    <string name="tool_category_bookmarks">Bookmarks</string>
+    <string name="tool_category_labels">Labels</string>
+    <string name="tool_category_study_pads">Study Pads</string>
+    <string name="tool_category_my_documents">My Documents</string>
+    <string name="tool_category_general_books">General Books</string>
+    <string name="tool_category_windows">Windows</string>
+    <string name="tool_category_read">Read</string>
+    <string name="tool_category_write">Write</string>
+    <string name="expand_collapse">Expand/collapse</string>
+    <string name="tool_option_enabled">Enabled</string>
+    <string name="tool_option_disabled">Disabled</string>
+    <string name="tool_option_default_enabled">Default (enabled)</string>
+    <string name="tool_option_default_disabled">Default (disabled)</string>
+    <string name="tool_option_default_allowed">Default (allowed)</string>
+    <string name="tool_option_default_denied">Default (denied)</string>
+
+    <!-- Per-Prompt Model Override -->
+    <string name="prompt_model_override">Model</string>
+    <string name="prompt_model_default">Default</string>
+
+    <!-- LLM One Tap Actions -->
+    <string name="select_llm_prompt">Select AI Action</string>
+    <string name="llm_actions">AI Actions</string>
+
+    <!-- Agent Log Widget -->
+    <string name="agent_log_expand">Expand/collapse agent log</string>
+    <string name="agent_log_close">Close agent log</string>
+    <string name="agent_log_stop">Stop AI</string>
+    <string name="agent_log_idle">AI Assistant</string>
+    <string name="agent_log_completed">Completed</string>
+    <string name="agent_log_executing">Executing: %s</string>
+    <string name="agent_log_iteration">Iteration %d</string>
+    <string name="agent_log_tool">Tool: %s</string>
+    <string name="agent_log_tool_failed">Tool %s failed</string>
+    <string name="agent_log_response_received">Response received</string>
+    <string name="agent_log_saved">Saved: %s</string>
+    <string name="agent_log_done">Done: %s</string>
+    <string name="agent_log_cancelled">Cancelled</string>
+    <string name="agent_already_running">An AI agent is already running. Please wait or stop it first.</string>
+
+    <!-- AI Agent Notifications -->
+    <string name="ai_agent_notification_channel_name">AI Agent</string>
+    <string name="ai_agent_notification_running">AI agent working…</string>
+    <string name="ai_agent_notification_permission_needed">AI agent needs your approval</string>
+    <string name="ai_agent_notification_permission_tap">Tap to return to AndBible</string>
+    <string name="ai_agent_notification_completed">AI task completed</string>
+    <string name="ai_agent_notification_completed_tap">Tap to view results</string>
+    <string name="ai_agent_notification_error">AI task failed</string>
+    <string name="ai_agent_notification_cancel">Cancel</string>
+
+    <!-- My Documents -->
+    <string name="my_documents_title">My Documents</string>
+    <string name="my_documents_empty">No documents yet. Tap + to create one.</string>
+    <string name="my_document_new_name">Document %d</string>
+    <string name="my_document_create_title">Create new document</string>
+    <string name="my_document_rename_title">Rename document</string>
+    <string name="my_document_delete_confirmation">Delete document \"%s\"?</string>
+    <string name="my_document_cannot_delete_ai_documents">AI Documents cannot be deleted while it contains pages. Delete the pages first.</string>
+    <string name="my_document_save_changes">Save changes?</string>
+    <string name="my_document_no_description">No description</string>
+    <string name="my_document_edit_description">Edit description</string>
+
+    <string name="my_document_pages_title">%s - Pages</string>
+    <string name="my_document_pages_empty">No pages in this document.</string>
+    <string name="my_document_page_rename_title">Rename page</string>
+    <string name="my_document_page_delete_confirmation">Delete page \"%s\"?</string>
+    <string name="my_document_new_page_name">Page %1$d</string>
+    <string name="my_document_create_page_title">New page</string>
+    <string name="my_document_content_type_label">Content type</string>
+    <string name="my_document_import_page">Import Markdown/HTML</string>
+    <string name="my_document_export_page">Export page</string>
+    <string name="my_document_imported_page_name">Imported</string>
+    <string name="my_document_export_fallback_name">page</string>
+    <string name="my_document_export_document">Export all pages</string>
+    <string name="my_document_import_document">Import files as document</string>
+    <string name="my_document_import_empty_selection">No importable files selected</string>
+    <string name="my_document_export_success">Pages exported successfully</string>
+    <string name="ai_doc_choose_page">Choose AI document page</string>
+    <string name="prefs_show_ai_doc_markers_title">Show AI document markers</string>
+    <string name="prefs_show_ai_doc_markers_summary">Show marker icons for AI-generated document pages linked to verses</string>
+    <string name="prefs_show_ordinals_title">Show ordinal numbers</string>
+    <string name="prefs_show_ordinals_summary">Show ordinal position markers in text</string>
+    <string name="prefs_show_reading_progress_title">Reading progress</string>
+    <string name="prefs_show_reading_progress_summary">Show how far through the book you are (percentage, page or chapter)</string>
+
+    <string name="prefs_page_scroll_amount_title">Page scroll amount</string>
+    <string name="prefs_page_scroll_amount_summary">How much of the page to scroll with page up/down</string>
+    <string name="prefs_scroll_helper_lines_title">Scroll helper lines</string>
+    <string name="prefs_scroll_helper_lines_summary">Show horizontal guide lines at page scroll boundaries</string>
+    <string name="prefs_scroll_helper_line_style_title">Helper line style</string>
+    <string name="prefs_scroll_helper_line_style_summary">Choose the visual style of scroll helper lines</string>
+    <string name="scroll_helper_line_style_thin_dotted">Thin dotted line</string>
+    <string name="scroll_helper_line_style_thin_solid">Thin solid line</string>
+    <string name="scroll_helper_line_style_thick_solid">Thick solid line</string>
+    <string name="prefs_page_buttons_title">Page scroll buttons</string>
+    <string name="prefs_page_buttons_summary">Show visible page up/down buttons on screen</string>
+
+    <!-- Document sync: settings UI -->
+    <string name="document_sync_title">Documents</string>
+    <string name="document_sync_contents">Installed Bibles, commentaries and other documents</string>
+    <string name="document_sync_category_title">Document sync</string>
+    <string name="document_sync_auto_download_title">Download automatically</string>
+    <string name="document_sync_auto_download_summary">Automatically download new and updated documents from the cloud to this device</string>
+    <string name="document_sync_auto_upload_title">Upload automatically</string>
+    <string name="document_sync_auto_upload_summary">Automatically upload documents installed on this device to the cloud</string>
+    <string name="document_sync_auto_delete_title">Apply removals automatically</string>
+    <string name="document_sync_auto_delete_summary">Automatically remove documents from this device when they are removed on another device</string>
+    <string name="document_sync_wifi_only_title">Sync documents on Wi-Fi only</string>
+    <string name="document_sync_wifi_only_summary">Automatic document transfers wait for an unmetered (Wi-Fi) connection</string>
+    <string name="document_sync_manage_summary">View and manage documents stored in the cloud</string>
+
+    <!-- Document sync: cloud documents management view -->
+    <string name="document_sync_manage_title">Synced documents</string>
+    <string name="cloud_doc_status_synced">Synced</string>
+    <string name="cloud_doc_status_local_only">On this device only</string>
+    <string name="cloud_doc_status_cloud_only">In cloud only</string>
+    <string name="cloud_doc_status_update">Update available</string>
+    <string name="cloud_doc_status_blocked">Blocked on this device</string>
+    <string name="cloud_doc_status_wont_sync">Won\'t sync to cloud</string>
+    <string name="cloud_doc_version_prefix">v%1$s</string>
+    <string name="cloud_doc_filter_all">All</string>
+    <string name="cloud_doc_filter_installed">Installed</string>
+    <string name="cloud_doc_filter_cloud">In cloud</string>
+    <string name="cloud_doc_filter_updates">Updates</string>
+    <string name="cloud_doc_filter_blocked">Blocked</string>
+    <string name="cloud_doc_filter_device_only">Only on this device</string>
+    <string name="cloud_doc_filter_cloud_only">In cloud only</string>
+    <string name="cloud_doc_filter_removed">Removed</string>
+    <string name="cloud_doc_show_removed">Show removed documents</string>
+    <string name="cloud_doc_status_removed">Removed from cloud</string>
+    <string name="cloud_doc_status_still_installed">still installed here</string>
+    <string name="cloud_doc_purge_confirm">Permanently remove \"%1$s\" from the cloud history? If it is still installed on another device, that device may upload it back to the cloud on its next sync.</string>
+    <string name="cloud_doc_action_download">Download</string>
+    <string name="cloud_doc_action_push">Push to cloud</string>
+    <string name="cloud_doc_action_remove_cloud">Remove from cloud</string>
+    <string name="cloud_doc_action_remove_all_devices">Remove from all devices</string>
+    <string name="cloud_doc_action_block">Don\'t sync to this device</string>
+    <string name="cloud_doc_action_unblock">Allow on this device</string>
+    <string name="cloud_doc_action_restore">Restore to cloud</string>
+    <string name="cloud_doc_action_dont_sync">Do not sync to cloud</string>
+    <string name="cloud_doc_action_allow_sync">Sync to cloud</string>
+    <string name="cloud_doc_action_purge">Remove from cloud history</string>
+    <string name="cloud_doc_remove_all_confirm">Remove %1$s from the cloud and from all your devices, including this one?</string>
+    <string name="cloud_doc_remove_cloud_confirm">Remove %1$s from the cloud? The copy on this device is kept; devices with document sync on will also remove it.</string>
+    <string name="cloud_doc_sync_now">Sync now</string>
+    <string name="cloud_doc_rescan">Re-scan from cloud</string>
+    <string name="cloud_doc_sync_now_download">Download new and updated documents</string>
+    <string name="cloud_doc_sync_now_upload">Upload local documents to the cloud</string>
+    <string name="cloud_doc_sync_now_delete">Apply removals from other devices</string>
+    <string name="document_sync_signin_required">Sign in to your cloud account to manage synced documents.</string>
+    <string name="cloud_doc_summary_upload">Upload %1$d</string>
+    <string name="cloud_doc_summary_upload_size">Upload %1$d (%2$s)</string>
+    <string name="cloud_doc_summary_download">Download %1$d</string>
+    <string name="cloud_doc_summary_download_size">Download %1$d (%2$s)</string>
+    <string name="cloud_doc_wifi_waiting">Automatic downloads will start on Wi-Fi.</string>
+    <plurals name="cloud_doc_sync_now_count">
+        <item quantity="one">%1$d document</item>
+        <item quantity="other">%1$d documents</item>
+    </plurals>
+    <plurals name="cloud_doc_sync_now_count_size">
+        <item quantity="one">%1$d document (%2$s)</item>
+        <item quantity="other">%1$d documents (%2$s)</item>
+    </plurals>
+    <string name="cloud_doc_sync_now_count_none">Nothing to transfer</string>
+    <string name="cloud_doc_selected_count">%1$d selected</string>
+    <string name="cloud_doc_bulk_skipped">Skipped %1$d not applicable</string>
+    <plurals name="cloud_doc_bulk_remove_all_confirm">
+        <item quantity="one">Remove %1$d document from the cloud and from all your devices, including this one?</item>
+        <item quantity="other">Remove %1$d documents from the cloud and from all your devices, including this one?</item>
+    </plurals>
+    <plurals name="cloud_doc_bulk_remove_cloud_confirm">
+        <item quantity="one">Remove %1$d document from the cloud? Copies on this device are kept.</item>
+        <item quantity="other">Remove %1$d documents from the cloud? Copies on this device are kept.</item>
+    </plurals>
+    <plurals name="cloud_doc_bulk_purge_confirm">
+        <item quantity="one">Permanently remove %1$d document from the cloud history?</item>
+        <item quantity="other">Permanently remove %1$d documents from the cloud history?</item>
+    </plurals>
+    <string name="document_sync_notification_title">Syncing documents</string>
+    <string name="document_sync_downloading">Downloading %1$s (%2$d/%3$d)</string>
+    <string name="document_sync_uploading">Uploading %1$s (%2$d/%3$d)</string>
+    <string name="document_sync_removing">Removing %1$s (%2$d/%3$d)</string>
+    <string name="document_sync_started">Document sync started</string>
+    <string name="document_sync_enable_dialog_title">Start syncing documents?</string>
+    <string name="document_sync_enable_dialog_nothing">No documents to transfer yet. Newly installed documents will sync automatically.</string>
+    <string name="help_document_sync_text">Document sync copies your installed Bibles, commentaries and other documents to the cloud and keeps them in sync across your devices. Use this view to see what is stored in the cloud, download or upload individual documents, remove documents, and control what syncs to this device.</string>
+    <string name="background_image_title">Background image</string>
+    <string name="background_image_none">No background</string>
+    <string name="background_image_import">Import from gallery…</string>
+    <string name="background_image_empty">No imported images yet. Tap \"Import from gallery…\" to add one.</string>
+    <string name="background_image_day">Background image (day)</string>
+    <string name="background_image_night">Background image (night)</string>
+    <string name="background_image_opacity_day">Background image opacity (day)</string>
+    <string name="background_image_opacity_night">Background image opacity (night)</string>
+</resources>
