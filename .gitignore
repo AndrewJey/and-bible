@@ -61,3 +61,6 @@ Thumbs.db
 !.env.sample
 !.env.template
 !.env.*.example
+
+# Local SWORD test modules
+/test-modules/

@@ -77,6 +77,10 @@ class BackupControlTest {
      */
     @Test
     fun fileProviderResolvesAllSaveOrShareDirectories() {
+        org.junit.Assume.assumeTrue(
+            "FileProvider uses Android/POSIX canonical paths; FileProviderSharingTest covers this on-device",
+            File.separatorChar == '/'
+        )
         val context = RuntimeEnvironment.getApplication()
         val authority = "${context.packageName}.provider"
         // Directories (relative to filesDir) that saveOrShare() callers write into.

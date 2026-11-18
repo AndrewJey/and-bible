@@ -105,7 +105,11 @@ class ModuleArchiveExtractionTest {
         BackupControl.extractAndRegisterModuleArchive({ FileInputStream(zip) })
 
         assertTrue(File(downloadDir, "modules/texts/win/path.dat").exists())
-        assertFalse(File(downloadDir, "modules\\texts\\win\\path.dat").exists())
+        assertArrayEquals(byteArrayOf(9), File(downloadDir, "modules/texts/win/path.dat").readBytes())
+        // Windows treats both spellings as separators, so literal-name checks apply to POSIX hosts.
+        if (File.separatorChar != '\\') {
+            assertFalse(File(downloadDir, "modules\\texts\\win\\path.dat").exists())
+        }
     }
 
     /** Deeply nested entries must have their parent directories created on demand. */

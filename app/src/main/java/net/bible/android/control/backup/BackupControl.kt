@@ -365,7 +365,7 @@ object BackupControl {
         val filePath = file.canonicalPath
         val dirPath = rootDir.canonicalPath
         assert(filePath.startsWith(dirPath))
-        return filePath.substring(dirPath.length + 1)
+        return file.canonicalFile.relativeTo(rootDir.canonicalFile).invariantSeparatorsPath
     }
 
     private fun addFile(outFile: ZipOutputStream, rootDir: File, file: File) {
@@ -381,7 +381,7 @@ object BackupControl {
     private fun addModuleFile(outFile: ZipOutputStream, moduleFile: File) {
         FileInputStream(moduleFile).use { inFile ->
             BufferedInputStream(inFile).use { origin ->
-                val fileNameInsideZip = moduleFile.relativeTo(moduleDir).path
+                val fileNameInsideZip = moduleFile.relativeTo(moduleDir).invariantSeparatorsPath
                 val entry = ZipEntry(fileNameInsideZip)
                 outFile.putNextEntry(entry)
                 origin.copyTo(outFile)

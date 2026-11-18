@@ -36,6 +36,14 @@ La primera compilación descarga Gradle, dependencias y herramientas, y puede ta
 
 El remoto `origin` es el fork personal. `upstream` apunta al original y su URL de push está deshabilitada para evitar publicar allí por accidente. Integra `upstream/current-stable` en una rama de trabajo y conserva el historial, las licencias y las mejoras locales. No uses un reset para actualizar el fork.
 
-## Límites de la suite JVM en Windows
+## Módulos de prueba y comprobaciones de plataforma
 
-La suite completa no queda aprobada sin los módulos bíblicos usados por el original. También hay comprobaciones de rutas FileProvider y nombres de entradas ZIP que presentan diferencias con Windows; estos casos permanecen visibles en los resultados y requieren revisión de portabilidad. El arranque de la APK y las pruebas de JavaScript se comprueban por separado. La pantalla inicial necesita instalar al menos un documento bíblico antes de abrir el lector.
+Puedes proporcionar módulos SWORD genuinos sin modificar el código ni el directorio personal:
+
+```powershell
+.\gradlew.bat testStandardGoogleplayDebugUnitTest -PtestModulesDir="D:/ruta/a/modulos"
+```
+
+La carpeta debe contener `mods.d/` y los datos de los módulos. Se verificaron módulos públicos KJV, FinRK, FinSTLK2017, FinPR, ISV y StrongsGreek descargados de CrossWire. El conjunto completo sigue necesitando ESV2011. Según la [FAQ del original](https://andbible.org/docs/faq/), el proveedor retiró esa edición de las descargas SWORD; un respaldo existente permite recuperarla. Los textos de prueba se mantienen fuera de Git y no se sustituyen por otras traducciones con un identificador falso.
+
+Los ZIP usan separadores independientes del sistema operativo. La comprobación de URI FileProvider se omite únicamente en la JVM de Windows, cuyo sistema de rutas no representa el de Android. La misma funcionalidad se comprueba en el dispositivo mediante `FileProviderSharingTest`, que escribe, comparte y vuelve a leer archivos de prueba en backup y export. La suite completa mantiene visibles los fallos por datos ausentes.

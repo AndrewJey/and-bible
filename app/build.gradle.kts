@@ -312,6 +312,9 @@ android {
                 test ->
                   // Use Android's native SQLite semantics on Windows as well.
                   test.systemProperty("robolectric.sqliteMode", "NATIVE")
+                  providers.gradleProperty("testModulesDir").orNull?.let { modulesDir ->
+                      test.systemProperty("sword.home", modulesDir)
+                  }
                   test.testLogging {
                     events("passed", "skipped", "failed")
                     setExceptionFormat("full")
