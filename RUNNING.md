@@ -35,3 +35,7 @@ La primera compilación descarga Gradle, dependencias y herramientas, y puede ta
 ## Sincronizar de nuevo
 
 El remoto `origin` es el fork personal. `upstream` apunta al original y su URL de push está deshabilitada para evitar publicar allí por accidente. Integra `upstream/current-stable` en una rama de trabajo y conserva el historial, las licencias y las mejoras locales. No uses un reset para actualizar el fork.
+
+## Límites de la suite JVM en Windows
+
+La suite completa no queda aprobada sin los módulos bíblicos usados por el original. También hay comprobaciones de rutas FileProvider y nombres de entradas ZIP que presentan diferencias con Windows; estos casos permanecen visibles en los resultados y requieren revisión de portabilidad. El arranque de la APK y las pruebas de JavaScript se comprueban por separado. La pantalla inicial necesita instalar al menos un documento bíblico antes de abrir el lector.
